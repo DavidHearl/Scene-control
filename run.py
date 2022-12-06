@@ -2,29 +2,138 @@ import pyautogui as gui
 import time
 import math
 
-# Navigate to windows search
-window_search = gui.locateCenterOnScreen("windows-search.PNG")
-gui.moveTo(window_search, duration=0.5)
-gui.click()
-gui.typewrite("scene")
-time.sleep(1)
-gui.hotkey("enter")
+from functions import safe_zone, scene_frozen
 
-# Exit Update menu
-time.sleep(11)
-update_exit = gui.locateCenterOnScreen("scene-update-exit.PNG")
-gui.moveTo(update_exit, duration=1)
-gui.click()
+""" Create array and assign default values """
+scans = 0
+processed = []
+registered = []
+point_cloud = []
+exported = []
 
-# Setup Network License
-time.sleep(1)
-network_license = gui.locateCenterOnScreen("network-license.PNG")
-gui.moveTo(network_license, duration=1)
-gui.click()
+""" Program Start """
+safe_zone()
 
-# Enter Host IP
-time.sleep(1)
-host_ip = gui.locateCenterOnScreen("host-ip-name.PNG")
-gui.moveTo(host_ip, duration=1)
-gui.click()
-gui.typewrite("Imaginary Host IP")
+# Check to see if the project is empty
+no_projects = gui.locateOnScreen('items/no-projects.PNG')
+if no_projects == None:
+    more_files = True
+else:
+    print("No folders present")
+    exit
+
+# Count Number of files
+while more_files != False:
+    if scans < 12:
+        gui.moveTo(600, (400 + (scans * 55)), duration=0.5)
+        time.sleep(1.25)
+    else:
+        gui.scroll(-67, 600, 345 + (scans * 55))
+        time.sleep(1.75)
+
+    more_actions = gui.locateOnScreen('items/more_actions.PNG')
+
+    if more_actions == None:
+        more_files = False
+    else:
+        scans += 1
+        print("Project Number:", scans)
+
+# Print Total number of projects
+safe_zone()
+print("Total Projects:", scans)
+
+# Set all job arrays to Fasle
+for i in range(scans):
+    processed.append(False)
+    registered.append(False)
+    point_cloud.append(False)
+    exported.append(False)
+
+for i in range(scans):
+    # Move mouse to project folder
+    if i < 11:
+        gui.moveTo(600, (400 + (i * 55)), duration=0.5)
+        time.sleep(1)
+        gui.click()
+    else:
+        safe_zone()
+        gui.scroll(-67 * (i - 10), 600, 345 + ((i - 10) * 55))
+        time.sleep(1.75)
+        gui.moveTo(600, (400 + (i * 55)), duration=0.5)
+        gui.click()
+
+    scene_frozen()
+
+    # Wait for project to open
+    project_opened = False
+    while project_opened == False:
+        opening_project = gui.locateOnScreen('items/opening-project.PNG', confidence=0.9)
+        if opening_project == None:
+            time.sleep(0.3)
+            break
+
+    scene_frozen()
+
+    # Check to see if operations have already been completed
+    processing_completed = gui.locateOnScreen('items/processing-completed.PNG')
+    registration_completed = gui.locateOnScreen('items/registration-completed.PNG')
+    point_cloud_completed = gui.locateOnScreen('items/point-cloud-completed.PNG')
+
+    # Change value from False to True
+    if processing_completed != None:
+        processed[i+1] = True
+
+    if registration_completed != None:
+        registered[i+1] = True
+
+    if point_cloud_completed != None:
+        point_cloud[i+1] = True
+
+    print(processed[i+1], registered[i+1], point_cloud[i+1])
+
+    # Create point cloud
+    if processed[i+1] and registered[i+1] == True and point_cloud[i+1] == False:
+        # Click the create button
+        create_point_cloud = gui.locateCenterOnScreen('items/create-point-cloud.PNG')
+        gui.moveTo(create_point_cloud, duration=0.5)
+        gui.click()
+        time.sleep(1)
+
+        # Configure Settings
+        gui.moveTo(940, 330, duration=1)
+        gui.dragTo(870, 330, duration=1, button='left')
+        gui.moveTo(845, 385, duration=0.75)
+        gui.click()
+        gui.moveTo(860, 405, duration=0.5)
+        gui.click()
+        ok_button = gui.locateCenterOnScreen('items/ok-button.PNG')
+        gui.moveTo(ok_button, duration=1)
+        gui.click()
+        time.sleep(2)
+
+        point_cloud_in_progress = False
+        while point_cloud_in_progress == False:
+            point_cloud_processing = gui.locateOnScreen('items/point-cloud-processing.PNG', confidence=0.9)
+            if point_cloud_processing == None:
+                time.sleep(0.3)
+                break
+
+        time.sleep(5)
+        ok_button = gui.locateCenterOnScreen('items/ok-button.PNG', confidence=0.9)
+        gui.moveTo(ok_button, duration=0.5)
+        point_cloud[i+1] = True
+
+    # Navigate to the close project button
+    close_project = gui.locateCenterOnScreen('items/close-project.PNG')
+    gui.moveTo(close_project, duration=1)
+    gui.click()
+
+    scene_frozen()
+
+    project_closed = False
+    while project_closed == False:
+        closing_project = gui.locateOnScreen('items/closing-project.PNG', confidence=0.9)
+        if closing_project == None:
+            time.sleep(0.3)
+            break
