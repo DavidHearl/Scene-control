@@ -2,7 +2,7 @@ import pyautogui as gui
 import time
 import math
 
-from functions import safe_zone, scene_frozen
+from functions import safe_zone, wait_open, wait_close
 
 """ Create array and assign default values """
 scans = 0
@@ -12,6 +12,24 @@ point_cloud = []
 exported = []
 
 """ Program Start """
+# Check to see if you're in the home menu
+close_project = gui.locateCenterOnScreen('items/close-project.PNG', confidence=0.9)
+if close_project != None:
+    gui.moveTo(close_project, duration=1)
+    gui.click()
+    time.sleep(2)
+
+save_changes = gui.locateOnScreen('items/save-changes.PNG')
+if save_changes != None:
+    gui.locateCenterOnScreen('items/yes.PNG')
+    gui.click()
+    time.sleep(1)
+    gui.locateCenterOnScreen('items/ok-button.PNG')
+    gui.click()
+    gui.locateCenterOnScreen('items/ok-button.PNG')
+    gui.click()
+
+wait_close()
 safe_zone()
 
 # Check to see if the project is empty
@@ -63,17 +81,7 @@ for i in range(scans):
         gui.moveTo(600, (400 + (i * 55)), duration=0.5)
         gui.click()
 
-    scene_frozen()
-
-    # Wait for project to open
-    project_opened = False
-    while project_opened == False:
-        opening_project = gui.locateOnScreen('items/opening-project.PNG', confidence=0.9)
-        if opening_project == None:
-            time.sleep(0.3)
-            break
-
-    scene_frozen()
+    wait_open()
 
     # Check to see if operations have already been completed
     processing_completed = gui.locateOnScreen('items/processing-completed.PNG')
@@ -129,11 +137,4 @@ for i in range(scans):
     gui.moveTo(close_project, duration=1)
     gui.click()
 
-    scene_frozen()
-
-    project_closed = False
-    while project_closed == False:
-        closing_project = gui.locateOnScreen('items/closing-project.PNG', confidence=0.9)
-        if closing_project == None:
-            time.sleep(0.3)
-            break
+    wait_close()
