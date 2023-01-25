@@ -1,5 +1,6 @@
 pip install pyautogui
-pip install opencv-python
+pip install math
+pip install time
 
 # print(pyautogui.size())       # Gets Screen Size
 # print(pyautogui.position())   # Gets Mouse Position

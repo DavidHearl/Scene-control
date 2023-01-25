@@ -1,22 +1,20 @@
-import pyautogui as gui
-import time
-import math
+import pyautogui, time, math
 
 """ Main Functions """
 # Move Mouse to safe area on the page
 def safe_zone():
-    gui.moveTo(150, 200, duration=1)
-    gui.scroll(1000)
+    pyautogui.moveTo(150, 200, duration=1)
+    pyautogui.scroll(1000)
     time.sleep(1)
-    gui.click()
+    pyautogui.click()
 
 # Wait for Project to close
 def wait_close():
     project_closed = False
     not_responding = True
     while project_closed == False or not_responding == True:
-        closing_project = gui.locateOnScreen('items/closing-project.PNG', confidence=0.9)
-        frozen = gui.locateOnScreen('items/not-responding.PNG', confidence=0.9)
+        closing_project = pyautogui.locateOnScreen('items/closing-project.PNG', confidence=0.9)
+        frozen = pyautogui.locateOnScreen('items/not-responding.PNG', confidence=0.9)
         if closing_project == None and frozen == None:
             project_closed = True
             not_responding = False
@@ -28,8 +26,8 @@ def wait_open():
     project_opened = False
     not_responding = True
     while project_opened == False or not_responding == True:
-        opening_project = gui.locateOnScreen('items/opening-project.PNG', confidence=0.9)
-        frozen = gui.locateOnScreen('items/not-responding.PNG', confidence=0.9)
+        opening_project = pyautogui.locateOnScreen('items/opening-project.PNG', confidence=0.9)
+        frozen = pyautogui.locateOnScreen('items/not-responding.PNG', confidence=0.9)
         if opening_project == None and frozen == None:
             project_closed = True
             not_responding = False

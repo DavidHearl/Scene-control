@@ -1,22 +1,13 @@
-import pyautogui, time, math
-import os
-
 from operations.start_operation import *
+from operations.close_project import *
 
-# """ Create array and assign default values """
-# scans = 0
-# processed = []
-# registered = []
-# point_cloud = []
-# exported = []
+startup()
+create_arrays()
 
-# """ Program Start """
-# # Check to see if you're in the home menu
-# close_project = pyautogui.locateCenterOnScreen('items/close-project.PNG', confidence=0.9)
-# if close_project != None:
-#     pyautogui.moveTo(close_project, duration=1)
-#     pyautogui.click()
-#     time.sleep(2)
+close_project()
+
+
+
 
 # save_changes = pyautogui.locateOnScreen('items/save-changes.PNG')
 # if save_changes != None:
