@@ -10,15 +10,6 @@ def safe_zone():
     time.sleep(1)
     gui.click()
 
-# Pauses when scene freezes
-# def scene_frozen():
-#     not_responding = True
-#     while not_responding == True:
-#         frozen = gui.locateOnScreen('items/not-responding.PNG', confidence=0.9)
-#         if frozen == None:
-#             time.sleep(0.3)
-#             break
-
 # Wait for Project to close
 def wait_close():
     project_closed = False
@@ -44,3 +35,12 @@ def wait_open():
             not_responding = False
             time.sleep(1)
             break
+
+# Pauses when scene freezes
+# def scene_frozen():
+#     not_responding = True
+#     while not_responding == True:
+#         frozen = gui.locateOnScreen('items/not-responding.PNG', confidence=0.9)
+#         if frozen == None:
+#             time.sleep(0.3)
+#             break      
