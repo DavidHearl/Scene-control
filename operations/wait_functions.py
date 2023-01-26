@@ -3,7 +3,9 @@ import pyautogui, time, math
 """ Main Functions """
 # Move Mouse to safe area on the page
 def safe_zone():
-    pyautogui.moveTo(150, 200, duration=1)
+    print("Navigating to safe zone...")
+    print("")
+    pyautogui.moveTo(150, 200, duration=0.75)
     pyautogui.scroll(1000)
     time.sleep(1)
     pyautogui.click()
@@ -33,12 +35,4 @@ def wait_open():
             not_responding = False
             time.sleep(1)
             break
-
-# Pauses when scene freezes
-# def scene_frozen():
-#     not_responding = True
-#     while not_responding == True:
-#         frozen = gui.locateOnScreen('items/not-responding.PNG', confidence=0.9)
-#         if frozen == None:
-#             time.sleep(0.3)
-#             break      
+        

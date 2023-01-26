@@ -1,34 +1,22 @@
-from operations.start_operation import *
-from operations.close_project import *
+from operations.start_operations import *
+from operations.scene_functions import *
+from operations.wait_functions import *
 
+# Command to access cmd
+# cd ../../local storage/github/scene-control
+
+# Startup Proceedure
 startup()
 create_arrays()
-
+check_scene_open()
 close_project()
+save_changes()
+wait_close()
+choose_directory()
+safe_zone()
+load_projects()
 
-
-
-
-# save_changes = pyautogui.locateOnScreen('items/save-changes.PNG')
-# if save_changes != None:
-#     pyautogui.locateCenterOnScreen('items/yes.PNG')
-#     pyautogui.click()
-#     time.sleep(1)
-#     pyautogui.locateCenterOnScreen('items/ok-button.PNG')
-#     pyautogui.click()
-#     pyautogui.locateCenterOnScreen('items/ok-button.PNG')
-#     pyautogui.click()
-
-# wait_close()
-# safe_zone()
-
-# # Check to see if the project is empty
-# no_projects = pyautogui.locateOnScreen('items/no-projects.PNG')
-# if no_projects == None:
-#     more_files = True
-# else:
-#     print("No folders present")
-#     exit
+print("All operations complete")
 
 # # Count Number of files
 # while more_files != False:
