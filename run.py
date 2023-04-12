@@ -1,22 +1,24 @@
+from tkinter.filedialog import *
+
 from operations.start_operations import *
 from operations.scene_functions import *
 from operations.wait_functions import *
 
-# Command to access cmd
+# Command to navigate to location in cmd
 # cd ../../local storage/github/scene-control
 
 # Startup Proceedure
 startup()
-create_arrays()
-check_scene_open()
-close_project()
-save_changes()
-wait_close()
-choose_directory()
-safe_zone()
-load_projects()
+folder_setup()
 
-print("All operations complete")
+# check_scene_open()
+# close_project()
+# save_changes()
+# wait_close()
+# safe_zone()
+# load_projects()
+
+# print("All operations complete")
 
 # # Count Number of files
 # while more_files != False:

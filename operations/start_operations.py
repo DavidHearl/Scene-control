@@ -1,8 +1,7 @@
-import pyautogui, time, tkinter
+import pyautogui, time
 import tkinter
 import os
-
-from tkinter import filedialog, messagebox
+import json
 
 def startup():
     print("")
@@ -10,48 +9,49 @@ def startup():
     print("-------------- Welcome to Scene Control ---------------")
     print("-------------------------------------------------------")
     print("")
-    multiple_screens = input("Are you using multiple Screens ? (y/n):")
-    print("")
-    remote_access = input("Are you connected remotely ? (y/n):")
-    print("")
+    
 
-    if multiple_screens == "y" and remote_access == "y":
-        startup.setup = 1
-    elif multiple_screens == "n" and remote_access == "y":
-        startup.setup = 2
-    elif multiple_screens == "y" and remote_access == "n":
-        startup.setup = 3
-    else:
-        startup.setup = 4
-
-    print("Setup Version:", startup.setup)
+def folder_setup():
+    print("Please Choose the directory that contains the scans")
     print("")
 
-def choose_directory():
-    if startup.setup == 1:
-        print("TBE")
-        print("")
-    elif startup.setup == 2:
-        print("TBE")
-        print("")
-    elif startup.setup == 3:
-        print("TBE")
-        print("")
-    else:
-        directory = tkinter.filedialog.askdirectory()
-        print("This is the selected location", scan_location)
-        print("")
-        print("These are the files present in the directory", os.listdir(scan_location))
-        print("")
+    # Ask user to Select Directory
+    directory = tkinter.filedialog.askdirectory()
+    print(directory)
+    print("")
 
-def create_arrays():
-    """ Create array and assign default values """
-    scans = 0
-    processed = []
-    registered = []
-    aligned = []
-    point_cloud = []
-    exported = []
+    # Create an array
+    outer_keys = []
+    inner_keys = [
+        'imported',
+        'processed',
+        'registered',
+        'aligned',
+        'point_cloud',
+        'clean_up',
+        'exported',
+        'uploaded'
+    ]
+    inner_value = False
+
+    # List all files in the directory
+    directory_content = os.listdir(directory)
+    print("Number of items : ", len(directory_content))
+    print("")
+    for x in directory_content:
+        outer_keys.append(x)
+
+    # Create a nested dictionary
+    nested_dict = {
+        outer_key: {
+            inner_key: inner_value
+            for inner_key in inner_keys
+        }
+        for outer_key in outer_keys
+    }
+    
+    # Print it to console in a readable format
+    print(json.dumps(nested_dict, indent=4))
 
 def check_scene_open():
     scene_open = pyautogui.locateCenterOnScreen("./items/scene-icon.PNG", confidence=0.9)
