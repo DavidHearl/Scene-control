@@ -9,6 +9,7 @@ from operations.wait_functions import *
 
 # Startup Proceedure
 startup()
+check_scene_open()
 folder_setup()
 
 # check_scene_open()

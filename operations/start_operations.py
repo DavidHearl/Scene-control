@@ -4,32 +4,65 @@ import os
 import json
 
 def startup():
+    # Introduction
     print("")
-    print("-------------------------------------------------------")
-    print("-------------- Welcome to Scene Control ---------------")
-    print("-------------------------------------------------------")
+    print("----------------------------------------------------------")
+    print("-----------Welcome to Automatic Scan Processing-----------")
+    print("----------------------------------------------------------")
     print("")
-    
+
+    # # Get screen size
+    # print(pyautogui.size())
+    # print("")
+
+    # # Calculate position for mouse test
+    # screen_width, screen_height = pyautogui.size()
+    # positionX0, positionY0 = (screen_width - screen_width + 100), (screen_height - screen_height + 100)
+    # positionX1, positionY1 = (screen_width - 100), (screen_height - screen_height + 100)
+    # positionX2, positionY2 = (screen_width - 100), (screen_height - 100)
+    # positionX3, positionY3 = (screen_width - screen_width + 100), (screen_height - 100)
+
+    # # Loop though positions
+    # print("Moving Mouse to", positionX0,",", positionY0, "...")
+    # pyautogui.moveTo(positionX0, positionY0, duration=0.5)
+
+    # print("Moving Mouse to", positionX1,",", positionY1, "...")
+    # pyautogui.moveTo(positionX1, positionY1, duration=0.5)
+
+    # print("Moving Mouse to", positionX2,",", positionY2, "...")
+    # pyautogui.moveTo(positionX2, positionY2, duration=0.5)
+
+    # print("Moving Mouse to", positionX3,",", positionY3, "...")
+    # pyautogui.moveTo(positionX3, positionY3, duration=0.5)
+
+    # print("")
+    # print("Did the mouse move on the correct screen ? (Y/N)")
+
+    # print("")
+    # main_screen = input()
+
 
 def folder_setup():
     print("Please Choose the directory that contains the scans")
+    time.sleep(0.2)
     print("")
 
     # Ask user to Select Directory
     directory = tkinter.filedialog.askdirectory()
-    print(directory)
+    print("Selected Directory:", directory)
+    time.sleep(1)
     print("")
 
     # Create an array
     outer_keys = []
     inner_keys = [
-        'imported',
         'processed',
         'registered',
         'aligned',
         'point_cloud',
         'clean_up',
-        'exported',
+        'rcp_export',
+        'rcs_export',
         'uploaded'
     ]
     inner_value = False
@@ -50,10 +83,17 @@ def folder_setup():
         for outer_key in outer_keys
     }
     
+    # nested_dict["adagio"]["processed"] = True
+
     # Print it to console in a readable format
     print(json.dumps(nested_dict, indent=4))
 
 def check_scene_open():
+    print("Checking if SCENE is open...")
+    print("")
+
+    time.sleep(0.5)
+
     scene_open = pyautogui.locateCenterOnScreen("./items/scene-icon.PNG", confidence=0.9)
     if scene_open == None:
         print("Scene is NOT open, opening now...")
