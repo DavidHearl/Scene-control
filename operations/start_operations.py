@@ -4,6 +4,11 @@ import os
 import json
 import psutil
 import subprocess
+import pytesseract
+import pyautogui
+
+from PIL import Image
+from tqdm import tqdm
 
 
 class InitialProcedures:
@@ -33,6 +38,7 @@ class InitialProcedures:
             time.sleep(0.2)
             print(self.operations[i])
 
+        # Adds a space to the terminal
         print("")
 
         # Takes input from user, doesn't allow wrong input
@@ -68,13 +74,16 @@ class InitialProcedures:
         for proc in psutil.process_iter(['name']):
             if proc.info['name'] == program_name:
                 print("The program is open.")
+                print("")
                 return
 
         print("The program is not open. Opening SCENE...")
+        print("")
         try:
             subprocess.Popen("C:\Program Files\FARO\SCENE\SCENE.exe")
         except Exception as e:
             print("Failed to open SCENE:", str(e))
+            print("")
             return
 
         # Wait for SCENE to open
@@ -88,18 +97,24 @@ class InitialProcedures:
             # Check if SCENE is now open
             for proc in psutil.process_iter(['name']):
                 if proc.info['name'] == program_name:
-                    time.sleep(2)  # Add a slight delay to the open confirmation message.
+                    for _ in tqdm(range(100), desc="Loading", unit="%", ncols=80):
+                        time.sleep(0.05)
+                    print("")
                     print("SCENE has been opened successfully.")
+                    print("")
                     return
 
         print("Failed to open SCENE. Please check the installation.")
+        print("")
 
     def folder_setup(self):
         # Ask user to Select Directory
+        print("Using the dialog box, please select the folder containing the scans")
+        print("")
         directory = tkinter.filedialog.askdirectory()
         print("Selected Directory:", directory)
-        time.sleep(1)
         print("")
+        time.sleep(1)
 
         # Create an array
         outer_keys = []
@@ -131,4 +146,21 @@ class InitialProcedures:
             for outer_key in outer_keys
         }
 
+        # Print nested directory
         print(json.dumps(nested_dict, indent=4))
+
+    # Set Tesseract path (replace with the correct path)
+    pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
+
+    def search_and_close(self):
+        screenshot = pyautogui.screenshot()  # Capture screenshot
+        screenshot.show()
+        text = pytesseract.image_to_string(screenshot)  # Perform OCR on the screenshot
+
+        target_text = "Updates and News"
+
+        if target_text in text:
+            print(f"Found '{target_text}' on the screen")
+            # Add code to find "Close" and move mouse to it and click
+        else:
+            print(f"'{target_text}' not found on the screen")
