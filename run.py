@@ -1,20 +1,22 @@
+"""
+Main file to run all the operations of automatic processing
+in FARO SCENE software.
+"""
+
 from tkinter.filedialog import *
 from operations.start_operations import *
 
 # Create an instance of the StartOperations class
-operations_instance = InitialProceedures()
+operations_instance = InitialProcedures()
 
-# Call the startup function on the instance
+# Call the instances
 operations_instance.startup()
+operations_instance.check_scene_open()
+# operations_instance.folder_setup()
 
-
-# from operations.scene_functions import *
-# from operations.wait_functions import *
 
 # Command to navigate to location in cmd
 # cd ../../local storage/github/scene-control
-
-
 
 
 # check_scene_open()

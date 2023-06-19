@@ -1,10 +1,12 @@
-import pyautogui
 import time
 import tkinter
 import os
 import json
+import psutil
+import subprocess
 
-class InitialProceedures:
+
+class InitialProcedures:
     def __init__(self):
         self.operations = [
             "1: Processing & Registration",
@@ -28,7 +30,7 @@ class InitialProceedures:
 
         # Prints list with a small delay
         for i in range(6):
-            time.sleep(0.3)
+            time.sleep(0.2)
             print(self.operations[i])
 
         print("")
@@ -52,6 +54,7 @@ class InitialProceedures:
         print("You have selected operation", self.operations[operation_number - 1])
         print("")
         print("If this is not correct, press CTRL + C and restart the program")
+        print("")
 
         return operation_number
 
@@ -61,30 +64,35 @@ class InitialProceedures:
 
         time.sleep(0.5)
 
-        scene_open = pyautogui.locateCenterOnScreen("./items/scene-icon.PNG", confidence=0.9)
-        if scene_open is None:
-            print("Scene is NOT open, opening now...")
-            print("")
-            windows_search = pyautogui.locateCenterOnScreen("items/windows-search.PNG")
-            pyautogui.moveTo(windows_search, duration=0.5)
-            pyautogui.click()
-            pyautogui.write('scene', interval=0.1)
-            pyautogui.hotkey('enter')
-            close_button = None
-            while close_button is None:
-                print("Waiting for Scene to load...")
-                print("")
-                time.sleep(3)
-                close_button = pyautogui.locateCenterOnScreen("items/close.PNG")
-                if close_button is not None:
-                    break
+        program_name = 'SCENE.exe'
+        for proc in psutil.process_iter(['name']):
+            if proc.info['name'] == program_name:
+                print("The program is open.")
+                return
 
-            close = pyautogui.locateCenterOnScreen("items/close.PNG", confidence=0.9)
-            pyautogui.moveTo(close, duration=1)
-            pyautogui.click()
-        else:
-            print("Scene is already open...")
-            print("")
+        print("The program is not open. Opening SCENE...")
+        try:
+            subprocess.Popen("C:\Program Files\FARO\SCENE\SCENE.exe")
+        except Exception as e:
+            print("Failed to open SCENE:", str(e))
+            return
+
+        # Wait for SCENE to open
+        max_attempts = 10
+        delay_between_attempts = 1
+        attempts = 0
+        while attempts < max_attempts:
+            time.sleep(delay_between_attempts)
+            attempts += 1
+
+            # Check if SCENE is now open
+            for proc in psutil.process_iter(['name']):
+                if proc.info['name'] == program_name:
+                    time.sleep(2)  # Add a slight delay to the open confirmation message.
+                    print("SCENE has been opened successfully.")
+                    return
+
+        print("Failed to open SCENE. Please check the installation.")
 
     def folder_setup(self):
         # Ask user to Select Directory
@@ -99,10 +107,10 @@ class InitialProceedures:
             'processed',
             'registered',
             'aligned',
-            'point_cloud',
             'clean_up',
-            'rcp_export',
-            'rcs_export',
+            'point_cloud_creation',
+            'point_cloud_export',
+            'recap_export',
             'uploaded'
         ]
         inner_value = False
