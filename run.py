@@ -1,16 +1,24 @@
 from tkinter.filedialog import *
-
 from operations.start_operations import *
-from operations.scene_functions import *
-from operations.wait_functions import *
+
+# Create an instance of the StartOperations class
+operations_instance = InitialProceedures()
+
+# Call the startup function on the instance
+operations_instance.startup()
+
+
+# from operations.scene_functions import *
+# from operations.wait_functions import *
 
 # Command to navigate to location in cmd
 # cd ../../local storage/github/scene-control
 
-# Startup Proceedure
-startup()
-check_scene_open()
-folder_setup()
+
+
+
+# check_scene_open()
+# folder_setup()
 
 # check_scene_open()
 # close_project()
