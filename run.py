@@ -10,9 +10,9 @@ from operations.start_operations import *
 operations_instance = InitialProcedures()
 
 # Call the instances
-# operations_instance.startup()
-# operations_instance.check_scene_open()
-# operations_instance.folder_setup()
+operations_instance.startup()
+operations_instance.open_scene()
+operations_instance.folder_setup()
 operations_instance.search_and_close()
 
 # close_project()

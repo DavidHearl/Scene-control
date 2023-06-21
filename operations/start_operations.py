@@ -6,13 +6,12 @@ import psutil
 import subprocess
 import pytesseract
 import pyautogui
-
-from PIL import Image
-from tqdm import tqdm
+import itertools
 
 
 class InitialProcedures:
     def __init__(self):
+        # Processing options to choose from
         self.operations = [
             "1: Processing & Registration",
             "2: Overview Map, Point Cloud Creation & Project Export",
@@ -21,6 +20,9 @@ class InitialProcedures:
             "5: Overview Map & Point Cloud Creation",
             "6: Recap Project Export"
         ]
+
+        # Set Tesseract path
+        pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
 
     def startup(self):
         # Introduction
@@ -33,7 +35,7 @@ class InitialProcedures:
         print("Select which operation you would like to run ?")
         print("")
 
-        # Prints list with a small delay
+        # Prints list of operations with a small delay
         for i in range(6):
             time.sleep(0.2)
             print(self.operations[i])
@@ -45,7 +47,6 @@ class InitialProcedures:
         while True:
             print("Please enter the operation number you wish to run:")
             operation_result = input()
-
             if operation_result.isdigit():
                 operation_number = int(operation_result)
                 if 1 <= operation_number <= 6:
@@ -55,6 +56,8 @@ class InitialProcedures:
             else:
                 print("Invalid input. Please enter a number between 1 and 6.")
 
+        return operation_number
+
         # Prints confirmation of selected choice
         print("")
         print("You have selected operation", self.operations[operation_number - 1])
@@ -62,48 +65,63 @@ class InitialProcedures:
         print("If this is not correct, press CTRL + C and restart the program")
         print("")
 
-        return operation_number
-
-    def check_scene_open(self):
+    def open_scene(self):
+        # Prints statement with small delay
         print("Checking if SCENE is open...")
+        time.sleep(0.5)
         print("")
 
-        time.sleep(0.5)
-
+        # Program name variable
         program_name = 'SCENE.exe'
+
+        # Checks to see if the program is open
         for proc in psutil.process_iter(['name']):
             if proc.info['name'] == program_name:
                 print("The program is open.")
                 print("")
                 return
-
         print("The program is not open. Opening SCENE...")
         print("")
+        # If the program is not open then open it.
         try:
-            subprocess.Popen("C:\Program Files\FARO\SCENE\SCENE.exe")
+            subprocess.Popen('C:\Program Files\FARO\SCENE\SCENE.exe')
         except Exception as e:
             print("Failed to open SCENE:", str(e))
             print("")
             return
 
-        # Wait for SCENE to open
+        # Keep checking if the program is open
         max_attempts = 10
         delay_between_attempts = 1
         attempts = 0
+
+        # Define the spinning icons
+        spinning_icons = ['-', '\\', '|', '/']
+
+        # Loop through attempts
         while attempts < max_attempts:
             time.sleep(delay_between_attempts)
             attempts += 1
 
-            # Check if SCENE is now open
+            # Check if the program is open
             for proc in psutil.process_iter(['name']):
                 if proc.info['name'] == program_name:
-                    for _ in tqdm(range(100), desc="Loading", unit="%", ncols=80):
+                    # Create an iterator that cycles through the spinning icons
+                    icon_cycle = itertools.cycle(spinning_icons)
+
+                    # Loop through iterations
+                    for _ in range(150):
+                        # Get the next spinning icon from the iterator
+                        spinning_icon = next(icon_cycle)
+                        loading_message = f"Loading {spinning_icon}"
+                        print(loading_message, end='\r')
                         time.sleep(0.05)
-                    print("")
+
                     print("SCENE has been opened successfully.")
                     print("")
                     return
 
+        # Print error message
         print("Failed to open SCENE. Please check the installation.")
         print("")
 
@@ -147,20 +165,35 @@ class InitialProcedures:
         }
 
         # Print nested directory
-        print(json.dumps(nested_dict, indent=4))
-
-    # Set Tesseract path (replace with the correct path)
-    pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
+        # print(json.dumps(nested_dict, indent=4))
 
     def search_and_close(self):
-        screenshot = pyautogui.screenshot()  # Capture screenshot
-        screenshot.show()
-        text = pytesseract.image_to_string(screenshot)  # Perform OCR on the screenshot
+        # Capture screenshot
+        screenshot = pyautogui.screenshot()
+        # Perform OCR on the screenshot
+        text = pytesseract.image_to_string(screenshot)
 
         target_text = "Updates and News"
 
         if target_text in text:
             print(f"Found '{target_text}' on the screen")
-            # Add code to find "Close" and move mouse to it and click
+
+            # Find the position of the text "Close" using OCR
+            try:
+                text_location = pyautogui.locateOnScreen('items/close.png')
+                if text_location is not None:
+                    # Get the center coordinates of the text "Close"
+                    text_position = pyautogui.center(text_location)
+                    # Move the mouse to the position of the text "Close"
+                    pyautogui.moveTo(text_position, duration="0.5")
+                    # Perform a click action
+                    pyautogui.click()
+                    print("Clicked on 'Close'")
+                    print("")
+                else:
+                    print("'Close' button not found")
+            except Exception as e:
+                print("Error occurred while locating 'Close' button:", str(e))
+
         else:
             print(f"'{target_text}' not found on the screen")
