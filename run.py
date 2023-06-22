@@ -12,10 +12,12 @@ operations_instance = InitialProcedures()
 # Call the instances
 operations_instance.startup()
 operations_instance.open_scene()
-operations_instance.folder_setup()
 operations_instance.search_and_close()
+operations_instance.set_database()
+operations_instance.validate_database()
 
 # close_project()
+# save_changes()
 # save_changes()
 # wait_close()
 # safe_zone()

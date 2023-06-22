@@ -21,6 +21,9 @@ class InitialProcedures:
             "6: Recap Project Export"
         ]
 
+        self.sorted_nested_dict = None
+        self.projects = []
+
         # Set Tesseract path
         pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
 
@@ -29,47 +32,41 @@ class InitialProcedures:
         print("")
         print("----------------------------------------------------------")
         print("---------- Welcome to Automatic Scan Processing ----------")
-        print("----------------------------------------------------------")
-        print("")
-
-        print("Select which operation you would like to run ?")
-        print("")
+        print("----------------------------------------------------------", end='\n\n')
+        print("Select which operation you would like to run ?", end='\n\n')
 
         # Prints list of operations with a small delay
         for i in range(6):
-            time.sleep(0.2)
+            time.sleep(0.15)
             print(self.operations[i])
 
         # Adds a space to the terminal
-        print("")
+        print()
 
         # Takes input from user, doesn't allow wrong input
         while True:
-            print("Please enter the operation number you wish to run:")
+            print("Please enter the operation number you wish to run:", end=" ")
             operation_result = input()
+            print()
             if operation_result.isdigit():
                 operation_number = int(operation_result)
                 if 1 <= operation_number <= 6:
                     break
                 else:
-                    print("Invalid input. Please enter a number between 1 and 6.")
+                    print("Invalid input. Please enter a number between 1 and 6.", end='\n\n')
             else:
-                print("Invalid input. Please enter a number between 1 and 6.")
+                print("Invalid input. Please enter a number between 1 and 6.", end='\n\n')
 
         return operation_number
 
         # Prints confirmation of selected choice
-        print("")
-        print("You have selected operation", self.operations[operation_number - 1])
-        print("")
-        print("If this is not correct, press CTRL + C and restart the program")
-        print("")
+        print("You have selected operation", self.operations[operation_number - 1], end='\n\n')
+        print("If this is not correct, press CTRL + C and restart the program", end='\n\n')
 
     def open_scene(self):
         # Prints statement with small delay
-        print("Checking if SCENE is open...")
+        print("Checking if SCENE is open...", end='\n\n')
         time.sleep(0.5)
-        print("")
 
         # Program name variable
         program_name = 'SCENE.exe'
@@ -77,17 +74,14 @@ class InitialProcedures:
         # Checks to see if the program is open
         for proc in psutil.process_iter(['name']):
             if proc.info['name'] == program_name:
-                print("The program is open.")
-                print("")
+                print("The program is open.", end='\n\n')
                 return
-        print("The program is not open. Opening SCENE...")
-        print("")
+        print("The program is not open. Opening SCENE...", end='\n\n')
         # If the program is not open then open it.
         try:
             subprocess.Popen('C:\Program Files\FARO\SCENE\SCENE.exe')
         except Exception as e:
-            print("Failed to open SCENE:", str(e))
-            print("")
+            print("Failed to open SCENE:", str(e), end='\n\n')
             return
 
         # Keep checking if the program is open
@@ -117,55 +111,11 @@ class InitialProcedures:
                         print(loading_message, end='\r')
                         time.sleep(0.05)
 
-                    print("SCENE has been opened successfully.")
-                    print("")
+                    print("SCENE has been opened successfully.", end='\n\n')
                     return
 
         # Print error message
-        print("Failed to open SCENE. Please check the installation.")
-        print("")
-
-    def folder_setup(self):
-        # Ask user to Select Directory
-        print("Using the dialog box, please select the folder containing the scans")
-        print("")
-        directory = tkinter.filedialog.askdirectory()
-        print("Selected Directory:", directory)
-        print("")
-        time.sleep(1)
-
-        # Create an array
-        outer_keys = []
-        inner_keys = [
-            'processed',
-            'registered',
-            'aligned',
-            'clean_up',
-            'point_cloud_creation',
-            'point_cloud_export',
-            'recap_export',
-            'uploaded'
-        ]
-        inner_value = False
-
-        # List all files in the directory
-        directory_content = os.listdir(directory)
-        print("Number of items: ", len(directory_content))
-        print("")
-        for x in directory_content:
-            outer_keys.append(x)
-
-        # Create a nested dictionary
-        nested_dict = {
-            outer_key: {
-                inner_key: inner_value
-                for inner_key in inner_keys
-            }
-            for outer_key in outer_keys
-        }
-
-        # Print nested directory
-        # print(json.dumps(nested_dict, indent=4))
+        print("Failed to open SCENE. Please check the installation.", end='\n\n')
 
     def search_and_close(self):
         # Capture screenshot
@@ -176,24 +126,142 @@ class InitialProcedures:
         target_text = "Updates and News"
 
         if target_text in text:
-            print(f"Found '{target_text}' on the screen")
+            print(f"Found '{target_text}' on the screen", end='\n\n')
 
             # Find the position of the text "Close" using OCR
             try:
-                text_location = pyautogui.locateOnScreen('items/close.png')
+                text_location = pyautogui.locateOnScreen('./items/close.png')
                 if text_location is not None:
                     # Get the center coordinates of the text "Close"
                     text_position = pyautogui.center(text_location)
                     # Move the mouse to the position of the text "Close"
-                    pyautogui.moveTo(text_position, duration="0.5")
+                    pyautogui.moveTo(text_position, duration=0.5)
                     # Perform a click action
                     pyautogui.click()
-                    print("Clicked on 'Close'")
-                    print("")
+                    print("Clicked on 'Close'", end='\n\n')
                 else:
-                    print("'Close' button not found")
+                    print("'Close' button not found", end='\n\n')
             except Exception as e:
-                print("Error occurred while locating 'Close' button:", str(e))
+                print("Error occurred while locating 'Close' button:", str(e), end='\n\n')
 
         else:
-            print(f"'{target_text}' not found on the screen")
+            print(f"'{target_text}' was not found on the screen", end='\n\n')
+
+    def set_database(self):
+        # Ask user to Select Directory
+        print("Using the dialog box, please select the folder containing the scans", end='\n\n')
+        directory = tkinter.filedialog.askdirectory()
+        print("Selected Directory:", directory, end='\n\n')
+        time.sleep(1.5)
+
+        # Create an array
+        inner_keys = [
+            'processed',
+            'registered',
+            'aligned',
+            'clean_up',
+            'point_cloud',
+            'point_cloud_export',
+            'recap_export',
+            'uploaded'
+        ]
+        inner_value = False
+
+        # List all files in the directory
+        directory_content = os.listdir(directory)
+        print("Number of items: ", len(directory_content), end='\n\n')
+        for x in directory_content:
+            self.projects.append(x)
+
+        # Create a nested dictionary
+        nested_dict = {
+            project: {
+                inner_key: inner_value
+                for inner_key in inner_keys
+            }
+            for project in self.projects
+
+        }
+
+        # Sort the outer keys alphabetically
+        sorted_projects = sorted(nested_dict.keys())
+
+        # Create a new dictionary with sorted outer keys
+        self.sorted_nested_dict = {
+            project: nested_dict[project]
+            for project in sorted_projects
+        }
+
+        # Print the sorted nested directory
+        # print(json.dumps(self.sorted_nested_dict, indent=4))
+
+    def validate_database(self):
+        # Move to and click on the project
+        pyautogui.moveTo(600, 390, duration=1)
+        pyautogui.click()
+
+        # Wait while project opens
+        print('Waiting for project to open...')
+        while True:
+            # Capture the screen
+            screenshot = pyautogui.screenshot()
+
+            # Check if the image is present on the screen
+            if pyautogui.locateOnScreen('./items/close-project.png') is not None:
+                print("Image found!")
+                break
+
+            # Wait for 1 second
+            time.sleep(1)
+
+        # Define location of colored band
+        location_x = [380, 620, 850]
+        location_y = 560
+
+        # Define Colors to search for: Green, Orange, Red, Gray
+        colors = [(0, 153, 105), (225, 160, 0), (220, 17, 28), (240, 240, 240)]
+
+        # Search locations
+        processed_color = pyautogui.pixel(location_x[0], location_y)
+        registration_color = pyautogui.pixel(location_x[1], location_y)
+        point_cloud_color = pyautogui.pixel(location_x[2], location_y)
+
+        if processed_color == colors[0]:  # Check processed status
+            self.sorted_nested_dict[next(iter(self.sorted_nested_dict))]["processed"] = True
+
+        if registration_color == colors[0]:  # Check registration status
+            self.sorted_nested_dict[next(iter(self.sorted_nested_dict))]["registered"] = True
+
+        if point_cloud_color == colors[0]:  # Check point cloud status
+            self.sorted_nested_dict[next(iter(self.sorted_nested_dict))]["point_cloud"] = True
+
+        # Find and click close project button
+        image_location = pyautogui.locateOnScreen('./items/close-project.png')
+        if image_location is not None:
+            image_center = pyautogui.center(image_location)
+            pyautogui.click(image_center)
+            print("Image clicked!")
+        else:
+            print("Image not found!")
+
+        # Wait while project closes
+        while True:
+            screen_text = pyautogui.screenshot()
+            extracted_text = pytesseract.image_to_string(screen_text)
+            text = "Projects Overview"
+            if text in extracted_text:
+                print("Text found:", text)
+                break
+
+            # Wait for 1 second
+            time.sleep(1)
+
+        # Print list with updated values
+        sorted_values = list(self.sorted_nested_dict.values())
+        for project, values in zip(self.sorted_nested_dict.keys(), sorted_values):
+            print("Project:", project, end=" ")
+            print(json.dumps(values, indent=4), end='\n\n')
+            time.sleep(0.2)
+
+        # for i in range(11):
+        #     pyautogui.move(0, 55, duration=1)
