@@ -16,12 +16,10 @@ operations_instance.search_and_close()
 operations_instance.set_database()
 operations_instance.validate_database()
 
-# close_project()
-# save_changes()
-# save_changes()
-# wait_close()
-# safe_zone()
-# load_projects()
+
+
+
+
 
 # print("All operations complete")
 
