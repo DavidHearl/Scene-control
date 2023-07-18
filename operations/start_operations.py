@@ -148,23 +148,27 @@ class InitialProcedures:
             print(f"'{target_text}' was not found on the screen", end='\n\n')
 
     def set_database(self):
-        # Ask user to Select Directory
-        print("Using the dialog box, please select the folder containing the scans", end='\n\n')
-        directory = tkinter.filedialog.askdirectory()
-        print("Selected Directory:", directory, end='\n\n')
-        time.sleep(1.5)
+        while True:        
+            # Verify if the path is correct
+            user_input = input("Is the current file path correct? (y/n): ")
+            print()
+            if user_input.lower() == 'y':
+                # print("Obtaining current file path, please wait...", end='\n\n')
+                # directory = "E:/Caribbean Princess - Processed/"
+                # print("Selected Directory:", directory, end='\n\n')
+                # time.sleep(1)
+                break
+            else:
+                # Ask user to select a directory
+                print("Using the dialog box, please select the folder containing the scans", end='\n\n')
+                directory = tkinter.filedialog.askdirectory()
+                print("Selected Directory:", directory, end='\n\n')
+                time.sleep(1.5)
 
         # Create an array
-        inner_keys = [
-            'processed',
-            'registered',
-            'aligned',
-            'clean_up',
-            'point_cloud',
-            'point_cloud_export',
-            'recap_export',
-            'uploaded'
-        ]
+        inner_keys = ['processed', 'registered', 'aligned', 'clean_up',
+            'point_cloud', 'point_cloud_export', 'recap_export', 'uploaded']
+
         inner_value = False
 
         # List all files in the directory
@@ -180,7 +184,6 @@ class InitialProcedures:
                 for inner_key in inner_keys
             }
             for project in self.projects
-
         }
 
         # Sort the outer keys alphabetically
@@ -192,34 +195,27 @@ class InitialProcedures:
             for project in sorted_projects
         }
 
-        # Print the sorted nested directory
-        # print(json.dumps(self.sorted_nested_dict, indent=4))
-
     def validate_database(self):
+    # Define location of colored band
+    location_x = [380, 620, 850]
+    location_y = 560
+
+    # Define Colors to search for: Green, Orange, Red, Gray
+    colors = [(0, 153, 105), (225, 160, 0), (220, 17, 28), (240, 240, 240)]
+
+    for project_number in range(12):
+        y_coords = 400 + (project_number * 55)
+
         # Move to and click on the project
-        pyautogui.moveTo(600, 390, duration=1)
+        pyautogui.moveTo(400, y_coords, duration=1)
         pyautogui.click()
 
         # Wait while project opens
-        print('Waiting for project to open...')
-        while True:
-            # Capture the screen
-            screenshot = pyautogui.screenshot()
-
-            # Check if the image is present on the screen
-            if pyautogui.locateOnScreen('./items/close-project.png') is not None:
-                print("Image found!")
-                break
-
-            # Wait for 1 second
+        print('Waiting for project to open...', end='\n\n')
+        while pyautogui.locateOnScreen('./items/close-project.png') is None:
             time.sleep(1)
 
-        # Define location of colored band
-        location_x = [380, 620, 850]
-        location_y = 560
-
-        # Define Colors to search for: Green, Orange, Red, Gray
-        colors = [(0, 153, 105), (225, 160, 0), (220, 17, 28), (240, 240, 240)]
+        print("Close Project Open", end='\n\n')
 
         # Search locations
         processed_color = pyautogui.pixel(location_x[0], location_y)
@@ -239,29 +235,22 @@ class InitialProcedures:
         image_location = pyautogui.locateOnScreen('./items/close-project.png')
         if image_location is not None:
             image_center = pyautogui.center(image_location)
+            time.sleep(0.5)
             pyautogui.click(image_center)
-            print("Image clicked!")
+            print("Image clicked!", end='\n\n')
         else:
-            print("Image not found!")
+            print("Image not found!", end='\n\n')
 
         # Wait while project closes
-        while True:
-            screen_text = pyautogui.screenshot()
-            extracted_text = pytesseract.image_to_string(screen_text)
-            text = "Projects Overview"
-            if text in extracted_text:
-                print("Text found:", text)
-                break
-
-            # Wait for 1 second
+        while "Projects Overview" not in pytesseract.image_to_string(pyautogui.screenshot()):
             time.sleep(1)
 
-        # Print list with updated values
-        sorted_values = list(self.sorted_nested_dict.values())
-        for project, values in zip(self.sorted_nested_dict.keys(), sorted_values):
-            print("Project:", project, end=" ")
-            print(json.dumps(values, indent=4), end='\n\n')
-            time.sleep(0.2)
+        print("Text found: Projects Overview")
+        time.sleep(0.2)
 
-        # for i in range(11):
-        #     pyautogui.move(0, 55, duration=1)
+    # Print list with updated values
+    sorted_values = list(self.sorted_nested_dict.values())
+    for project, values in zip(self.sorted_nested_dict.keys(), sorted_values):
+        print("Project:", project, end=" ")
+        print(json.dumps(values, indent=4), end='\n\n')
+        time.sleep(0.2)
