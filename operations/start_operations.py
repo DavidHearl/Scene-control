@@ -147,100 +147,100 @@ class InitialProcedures:
         else:
             print(f"'{target_text}' was not found on the screen", end='\n\n')
 
-def set_database(self):
-    while True:
-        user_input = input("Is the current file path correct? (y/n): ")
-        print()
-        if user_input.lower() == 'y':
-            # print("Obtaining current file path, please wait...", end='\n\n')
-                # directory = "E:/Caribbean Princess - Processed/"
-                # print("Selected Directory:", directory, end='\n\n')
-                # time.sleep(1)
-            break
-        else:
-            print("Using the dialog box, please select the folder containing the scans", end='\n\n')
-            directory = tkinter.filedialog.askdirectory()
-            print("Selected Directory:", directory, end='\n\n')
-            time.sleep(1.5)
+    def set_database(self):
+        while True:
+            user_input = input("Is the current file path correct? (y/n): ")
+            print()
+            if user_input.lower() == 'y':
+                # print("Obtaining current file path, please wait...", end='\n\n')
+                directory = "E:/Caribbean Princess - Processed/"
+                print("Selected Directory:", directory, end='\n\n')
+                time.sleep(1)
+                break
+            else:
+                print("Using the dialog box, please select the folder containing the scans", end='\n\n')
+                directory = tkinter.filedialog.askdirectory()
+                print("Selected Directory:", directory, end='\n\n')
+                time.sleep(1.5)
 
-    # Create an array
-    inner_keys = ['processed', 'registered', 'aligned', 'clean_up',
-                  'point_cloud', 'point_cloud_export', 'recap_export', 'uploaded']
-    inner_value = False
+        # Create an array
+        inner_keys = ['processed', 'registered', 'aligned', 'clean_up',
+                    'point_cloud', 'point_cloud_export', 'recap_export', 'uploaded']
+        inner_value = False
 
-    # List all files in the directory
-    directory_content = os.listdir(directory)
-    print("Number of items: ", len(directory_content), end='\n\n')
+        # List all files in the directory
+        directory_content = os.listdir(directory)
+        print("Number of items: ", len(directory_content), end='\n\n')
 
-    # Create a nested dictionary
-    nested_dict = {
-        project: {inner_key: inner_value for inner_key in inner_keys}
-        for project in directory_content
-    }
+        # Create a nested dictionary
+        nested_dict = {
+            project: {inner_key: inner_value for inner_key in inner_keys}
+            for project in directory_content
+        }
 
-    # Sort the outer keys alphabetically
-    sorted_projects = sorted(nested_dict.keys())
+        # Sort the outer keys alphabetically
+        sorted_projects = sorted(nested_dict.keys())
 
-    # Create a new dictionary with sorted outer keys
-    self.sorted_nested_dict = {project: nested_dict[project] for project in sorted_projects}
+        # Create a new dictionary with sorted outer keys
+        self.sorted_nested_dict = {project: nested_dict[project] for project in sorted_projects}
 
 
-def validate_database(self):
-    # Define location of colored band
-    location_x = [380, 620, 850]
-    location_y = 560
+    def validate_database(self):
+        # Define location of colored band
+        location_x = [380, 620, 850]
+        location_y = 560
 
-    # Define Colors to search for: Green, Orange, Red, Gray
-    colors = [(0, 153, 105), (225, 160, 0), (220, 17, 28), (240, 240, 240)]
+        # Define Colors to search for: Green, Orange, Red, Gray
+        colors = [(0, 153, 105), (225, 160, 0), (220, 17, 28), (240, 240, 240)]
 
-    for project_number in range(12):
-        y_coords = 400 + (project_number * 55)
-        pyautogui.moveTo(400, y_coords, duration=1)
-        pyautogui.click()
+        for project_number in range(12):
+            y_coords = 400 + (project_number * 55)
+            pyautogui.moveTo(400, y_coords, duration=1)
+            pyautogui.click()
 
-        # Wait while project opens
-        print('Waiting for project to open...', end='\n\n')
-        while pyautogui.locateOnScreen('./items/close-project.png') is None:
-            time.sleep(1)
-        print("Close Project Open", end='\n\n')
+            # Wait while project opens
+            print('Waiting for project to open...', end='\n\n')
+            while pyautogui.locateOnScreen('./items/close-project.png') is None:
+                time.sleep(1)
+            print("Close Project Open", end='\n\n')
 
-        # Search locations
-        processed_color = pyautogui.pixel(location_x[0], location_y)
-        registration_color = pyautogui.pixel(location_x[1], location_y)
-        point_cloud_color = pyautogui.pixel(location_x[2], location_y)
+            # Search locations
+            processed_color = pyautogui.pixel(location_x[0], location_y)
+            registration_color = pyautogui.pixel(location_x[1], location_y)
+            point_cloud_color = pyautogui.pixel(location_x[2], location_y)
 
-        # Check processed status
-        current_project = next(iter(self.sorted_nested_dict))
-        if processed_color == colors[0]:
-            self.sorted_nested_dict[current_project]["processed"] = True
+            # Check processed status
+            current_project = next(iter(self.sorted_nested_dict))
+            if processed_color == colors[0]:
+                self.sorted_nested_dict[current_project]["processed"] = True
 
-        # Check registration status
-        if registration_color == colors[0]:
-            self.sorted_nested_dict[current_project]["registered"] = True
+            # Check registration status
+            if registration_color == colors[0]:
+                self.sorted_nested_dict[current_project]["registered"] = True
 
-        # Check point cloud status
-        if point_cloud_color == colors[0]:
-            self.sorted_nested_dict[current_project]["point_cloud"] = True
+            # Check point cloud status
+            if point_cloud_color == colors[0]:
+                self.sorted_nested_dict[current_project]["point_cloud"] = True
 
-        # Find and click close project button
-        image_location = pyautogui.locateOnScreen('./items/close-project.png')
-        if image_location is not None:
-            image_center = pyautogui.center(image_location)
-            time.sleep(0.5)
-            pyautogui.click(image_center)
-            print("Image clicked!", end='\n\n')
-        else:
-            print("Image not found!", end='\n\n')
+            # Find and click close project button
+            image_location = pyautogui.locateOnScreen('./items/close-project.png')
+            if image_location is not None:
+                image_center = pyautogui.center(image_location)
+                time.sleep(0.5)
+                pyautogui.click(image_center)
+                print("Image clicked!", end='\n\n')
+            else:
+                print("Image not found!", end='\n\n')
 
-        # Wait while project closes
-        while "Projects Overview" not in pytesseract.image_to_string(pyautogui.screenshot()):
-            time.sleep(1)
-        print("Text found: Projects Overview")
-        time.sleep(0.2)
+            # Wait while project closes
+            while "Projects Overview" not in pytesseract.image_to_string(pyautogui.screenshot()):
+                time.sleep(1)
+            print("Text found: Projects Overview")
+            time.sleep(0.2)
 
-    # Print list with updated values
-    sorted_values = list(self.sorted_nested_dict.values())
-    for project, values in zip(self.sorted_nested_dict.keys(), sorted_values):
-        print("Project:", project, end=" ")
-        print(json.dumps(values, indent=4), end='\n\n')
-        time.sleep(0.2)
+        # Print list with updated values
+        sorted_values = list(self.sorted_nested_dict.values())
+        for project, values in zip(self.sorted_nested_dict.keys(), sorted_values):
+            print("Project:", project, end=" ")
+            print(json.dumps(values, indent=4), end='\n\n')
+            time.sleep(0.2)
