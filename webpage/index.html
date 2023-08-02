@@ -5,53 +5,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ship and Area Details</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="./style.css">
 </head>
 
 <body>
-    <h1>Ship and Area Details</h1>
-    <div id="ship-details"></div>
-
-    <script>
-        fetch('../data/scan_database.json')
-            .then(response => response.json())
-            .then(data => {
-                const shipDetailsDiv = document.getElementById('ship-details');
-
-                for (const ship in data.ships) {
-                    const shipInfo = data.ships[ship];
-                    const shipName = ship;
-                    const shipNumber = shipInfo.number;
-                    const areas = shipInfo.areas;
-
-                    const shipElement = document.createElement('ul');
-                    const shipNameElement = document.createElement('strong');
-                    shipNameElement.textContent = `${shipName} (Number: ${shipNumber})`;
-                    shipElement.appendChild(shipNameElement);
-
-                    for (const area in areas) {
-                        const areaDetails = areas[area];
-
-                        const areaElement = document.createElement('li');
-                        const areaNameElement = document.createElement('strong');
-                        areaNameElement.textContent = area;
-                        areaElement.appendChild(areaNameElement);
-
-                        const subcategoriesElement = document.createElement('ul');
-                        for (const subcategory in areaDetails) {
-                            const subcategoryElement = document.createElement('li');
-                            subcategoryElement.textContent = `${subcategory}: ${areaDetails[subcategory]}`;
-                            subcategoriesElement.appendChild(subcategoryElement);
-                        }
-
-                        areaElement.appendChild(subcategoriesElement);
-                        shipElement.appendChild(areaElement);
-                    }
-
-                    shipDetailsDiv.appendChild(shipElement);
-                }
-            })
-            .catch(error => console.error('Error fetching JSON:', error));
-    </script>
+    <div class="container mt-4">
+        <h1 class="text-center mb-4">Ship and Area Details</h1>
+        <div id="ship-details"></div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="./script.js"></script>
 </body>
 
 </html>

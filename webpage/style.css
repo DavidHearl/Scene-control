@@ -1,0 +1,46 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #007bff;
+}
+
+.container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.mb-4 {
+    margin-bottom: 1.5rem;
+}
+
+.area {
+    margin-bottom: 0.5rem;
+}
+
+.area-name {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.area-box {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    margin-right: 5px;
+}
+
+.area-box.true {
+    background-color: #28a745;
+}
+
+.area-box.false {
+    background-color: #dc3545;
+}
