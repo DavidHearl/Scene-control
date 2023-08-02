@@ -1,0 +1,54 @@
+{
+    "ships": {
+        "Island Princess": {
+            "number": "1110",
+            "areas": {
+                "Bar & Grill": {
+                    "Imported": true,
+                    "Processed": true,
+                    "Registered": true,
+                    "Alignment": true,
+                    "Clean Up": true,
+                    "Point Cloud": true,
+                    "Exported": true,
+                    "Uploaded": true
+                },
+                "Bayou Bar": {
+                    "Imported": true,
+                    "Processed": true,
+                    "Registered": true,
+                    "Alignment": true,
+                    "Clean Up": true,
+                    "Point Cloud": true,
+                    "Exported": true,
+                    "Uploaded": true
+                }
+            }
+        },
+        "Carribean Princess": {
+            "number": "1112",
+            "areas": {
+                "RR Shelves": {
+                    "Imported": true,
+                    "Processed": false,
+                    "Registered": false,
+                    "Alignment": false,
+                    "Clean Up": false,
+                    "Point Cloud": false,
+                    "Exported": false,
+                    "Uploaded": false
+                },
+                "International Cafe": {
+                    "Imported": true,
+                    "Processed": false,
+                    "Registered": false,
+                    "Alignment": false,
+                    "Clean Up": false,
+                    "Point Cloud": false,
+                    "Exported": false,
+                    "Uploaded": false
+                }
+            }
+        }
+    }
+}

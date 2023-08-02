@@ -117,7 +117,7 @@ class InitialProcedures:
         # Print error message
         print("Failed to open SCENE. Please check the installation.", end='\n\n')
 
-    def search_and_close(self):
+    def close_updates_and_news(self):
         # Capture screenshot
         screenshot = pyautogui.screenshot()
         # Perform OCR on the screenshot
