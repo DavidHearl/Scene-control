@@ -2,6 +2,7 @@
     "ships": {
         "Celebrity Shillouette": {
             "number": "920",
+            "company": "Celebrity",
             "areas": {
                 "Porch": {
                     "Imported": "Legacy",
@@ -17,6 +18,7 @@
         },
         "Explorer OTS": {
             "number": "920",
+            "company": "Royal Caribbean",
             "areas": {
                 "Playmakers": {
                     "Imported": "Legacy",
@@ -32,6 +34,7 @@
         },
         "Island Princess": {
             "number": "1110",
+            "company": "Princess",
             "areas": {
                 "Bar & Grill": {
                     "Imported": true,
@@ -57,6 +60,7 @@
         },
         "Carnival Paradise": {
             "number": "1122",
+            "company": "Carnival",
             "areas": {
                 "Bar & Grill": {
                     "Imported": true,
@@ -82,7 +86,7 @@
         },
         "Coral Princess": {
             "number": "1111",
-            "Company": "Princess",
+            "company": "Princess",
             "areas": {
                 "Good Spirits": {
                     "Imported": "Completed",
