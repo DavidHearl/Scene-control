@@ -6,16 +6,34 @@ body {
 
 h1 {
     text-align: center;
-    margin-bottom: 30px;
+    margin: 8px 0 20px 0;
     color: #007bff;
 }
 
 h3 {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
+}
+
+ul {
+    margin: 0;
 }
 
 .col-lg-4 {
     height: 24px;
+}
+
+.filters {
+    text-align: center;
+    margin: 12px 12px;
+}
+
+.key-box {
+    display: inline-block;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 11px;
+    padding: 4px;
 }
 
 .ship-title {
@@ -23,19 +41,25 @@ h3 {
 }
 
 .key {
-    margin-bottom: 16px;
+    display: flex;
+    flex-direction: row;
+}
+
+.key-description {
+    font-size: 14px;
+    margin: 8px;
+    margin-bottom: 12px;
 }
 
 .ship-section {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 5px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-    margin-bottom: 20px;
+    padding: 10px;
 }
 
 #ship-dropdown {
-  margin-left: 10px;
+    margin-left: 10px;
 }
 
 .area {
@@ -43,8 +67,8 @@ h3 {
 }
 
 .area-name {
-    font-size: 1.2rem;
-    font-weight: bold;
+    font-size: 1.1rem;
+    margin-bottom: 8px;
 }
 
 .area-subcategory {
@@ -54,7 +78,7 @@ h3 {
 .area-box {
     display: inline-block;
     width: 100%;
-    border: 1px solid black;
+    border: 1px solid #ccc;
     border-radius: 8px;
     text-align: center;
     font-size: 11px;
@@ -63,28 +87,48 @@ h3 {
 
 .area-box.Legacy {
     background-color: #ffffff;
+    color: #000000;
 }
 
 .area-box.Queued {
     background-color: #ff0000;
+    color: #ffffff;
 }
 
 .area-box.Failed {
     background: repeating-linear-gradient(45deg,
-            black,
-            black 10px,
-            yellow 10px,
-            yellow 20px);
+        black,
+        black 10px,
+        yellow 10px,
+        yellow 20px);
+    color: #ffffff;
 }
 
 .area-box.WIP {
     background-color: #ffa500;
+    color: #000000;
 }
 
 .area-box.Data {
     background-color: #808080;
+    color: #ffffff;
 }
 
 .area-box.Completed {
     background-color: #28a745;
+    color: #ffffff;
 }
+
+@media (max-width: 992px) {
+    .area-box {
+        width: 95%;
+        margin: 2.5%;
+        margin-bottom: 0px;
+    }
+
+    .area-name {
+        list-style: none;
+        margin-left: -32px;
+    }
+}
+  

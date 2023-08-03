@@ -4,6 +4,7 @@ fetch('../data/scan_database.json')
     .then(data => {
         const shipFilter = document.getElementById('ship-filter');
         const companyFilter = document.getElementById('company-filter');
+        const numberSearch = document.getElementById('number-search');
 
         // Initialize arrays to store unique ship names and company names
         const shipNames = [];
@@ -25,6 +26,9 @@ fetch('../data/scan_database.json')
             }
         }
 
+        // Sort shipNames alphabetically
+        shipNames.sort();
+
         // Populate ship filter dropdown options
         for (const shipName of shipNames) {
             const option = document.createElement('option');
@@ -42,6 +46,7 @@ fetch('../data/scan_database.json')
         // Add event listeners for ship and company filters
         shipFilter.addEventListener('change', applyFilters);
         companyFilter.addEventListener('change', applyFilters);
+        numberSearch.addEventListener('input', applyFilters);
 
         // Apply the filters on initial page load
         applyFilters();
@@ -49,21 +54,23 @@ fetch('../data/scan_database.json')
         function applyFilters() {
             const selectedShip = shipFilter.value;
             const selectedCompany = companyFilter.value;
-
+            const searchNumber = numberSearch.value.toLowerCase();
+        
             const shipDetailsDiv = document.getElementById('ship-details');
             shipDetailsDiv.innerHTML = '';
-
+        
             for (const ship in data.ships) {
                 const shipInfo = data.ships[ship];
                 const shipName = ship;
                 const shipNumber = shipInfo.number;
                 const companyName = shipInfo.company;
-
+        
                 // Check if the ship and company match the selected filters
                 const shipMatched = !selectedShip || selectedShip === shipName;
                 const companyMatched = !selectedCompany || selectedCompany === companyName;
-
-                if (shipMatched && companyMatched) {
+                const numberMatched = !searchNumber || shipNumber.toLowerCase().includes(searchNumber);
+        
+                if (shipMatched && companyMatched && numberMatched) {
                     const areas = shipInfo.areas;
 
                     const shipElement = document.createElement('div');
@@ -73,9 +80,9 @@ fetch('../data/scan_database.json')
                     const shipRow = document.createElement('div');
                     shipRow.className = 'row mb-2';
 
-                    const shipNameElement = document.createElement('strong');
+                    const shipNameElement = document.createElement('div');
                     shipNameElement.className = 'col';
-                    shipNameElement.textContent = `${shipName} (Number: ${shipNumber})`;
+                    shipNameElement.innerHTML = `<h3>${shipName} (Number: ${shipNumber})</h3>`;
                     shipRow.appendChild(shipNameElement);
 
                     shipElement.appendChild(shipRow);
@@ -88,29 +95,29 @@ fetch('../data/scan_database.json')
 
                         const areaNameElement = document.createElement('div');
                         areaNameElement.className = 'col-lg-4';
-                        
+
                         const areaNameList = document.createElement('ul');
                         areaNameList.className = '';
-                        
+
                         const areaNameListItem = document.createElement('li');
+                        areaNameList.className = 'area-name';
                         areaNameListItem.textContent = area;
-                        
+
                         areaNameList.appendChild(areaNameListItem);
                         areaNameElement.appendChild(areaNameList);
                         areaElement.appendChild(areaNameElement);
-                        
 
                         for (const subcategory in areaDetails) {
                             const subcategoryElement = document.createElement('div');
-                            subcategoryElement.className = 'col-md-6 col-lg-1 area-subcategory'; // Use col-2 class for subcategory
+                            subcategoryElement.className = 'col-md-6 col-lg-1 area-subcategory';
 
                             const subcategoryBox = document.createElement('div');
 
                             const status = areaDetails[subcategory];
+                            const statusClass = status.replace(/\s/g, ''); // Remove spaces from status for class name
 
                             // Set class based on status, use "NoData" for [No Data]
-                            subcategoryBox.className = `area-box ${status === 'No Data' ? 'NoData' : status}`;
-
+                            subcategoryBox.className = `area-box ${status === 'No Data' ? 'NoData' : statusClass}`;
                             subcategoryBox.textContent = subcategory; // Set the description as the text content
 
                             subcategoryElement.appendChild(subcategoryBox);
