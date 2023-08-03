@@ -55,28 +55,123 @@
                 }
             }
         },
-        "Carribean Princess": {
-            "number": "1112",
+        "Carnival Paradise": {
+            "number": "1110",
             "areas": {
-                "RR Shelves": {
+                "Bar & Grill": {
                     "Imported": true,
-                    "Processed": false,
-                    "Registered": false,
-                    "Alignment": false,
-                    "Clean Up": false,
-                    "Point Cloud": false,
-                    "Exported": false,
-                    "Uploaded": false
+                    "Processed": true,
+                    "Registered": true,
+                    "Alignment": true,
+                    "Clean Up": true,
+                    "Point Cloud": true,
+                    "Exported": true,
+                    "Uploaded": true
                 },
-                "International Cafe": {
+                "Bayou Bar": {
                     "Imported": true,
-                    "Processed": false,
-                    "Registered": false,
-                    "Alignment": false,
-                    "Clean Up": false,
-                    "Point Cloud": false,
-                    "Exported": false,
-                    "Uploaded": false
+                    "Processed": true,
+                    "Registered": true,
+                    "Alignment": true,
+                    "Clean Up": true,
+                    "Point Cloud": true,
+                    "Exported": true,
+                    "Uploaded": true
+                }
+            }
+        },
+        "Coral Princess": {
+            "number": "1111",
+            "areas": {
+                "Good Spirits": {
+                    "Imported": "Completed",
+                    "Processed": "Completed",
+                    "Registered": "Completed",
+                    "Alignment": "Completed",
+                    "Clean Up": "Completed",
+                    "Point Cloud": "Completed",
+                    "Exported": "Completed",
+                    "Uploaded": "Completed"
+                },
+                "Lotus Bar": {
+                    "Imported": "Completed",
+                    "Processed": "Completed",
+                    "Registered": "Completed",
+                    "Alignment": "Completed",
+                    "Clean Up": "Completed",
+                    "Point Cloud": "Completed",
+                    "Exported": "Completed",
+                    "Uploaded": "Completed"
+                },
+                "Princess Pizza": {
+                    "Imported": "Completed",
+                    "Processed": "Completed",
+                    "Registered": "Completed",
+                    "Alignment": "Completed",
+                    "Clean Up": "Completed",
+                    "Point Cloud": "Completed",
+                    "Exported": "Completed",
+                    "Uploaded": "Completed"
+                },
+                "Swirls": {
+                    "Imported": "Completed",
+                    "Processed": "Completed",
+                    "Registered": "Completed",
+                    "Alignment": "Completed",
+                    "Clean Up": "Completed",
+                    "Point Cloud": "Completed",
+                    "Exported": "Completed",
+                    "Uploaded": "Completed"
+                },
+                "Lido Bar": {
+                    "Imported": "Completed",
+                    "Processed": "Completed",
+                    "Registered": "Completed",
+                    "Alignment": "Completed",
+                    "Clean Up": "Completed",
+                    "Point Cloud": "Completed",
+                    "Exported": "Completed",
+                    "Uploaded": "Completed"
+                },
+                "The Grill Bar": {
+                    "Imported": "Completed",
+                    "Processed": "Completed",
+                    "Registered": "Completed",
+                    "Alignment": "Completed",
+                    "Clean Up": "Completed",
+                    "Point Cloud": "Completed",
+                    "Exported": "Completed",
+                    "Uploaded": "Completed"
+                },
+                "The Grill Food Counter": {
+                    "Imported": "Completed",
+                    "Processed": "Completed",
+                    "Registered": "Completed",
+                    "Alignment": "Completed",
+                    "Clean Up": "Completed",
+                    "Point Cloud": "Completed",
+                    "Exported": "Completed",
+                    "Uploaded": "Completed"
+                },
+                "Bayou Cafe": {
+                    "Imported": "Completed",
+                    "Processed": "Completed",
+                    "Registered": "Completed",
+                    "Alignment": "Completed",
+                    "Clean Up": "Completed",
+                    "Point Cloud": "Completed",
+                    "Exported": "Completed",
+                    "Uploaded": "Completed"
+                },                
+                "Wheelhouse": {
+                    "Imported": "Completed",
+                    "Processed": "Completed",
+                    "Registered": "Completed",
+                    "Alignment": "Completed",
+                    "Clean Up": "Completed",
+                    "Point Cloud": "Completed",
+                    "Exported": "Completed",
+                    "Uploaded": "Completed"
                 }
             }
         },

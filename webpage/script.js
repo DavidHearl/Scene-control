@@ -2,10 +2,23 @@ fetch('../data/scan_database.json')
     .then(response => response.json())
     .then(data => {
         const shipDetailsDiv = document.getElementById('ship-details');
+        const shipDropdown = document.getElementById('ship-dropdown');
 
+        // Create the dropdown options for each ship
         for (const ship in data.ships) {
-            const shipInfo = data.ships[ship];
-            const shipName = ship;
+            const option = document.createElement('option');
+            option.value = ship;
+            option.textContent = `${ship} (Number: ${data.ships[ship].number})`;
+            shipDropdown.appendChild(option);
+        }
+
+        // Function to update ship details when a ship is selected from the dropdown
+        const updateShipDetails = () => {
+            const selectedShip = shipDropdown.value;
+            shipDetailsDiv.innerHTML = ''; // Clear previous ship details
+
+            const shipInfo = data.ships[selectedShip];
+            const shipName = selectedShip;
             const shipNumber = shipInfo.number;
             const areas = shipInfo.areas;
 
@@ -14,12 +27,13 @@ fetch('../data/scan_database.json')
 
             // Create a row for ship name and number
             const shipRow = document.createElement('div');
-            shipRow.className = 'row';
+            shipRow.className = 'row mb-2';
 
-            const shipNameElement = document.createElement('h3');
-            shipNameElement.className = 'row ship-title';
+            const shipNameElement = document.createElement('strong');
+            shipNameElement.className = 'col';
             shipNameElement.textContent = `${shipName} (Number: ${shipNumber})`;
             shipRow.appendChild(shipNameElement);
+
             shipElement.appendChild(shipRow);
 
             for (const area in areas) {
@@ -28,7 +42,7 @@ fetch('../data/scan_database.json')
                 const areaElement = document.createElement('div');
                 areaElement.className = 'area row mb-2'; // Use row class for area
 
-                const areaNameElement = document.createElement('div');
+                const areaNameElement = document.createElement('strong');
                 areaNameElement.className = 'col-lg-4'; // Use col class for area name
                 areaNameElement.textContent = area;
                 areaElement.appendChild(areaNameElement);
@@ -40,7 +54,10 @@ fetch('../data/scan_database.json')
                     const subcategoryBox = document.createElement('div');
 
                     const status = areaDetails[subcategory];
-                    subcategoryBox.className = `area-box ${status}`;
+
+                    // Set class based on status, use "No Data" for [No Data]
+                    subcategoryBox.className = `area-box ${status === false ? 'No Data' : status}`;
+
                     subcategoryBox.textContent = subcategory; // Set the description as the text content
 
                     subcategoryElement.appendChild(subcategoryBox);
@@ -52,6 +69,12 @@ fetch('../data/scan_database.json')
             }
 
             shipDetailsDiv.appendChild(shipElement);
-        }
+        };
+
+        // Add event listener to the ship dropdown to update ship details
+        shipDropdown.addEventListener('change', updateShipDetails);
+
+        // Initial update of ship details for the default selected ship
+        updateShipDetails();
     })
     .catch(error => console.error('Error fetching JSON:', error));

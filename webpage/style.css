@@ -27,6 +27,11 @@ h3 {
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+}
+
+#ship-dropdown {
+  margin-left: 10px;
 }
 
 .area {

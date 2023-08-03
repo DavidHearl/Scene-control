@@ -11,7 +11,7 @@
 
 <body>
     <div class="container-fluid mt-4">
-        <h1 class="text-center mb-4">Ship and Area Details</h1>
+        <h1 class="text-center mb-4">Ship and Area Details</h1>        
         <div class="container-fluid key">
             <div class="row">
                 <div class="area-box Legacy col-sm-4 col-md-2">Legacy</div>
@@ -20,6 +20,14 @@
                 <div class="area-box Queued col-sm-4 col-md-2">Queued</div>
                 <div class="area-box WIP col-sm-4 col-md-2">WIP</div>
                 <div class="area-box Completed col-sm-4 col-md-2">Completed</div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row">
+                <label for="ship-dropdown" class="col-md-2 mt-2">Select a Ship:</label>
+                <div class="col-md-4 mt-2">
+                    <select id="ship-dropdown" class="form-control"></select>
+                </div>
             </div>
         </div>
         <div id="ship-details"></div>
