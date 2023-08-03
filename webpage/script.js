@@ -55,21 +55,22 @@ fetch('../data/scan_database.json')
             const selectedShip = shipFilter.value;
             const selectedCompany = companyFilter.value;
             const searchNumber = numberSearch.value.toLowerCase();
-        
+
             const shipDetailsDiv = document.getElementById('ship-details');
             shipDetailsDiv.innerHTML = '';
-        
+
             for (const ship in data.ships) {
                 const shipInfo = data.ships[ship];
                 const shipName = ship;
                 const shipNumber = shipInfo.number;
                 const companyName = shipInfo.company;
-        
+                const areas = shipInfo.areas;
+
                 // Check if the ship and company match the selected filters
                 const shipMatched = !selectedShip || selectedShip === shipName;
                 const companyMatched = !selectedCompany || selectedCompany === companyName;
                 const numberMatched = !searchNumber || shipNumber.toLowerCase().includes(searchNumber);
-        
+
                 if (shipMatched && companyMatched && numberMatched) {
                     const areas = shipInfo.areas;
 
@@ -82,10 +83,27 @@ fetch('../data/scan_database.json')
 
                     const shipNameElement = document.createElement('div');
                     shipNameElement.className = 'col';
-                    shipNameElement.innerHTML = `<h3>${shipName} (Number: ${shipNumber})</h3>`;
+                    const shipNameHeader = document.createElement('h3');
+                    shipNameHeader.textContent = shipName;
+                    shipNameElement.appendChild(shipNameHeader);
                     shipRow.appendChild(shipNameElement);
 
+                    const shipNumberElement = document.createElement('div');
+                    shipNumberElement.className = 'col';
+                    const shipNumberHeader = document.createElement('h3');
+                    shipNumberHeader.textContent = `CN: ${shipNumber}`;
+                    shipNumberElement.appendChild(shipNumberHeader);
+                    shipRow.appendChild(shipNumberElement);
+
+                    const areaCountElement = document.createElement('div');
+                    areaCountElement.className = 'col';
+                    const areaCountText = document.createElement('h3');
+                    areaCountText.textContent = `Areas: ${Object.keys(areas).length}`;
+                    areaCountElement.appendChild(areaCountText);
+                    shipRow.appendChild(areaCountElement);
+
                     shipElement.appendChild(shipRow);
+
 
                     for (const area in areas) {
                         const areaDetails = areas[area];
