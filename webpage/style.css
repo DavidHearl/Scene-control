@@ -10,15 +10,23 @@ h1 {
     color: #007bff;
 }
 
-.container {
+h3 {
+    font-size: 1.5rem;
+}
+
+.ship-title {
+    margin: 10px 0 16px 14px;
+}
+
+.key {
+    margin-bottom: 16px;
+}
+
+.ship-section {
     background-color: #fff;
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-}
-
-.ship-section {
-    border: 1px solid black;
 }
 
 .area {
@@ -37,18 +45,37 @@ h1 {
 .area-box {
     display: inline-block;
     width: 100%;
-    height: 20px;
-    border: 1px solid #ccc;
-    border-radius: 3px;
+    border: 1px solid black;
+    border-radius: 8px;
     text-align: center;
-    font-size: 10px;
-    padding: 2px;
+    font-size: 11px;
+    padding: 4px;
 }
 
-.area-box.true {
+.area-box.Legacy {
+    background-color: #ffffff;
+}
+
+.area-box.Queued {
+    background-color: #ff0000;
+}
+
+.area-box.Failed {
+    background: repeating-linear-gradient(45deg,
+            black,
+            black 10px,
+            yellow 10px,
+            yellow 20px);
+}
+
+.area-box.WIP {
+    background-color: #ffa500;
+}
+
+.area-box.Data {
+    background-color: #808080;
+}
+
+.area-box.Completed {
     background-color: #28a745;
-}
-
-.area-box.false {
-    background-color: #dc3545;
 }

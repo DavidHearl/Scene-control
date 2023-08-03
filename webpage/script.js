@@ -14,13 +14,12 @@ fetch('../data/scan_database.json')
 
             // Create a row for ship name and number
             const shipRow = document.createElement('div');
-            shipRow.className = 'row mb-2';
+            shipRow.className = 'row';
 
-            const shipNameElement = document.createElement('strong');
-            shipNameElement.className = 'col';
+            const shipNameElement = document.createElement('h3');
+            shipNameElement.className = 'row ship-title';
             shipNameElement.textContent = `${shipName} (Number: ${shipNumber})`;
             shipRow.appendChild(shipNameElement);
-
             shipElement.appendChild(shipRow);
 
             for (const area in areas) {
@@ -29,7 +28,7 @@ fetch('../data/scan_database.json')
                 const areaElement = document.createElement('div');
                 areaElement.className = 'area row mb-2'; // Use row class for area
 
-                const areaNameElement = document.createElement('strong');
+                const areaNameElement = document.createElement('div');
                 areaNameElement.className = 'col-lg-4'; // Use col class for area name
                 areaNameElement.textContent = area;
                 areaElement.appendChild(areaNameElement);
@@ -39,7 +38,9 @@ fetch('../data/scan_database.json')
                     subcategoryElement.className = 'col-md-6 col-lg-1 area-subcategory'; // Use col-2 class for subcategory
 
                     const subcategoryBox = document.createElement('div');
-                    subcategoryBox.className = `area-box ${areaDetails[subcategory]}`;
+
+                    const status = areaDetails[subcategory];
+                    subcategoryBox.className = `area-box ${status}`;
                     subcategoryBox.textContent = subcategory; // Set the description as the text content
 
                     subcategoryElement.appendChild(subcategoryBox);
