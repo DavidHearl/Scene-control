@@ -15,3 +15,5 @@ Command to navigate to location in cmd
 cd ../../local storage/github/scene-control
 
 py run.py
+
+https://davidhearl.github.io/scene-control/webpage/index.html

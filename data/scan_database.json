@@ -1,6 +1,6 @@
 {
     "ships": {
-        "Shillouette": {
+        "Celebrity Shillouette": {
             "number": "920",
             "areas": {
                 "Porch": {
@@ -56,7 +56,7 @@
             }
         },
         "Carnival Paradise": {
-            "number": "1110",
+            "number": "1122",
             "areas": {
                 "Bar & Grill": {
                     "Imported": true,
@@ -82,6 +82,7 @@
         },
         "Coral Princess": {
             "number": "1111",
+            "Company": "Princess",
             "areas": {
                 "Good Spirits": {
                     "Imported": "Completed",
@@ -177,6 +178,7 @@
         },
         "Carnival Vista": {
             "number": "1133",
+            "company": "Carnival",
             "areas": {
                 "AFT Restaurant": {
                     "Imported": "Completed",

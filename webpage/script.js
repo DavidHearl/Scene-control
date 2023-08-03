@@ -4,26 +4,21 @@ fetch('../data/scan_database.json')
         const shipDetailsDiv = document.getElementById('ship-details');
         const shipDropdown = document.getElementById('ship-dropdown');
 
-        // Create the dropdown options for each ship
+        // Create an option for showing all ships
+        const allShipsOption = document.createElement('option');
+        allShipsOption.value = '';
+        allShipsOption.textContent = 'Show All Ships';
+        shipDropdown.appendChild(allShipsOption);
+
         for (const ship in data.ships) {
-            const option = document.createElement('option');
-            option.value = ship;
-            option.textContent = `${ship} (Number: ${data.ships[ship].number})`;
-            shipDropdown.appendChild(option);
-        }
-
-        // Function to update ship details when a ship is selected from the dropdown
-        const updateShipDetails = () => {
-            const selectedShip = shipDropdown.value;
-            shipDetailsDiv.innerHTML = ''; // Clear previous ship details
-
-            const shipInfo = data.ships[selectedShip];
-            const shipName = selectedShip;
+            const shipInfo = data.ships[ship];
+            const shipName = ship;
             const shipNumber = shipInfo.number;
             const areas = shipInfo.areas;
 
             const shipElement = document.createElement('div');
             shipElement.className = 'container-fluid ship-section mb-4';
+            shipElement.id = ship; // Set the ID to the ship name for easier selection
 
             // Create a row for ship name and number
             const shipRow = document.createElement('div');
@@ -55,8 +50,8 @@ fetch('../data/scan_database.json')
 
                     const status = areaDetails[subcategory];
 
-                    // Set class based on status, use "No Data" for [No Data]
-                    subcategoryBox.className = `area-box ${status === false ? 'No Data' : status}`;
+                    // Set class based on status, use "NoData" for [No Data]
+                    subcategoryBox.className = `area-box ${status === 'No Data' ? 'NoData' : status}`;
 
                     subcategoryBox.textContent = subcategory; // Set the description as the text content
 
@@ -68,13 +63,23 @@ fetch('../data/scan_database.json')
                 shipElement.appendChild(areaElement);
             }
 
+            // Add an option for each ship to the dropdown list
+            const shipOption = document.createElement('option');
+            shipOption.value = ship;
+            shipOption.textContent = `${shipName} (Number: ${shipNumber})`;
+            shipDropdown.appendChild(shipOption);
+
             shipDetailsDiv.appendChild(shipElement);
-        };
+        }
 
-        // Add event listener to the ship dropdown to update ship details
-        shipDropdown.addEventListener('change', updateShipDetails);
+        // Event listener for the dropdown list
+        shipDropdown.addEventListener('change', function () {
+            const selectedShip = shipDropdown.value;
+            const shipSections = document.getElementsByClassName('ship-section');
 
-        // Initial update of ship details for the default selected ship
-        updateShipDetails();
+            for (const shipSection of shipSections) {
+                shipSection.style.display = shipSection.id === selectedShip || selectedShip === '' ? 'block' : 'none';
+            }
+        });
     })
     .catch(error => console.error('Error fetching JSON:', error));
