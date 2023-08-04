@@ -32,11 +32,225 @@
                 }
             }
         },
+        "Manard World Dream": {
+            "number": "XXX",
+            "company": "Manara",
+            "areas": {
+                "Blue Lagoon": {
+                    "Imported": "Completed",
+                    "Processed": "Completed",
+                    "Registered": "Completed",
+                    "Alignment": "Completed",
+                    "Clean Up": "Completed",
+                    "Point Cloud": "Completed",
+                    "Exported": "Completed",
+                    "Uploaded": "Queued"
+                },
+                "Casino Deck 6": {
+                    "Imported": "Completed",
+                    "Processed": "Completed",
+                    "Registered": "Completed",
+                    "Alignment": "Completed",
+                    "Clean Up": "Completed",
+                    "Point Cloud": "Completed",
+                    "Exported": "Completed",
+                    "Uploaded": "Queued"
+                },
+                "Casino Store": {
+                    "Imported": "Completed",
+                    "Processed": "Completed",
+                    "Registered": "Completed",
+                    "Alignment": "Completed",
+                    "Clean Up": "Completed",
+                    "Point Cloud": "Completed",
+                    "Exported": "Completed",
+                    "Uploaded": "Queued"
+                },
+                "Crystal Life Spa": {
+                    "Imported": "Completed",
+                    "Processed": "Completed",
+                    "Registered": "Failed",
+                    "Alignment": "Queued",
+                    "Clean Up": "Queued",
+                    "Point Cloud": "Queued",
+                    "Exported": "Queued",
+                    "Uploaded": "Queued"
+                },
+                "Dream Dining Room": {
+                    "Imported": "Completed",
+                    "Processed": "Completed",
+                    "Registered": "Completed",
+                    "Alignment": "Completed",
+                    "Clean Up": "Completed",
+                    "Point Cloud": "Completed",
+                    "Exported": "Completed",
+                    "Uploaded": "Queued"
+                },
+                "Medical Center": {
+                    "Imported": "Completed",
+                    "Processed": "Completed",
+                    "Registered": "Failed",
+                    "Alignment": "Queued",
+                    "Clean Up": "Queued",
+                    "Point Cloud": "Queued",
+                    "Exported": "Queued",
+                    "Uploaded": "Queued"
+                }
+            }
+        },
+        "Oosterdam": {
+            "number": "XXX",
+            "company": "Holland America",
+            "areas": {
+                "Library": {
+                    "Imported": "Completed",
+                    "Processed": "Completed",
+                    "Registered": "Completed",
+                    "Alignment": "Completed",
+                    "Clean Up": "Completed",
+                    "Point Cloud": "Completed",
+                    "Exported": "Completed",
+                    "Uploaded": "Completed"
+                },
+                "Executive Desk": {
+                    "Imported": "Completed",
+                    "Processed": "Completed",
+                    "Registered": "Completed",
+                    "Alignment": "Completed",
+                    "Clean Up": "Completed",
+                    "Point Cloud": "Completed",
+                    "Exported": "Completed",
+                    "Uploaded": "Completed"
+                },
+                "Executive Office": {
+                    "Imported": "Completed",
+                    "Processed": "Completed",
+                    "Registered": "Completed",
+                    "Alignment": "Completed",
+                    "Clean Up": "Completed",
+                    "Point Cloud": "Completed",
+                    "Exported": "Completed",
+                    "Uploaded": "Completed"
+                }
+            }
+        },     
+        "Nieuw Statendam": {
+            "number": "1092",
+            "company": "Holland America",
+            "areas": {
+                "Ocean Bar": {
+                    "Imported": "Completed",
+                    "Processed": "Completed",
+                    "Registered": "Completed",
+                    "Alignment": "Completed",
+                    "Clean Up": "Completed",
+                    "Point Cloud": "Completed",
+                    "Exported": "Completed",
+                    "Uploaded": "Completed"
+                },
+                "Lido, Gelato, Dive in Grill": {
+                    "Imported": "Completed",
+                    "Processed": "Completed",
+                    "Registered": "Completed",
+                    "Alignment": "Completed",
+                    "Clean Up": "Completed",
+                    "Point Cloud": "Completed",
+                    "Exported": "Completed",
+                    "Uploaded": "Completed"
+                },
+                "Billboards": {
+                    "Imported": "Completed",
+                    "Processed": "Completed",
+                    "Registered": "Completed",
+                    "Alignment": "Completed",
+                    "Clean Up": "Completed",
+                    "Point Cloud": "Completed",
+                    "Exported": "Completed",
+                    "Uploaded": "Completed"
+                },
+                "NY Pizza": {
+                    "Imported": "Completed",
+                    "Processed": "Completed",
+                    "Registered": "Completed",
+                    "Alignment": "Completed",
+                    "Clean Up": "Completed",
+                    "Point Cloud": "Completed",
+                    "Exported": "Completed",
+                    "Uploaded": "Completed"
+                },
+                "Kids Area": {
+                    "Imported": "Completed",
+                    "Processed": "Completed",
+                    "Registered": "Completed",
+                    "Alignment": "Completed",
+                    "Clean Up": "Completed",
+                    "Point Cloud": "Completed",
+                    "Exported": "Completed",
+                    "Uploaded": "Completed"
+                },
+                "Neptune Bar": {
+                    "Imported": "Completed",
+                    "Processed": "Completed",
+                    "Registered": "Completed",
+                    "Alignment": "Completed",
+                    "Clean Up": "Completed",
+                    "Point Cloud": "Completed",
+                    "Exported": "Completed",
+                    "Uploaded": "Completed"
+                }
+            }
+        },
+        "Anthem OTS": {
+            "number": "XXX",
+            "company": "Royal Caribbean",
+            "areas": {
+                "Playmakers": {
+                    "Imported": "Completed",
+                    "Processed": "Completed",
+                    "Registered": "Completed",
+                    "Alignment": "Completed",
+                    "Clean Up": "Completed",
+                    "Point Cloud": "Completed",
+                    "Exported": "Completed",
+                    "Uploaded": "Completed"
+                }
+            }
+        },
         "Nieuw Amsterdam": {
             "number": "XXX",
             "company": "Holland America",
             "areas": {
                 "Rolling Stones": {
+                    "Imported": "Completed",
+                    "Processed": "Completed",
+                    "Registered": "Completed",
+                    "Alignment": "Completed",
+                    "Clean Up": "Completed",
+                    "Point Cloud": "Completed",
+                    "Exported": "Completed",
+                    "Uploaded": "Completed"
+                },
+                "Billboards": {
+                    "Imported": "Completed",
+                    "Processed": "Completed",
+                    "Registered": "Completed",
+                    "Alignment": "Completed",
+                    "Clean Up": "Completed",
+                    "Point Cloud": "Completed",
+                    "Exported": "Completed",
+                    "Uploaded": "Completed"
+                },
+                "Photo Gallery": {
+                    "Imported": "Completed",
+                    "Processed": "Completed",
+                    "Registered": "Completed",
+                    "Alignment": "Completed",
+                    "Clean Up": "Completed",
+                    "Point Cloud": "Completed",
+                    "Exported": "Completed",
+                    "Uploaded": "Completed"
+                },
+                "Billboards 2": {
                     "Imported": "Completed",
                     "Processed": "Completed",
                     "Registered": "Completed",
@@ -53,14 +267,14 @@
             "company": "Celebrity",
             "areas": {
                 "Immersive Tunnel": {
-                    "Imported": "Queued",
-                    "Processed": "Queued",
-                    "Registered": "Queued",
-                    "Alignment": "Queued",
-                    "Clean Up": "Queued",
-                    "Point Cloud": "Queued",
-                    "Exported": "Queued",
-                    "Uploaded": "Queued"
+                    "Imported": "Completed",
+                    "Processed": "Completed",
+                    "Registered": "Completed",
+                    "Alignment": "Completed",
+                    "Clean Up": "Completed",
+                    "Point Cloud": "Completed",
+                    "Exported": "Completed",
+                    "Uploaded": "Completed"
                 }
             }
         },
@@ -69,24 +283,174 @@
             "company": "Princess",
             "areas": {
                 "Bar & Grill": {
-                    "Imported": "Queued",
-                    "Processed": "Queued",
-                    "Registered": "Queued",
-                    "Alignment": "Queued",
-                    "Clean Up": "Queued",
-                    "Point Cloud": "Queued",
-                    "Exported": "Queued",
-                    "Uploaded": "Queued"
+                    "Imported": "Completed",
+                    "Processed": "Completed",
+                    "Registered": "Completed",
+                    "Alignment": "Completed",
+                    "Clean Up": "Completed",
+                    "Point Cloud": "Completed",
+                    "Exported": "Completed",
+                    "Uploaded": "Completed"
                 },
                 "Bayou Bar": {
-                    "Imported": "Queued",
-                    "Processed": "Queued",
-                    "Registered": "Queued",
-                    "Alignment": "Queued",
-                    "Clean Up": "Queued",
-                    "Point Cloud": "Queued",
-                    "Exported": "Queued",
-                    "Uploaded": "Queued"
+                    "Imported": "Completed",
+                    "Processed": "Completed",
+                    "Registered": "Completed",
+                    "Alignment": "Completed",
+                    "Clean Up": "Completed",
+                    "Point Cloud": "Completed",
+                    "Exported": "Completed",
+                    "Uploaded": "Completed"
+                },
+                "Captains Cruises": {
+                    "Imported": "Completed",
+                    "Processed": "Completed",
+                    "Registered": "Completed",
+                    "Alignment": "Completed",
+                    "Clean Up": "Completed",
+                    "Point Cloud": "Completed",
+                    "Exported": "Completed",
+                    "Uploaded": "Completed"
+                },
+                "Crooners": {
+                    "Imported": "Completed",
+                    "Processed": "Completed",
+                    "Registered": "Completed",
+                    "Alignment": "Completed",
+                    "Clean Up": "Completed",
+                    "Point Cloud": "Completed",
+                    "Exported": "Completed",
+                    "Uploaded": "Completed"
+                },
+                "Explorers Lounge": {
+                    "Imported": "Completed",
+                    "Processed": "Completed",
+                    "Registered": "Completed",
+                    "Alignment": "Completed",
+                    "Clean Up": "Completed",
+                    "Point Cloud": "Completed",
+                    "Exported": "Completed",
+                    "Uploaded": "Completed"
+                },
+                "Future Cruises": {
+                    "Imported": "Completed",
+                    "Processed": "Completed",
+                    "Registered": "Completed",
+                    "Alignment": "Completed",
+                    "Clean Up": "Completed",
+                    "Point Cloud": "Completed",
+                    "Exported": "Completed",
+                    "Uploaded": "Completed"
+                },
+                "Good Spirits": {
+                    "Imported": "Completed",
+                    "Processed": "Completed",
+                    "Registered": "Completed",
+                    "Alignment": "Completed",
+                    "Clean Up": "Completed",
+                    "Point Cloud": "Completed",
+                    "Exported": "Completed",
+                    "Uploaded": "Completed"
+                },
+                "Internet Cafe": {
+                    "Imported": "Completed",
+                    "Processed": "Completed",
+                    "Registered": "Completed",
+                    "Alignment": "Completed",
+                    "Clean Up": "Completed",
+                    "Point Cloud": "Completed",
+                    "Exported": "Completed",
+                    "Uploaded": "Completed"
+                },
+                "Internet Cafe 2": {
+                    "Imported": "Completed",
+                    "Processed": "Completed",
+                    "Registered": "Completed",
+                    "Alignment": "Completed",
+                    "Clean Up": "Completed",
+                    "Point Cloud": "Completed",
+                    "Exported": "Completed",
+                    "Uploaded": "Completed"
+                },
+                "Lido Bar & Pizzeria": {
+                    "Imported": "Completed",
+                    "Processed": "Completed",
+                    "Registered": "Completed",
+                    "Alignment": "Completed",
+                    "Clean Up": "Completed",
+                    "Point Cloud": "Completed",
+                    "Exported": "Completed",
+                    "Uploaded": "Completed"
+                },
+                "Lotus Bar": {
+                    "Imported": "Completed",
+                    "Processed": "Completed",
+                    "Registered": "Completed",
+                    "Alignment": "Completed",
+                    "Clean Up": "Completed",
+                    "Point Cloud": "Completed",
+                    "Exported": "Completed",
+                    "Uploaded": "Completed"
+                },
+                "Lotus Bar Box": {
+                    "Imported": "Completed",
+                    "Processed": "Completed",
+                    "Registered": "Completed",
+                    "Alignment": "Completed",
+                    "Clean Up": "Completed",
+                    "Point Cloud": "Completed",
+                    "Exported": "Completed",
+                    "Uploaded": "Completed"
+                },
+                "Photo Gallery": {
+                    "Imported": "Completed",
+                    "Processed": "Completed",
+                    "Registered": "Completed",
+                    "Alignment": "Completed",
+                    "Clean Up": "Completed",
+                    "Point Cloud": "Completed",
+                    "Exported": "Completed",
+                    "Uploaded": "Completed"
+                },
+                "Reception Desk": {
+                    "Imported": "Completed",
+                    "Processed": "Completed",
+                    "Registered": "Completed",
+                    "Alignment": "Completed",
+                    "Clean Up": "Completed",
+                    "Point Cloud": "Completed",
+                    "Exported": "Completed",
+                    "Uploaded": "Completed"
+                },
+                "Shore Excursions": {
+                    "Imported": "Completed",
+                    "Processed": "Completed",
+                    "Registered": "Completed",
+                    "Alignment": "Completed",
+                    "Clean Up": "Completed",
+                    "Point Cloud": "Completed",
+                    "Exported": "Completed",
+                    "Uploaded": "Completed"
+                },
+                "Swirls": {
+                    "Imported": "Completed",
+                    "Processed": "Completed",
+                    "Registered": "Completed",
+                    "Alignment": "Completed",
+                    "Clean Up": "Completed",
+                    "Point Cloud": "Completed",
+                    "Exported": "Completed",
+                    "Uploaded": "Completed"
+                },
+                "Wheelhouse": {
+                    "Imported": "Completed",
+                    "Processed": "Completed",
+                    "Registered": "Completed",
+                    "Alignment": "Completed",
+                    "Clean Up": "Completed",
+                    "Point Cloud": "Completed",
+                    "Exported": "Completed",
+                    "Uploaded": "Completed"
                 }
             }
         },
@@ -271,7 +635,7 @@
             "company": "Princess",
             "areas": {
                 "RR Shelves": {
-                    "Imported": "Queued",
+                    "Imported": "Completed",
                     "Processed": "Queued",
                     "Registered": "Queued",
                     "Alignment": "Queued",
@@ -281,7 +645,7 @@
                     "Uploaded": "Queued"
                 },
                 "International Cafe": {
-                    "Imported": "Queued",
+                    "Imported": "Completed",
                     "Processed": "Queued",
                     "Registered": "Queued",
                     "Alignment": "Queued",
@@ -291,7 +655,7 @@
                     "Uploaded": "Queued"
                 },
                 "Shore Excursions": {
-                    "Imported": "Queued",
+                    "Imported": "Completed",
                     "Processed": "Queued",
                     "Registered": "Queued",
                     "Alignment": "Queued",
@@ -301,7 +665,7 @@
                     "Uploaded": "Queued"
                 },
                 "Outriggers": {
-                    "Imported": "Queued",
+                    "Imported": "Completed",
                     "Processed": "Queued",
                     "Registered": "Queued",
                     "Alignment": "Queued",
@@ -311,7 +675,7 @@
                     "Uploaded": "Queued"
                 },
                 "Internet Cafe": {
-                    "Imported": "Queued",
+                    "Imported": "Completed",
                     "Processed": "Queued",
                     "Registered": "Queued",
                     "Alignment": "Queued",
@@ -321,7 +685,7 @@
                     "Uploaded": "Queued"
                 },
                 "Future Cruises": {
-                    "Imported": "Queued",
+                    "Imported": "Completed",
                     "Processed": "Queued",
                     "Registered": "Queued",
                     "Alignment": "Queued",
@@ -331,7 +695,7 @@
                     "Uploaded": "Queued"
                 },
                 "Coffee & Cones": {
-                    "Imported": "Queued",
+                    "Imported": "Completed",
                     "Processed": "Queued",
                     "Registered": "Queued",
                     "Alignment": "Queued",
@@ -341,7 +705,7 @@
                     "Uploaded": "Queued"
                 },
                 "Skywalkers": {
-                    "Imported": "Queued",
+                    "Imported": "Completed",
                     "Processed": "Queued",
                     "Registered": "Queued",
                     "Alignment": "Queued",
@@ -351,7 +715,7 @@
                     "Uploaded": "Queued"
                 },
                 "Vines": {
-                    "Imported": "Queued",
+                    "Imported": "Completed",
                     "Processed": "Queued",
                     "Registered": "Queued",
                     "Alignment": "Queued",
@@ -361,7 +725,7 @@
                     "Uploaded": "Queued"
                 },
                 "Tradewinds": {
-                    "Imported": "Queued",
+                    "Imported": "Completed",
                     "Processed": "Queued",
                     "Registered": "Queued",
                     "Alignment": "Queued",
@@ -371,7 +735,7 @@
                     "Uploaded": "Queued"
                 },
                 "Calypso Bar": {
-                    "Imported": "Queued",
+                    "Imported": "Completed",
                     "Processed": "Queued",
                     "Registered": "Queued",
                     "Alignment": "Queued",
@@ -381,7 +745,7 @@
                     "Uploaded": "Queued"
                 },
                 "Chirchills Lounge": {
-                    "Imported": "Queued",
+                    "Imported": "Completed",
                     "Processed": "Queued",
                     "Registered": "Queued",
                     "Alignment": "Queued",
@@ -391,7 +755,7 @@
                     "Uploaded": "Queued"
                 },
                 "Captains Circle": {
-                    "Imported": "Queued",
+                    "Imported": "Completed",
                     "Processed": "Queued",
                     "Registered": "Queued",
                     "Alignment": "Queued",
@@ -401,7 +765,7 @@
                     "Uploaded": "Queued"
                 },
                 "The Reef": {
-                    "Imported": "Queued",
+                    "Imported": "Completed",
                     "Processed": "Queued",
                     "Registered": "Queued",
                     "Alignment": "Queued",
@@ -411,17 +775,17 @@
                     "Uploaded": "Queued"
                 },
                 "Slices, Mix, Salty Dog": {
-                    "Imported": "Queued",
-                    "Processed": "Queued",
-                    "Registered": "Queued",
-                    "Alignment": "Queued",
-                    "Clean Up": "Queued",
-                    "Point Cloud": "Queued",
+                    "Imported": "Completed",
+                    "Processed": "Completed",
+                    "Registered": "Completed",
+                    "Alignment": "Completed",
+                    "Clean Up": "Completed",
+                    "Point Cloud": "Completed",
                     "Exported": "Queued",
                     "Uploaded": "Queued"
                 },
                 "Photo Gallery": {
-                    "Imported": "Queued",
+                    "Imported": "Completed",
                     "Processed": "Queued",
                     "Registered": "Queued",
                     "Alignment": "Queued",
@@ -431,7 +795,7 @@
                     "Uploaded": "Queued"
                 },
                 "Photo Gallery 2": {
-                    "Imported": "Queued",
+                    "Imported": "Completed",
                     "Processed": "Queued",
                     "Registered": "Queued",
                     "Alignment": "Queued",
@@ -441,7 +805,7 @@
                     "Uploaded": "Queued"
                 },
                 "Crooners": {
-                    "Imported": "Queued",
+                    "Imported": "Completed",
                     "Processed": "Queued",
                     "Registered": "Queued",
                     "Alignment": "Queued",
@@ -451,7 +815,7 @@
                     "Uploaded": "Queued"
                 },
                 "Wheelhouse Bar": {
-                    "Imported": "Queued",
+                    "Imported": "Completed",
                     "Processed": "Queued",
                     "Registered": "Queued",
                     "Alignment": "Queued",
@@ -461,7 +825,7 @@
                     "Uploaded": "Queued"
                 },
                 "Explorers Lounge": {
-                    "Imported": "Queued",
+                    "Imported": "Completed",
                     "Processed": "Queued",
                     "Registered": "Queued",
                     "Alignment": "Queued",
@@ -471,7 +835,7 @@
                     "Uploaded": "Queued"
                 },
                 "Club Fusion": {
-                    "Imported": "Queued",
+                    "Imported": "Completed",
                     "Processed": "Queued",
                     "Registered": "Queued",
                     "Alignment": "Queued",
@@ -487,19 +851,19 @@
             "company": "Carnival",
             "areas": {
                 "Arcade": {
-                    "Imported": "Queued",
-                    "Processed": "Queued",
-                    "Registered": "Queued",
-                    "Alignment": "Queued",
-                    "Clean Up": "Queued",
-                    "Point Cloud": "Queued",
-                    "Exported": "Queued",
-                    "Uploaded": "Queued"
+                    "Imported": "Completed",
+                    "Processed": "Completed",
+                    "Registered": "Completed",
+                    "Alignment": "Completed",
+                    "Clean Up": "Completed",
+                    "Point Cloud": "Completed",
+                    "Exported": "Completed",
+                    "Uploaded": "Completed"
                 },
                 "Crew Area": {
-                    "Imported": "Queued",
-                    "Processed": "Queued",
-                    "Registered": "Queued",
+                    "Imported": "Completed",
+                    "Processed": "Completed",
+                    "Registered": "Completed",
                     "Alignment": "Queued",
                     "Clean Up": "Queued",
                     "Point Cloud": "Queued",
@@ -507,9 +871,9 @@
                     "Uploaded": "Queued"
                 },
                 "Deck 4 Shop": {
-                    "Imported": "Queued",
-                    "Processed": "Queued",
-                    "Registered": "Queued",
+                    "Imported": "Completed",
+                    "Processed": "Completed",
+                    "Registered": "Completed",
                     "Alignment": "Queued",
                     "Clean Up": "Queued",
                     "Point Cloud": "Queued",
@@ -517,9 +881,9 @@
                     "Uploaded": "Queued"
                 },
                 "Deck 4 Shop #2": {
-                    "Imported": "Queued",
-                    "Processed": "Queued",
-                    "Registered": "Queued",
+                    "Imported": "Completed",
+                    "Processed": "Completed",
+                    "Registered": "Completed",
                     "Alignment": "Queued",
                     "Clean Up": "Queued",
                     "Point Cloud": "Queued",
@@ -527,9 +891,9 @@
                     "Uploaded": "Queued"
                 },
                 "Palazzo Vecchio": {
-                    "Imported": "Queued",
-                    "Processed": "Queued",
-                    "Registered": "Queued",
+                    "Imported": "Completed",
+                    "Processed": "Completed",
+                    "Registered": "Completed",
                     "Alignment": "Queued",
                     "Clean Up": "Queued",
                     "Point Cloud": "Queued",
@@ -537,7 +901,7 @@
                     "Uploaded": "Queued"
                 },
                 "Photo Gallery": {
-                    "Imported": "Queued",
+                    "Imported": "Completed",
                     "Processed": "Queued",
                     "Registered": "Queued",
                     "Alignment": "Queued",
@@ -547,7 +911,7 @@
                     "Uploaded": "Queued"
                 },
                 "Photo Shades": {
-                    "Imported": "Queued",
+                    "Imported": "Completed",
                     "Processed": "Queued",
                     "Registered": "Queued",
                     "Alignment": "Queued",
@@ -557,9 +921,9 @@
                     "Uploaded": "Queued"
                 },
                 "Spa": {
-                    "Imported": "Queued",
-                    "Processed": "Queued",
-                    "Registered": "Queued",
+                    "Imported": "Completed",
+                    "Processed": "Completed",
+                    "Registered": "Failed",
                     "Alignment": "Queued",
                     "Clean Up": "Queued",
                     "Point Cloud": "Queued",
@@ -567,9 +931,9 @@
                     "Uploaded": "Queued"
                 },
                 "Suit Row": {
-                    "Imported": "Queued",
-                    "Processed": "Queued",
-                    "Registered": "Queued",
+                    "Imported": "Completed",
+                    "Processed": "Completed",
+                    "Registered": "Completed",
                     "Alignment": "Queued",
                     "Clean Up": "Queued",
                     "Point Cloud": "Queued",
@@ -577,9 +941,9 @@
                     "Uploaded": "Queued"
                 },
                 "Tuscany Lounge": {
-                    "Imported": "Queued",
-                    "Processed": "Queued",
-                    "Registered": "Queued",
+                    "Imported": "Completed",
+                    "Processed": "Completed",
+                    "Registered": "Completed",
                     "Alignment": "Queued",
                     "Clean Up": "Queued",
                     "Point Cloud": "Queued",

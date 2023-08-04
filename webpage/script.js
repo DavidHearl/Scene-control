@@ -104,43 +104,54 @@ fetch('../data/scan_database.json')
 
                     shipElement.appendChild(shipRow);
 
-
                     for (const area in areas) {
                         const areaDetails = areas[area];
-
+                        const subcategoryValues = Object.values(areaDetails);
+                        const isAllSameValue = subcategoryValues.every(value => value === subcategoryValues[0]);
+        
                         const areaElement = document.createElement('div');
                         areaElement.className = 'area row mb-2';
-
+        
                         const areaNameElement = document.createElement('div');
                         areaNameElement.className = 'col-lg-4';
-
+        
                         const areaNameList = document.createElement('ul');
                         areaNameList.className = '';
-
+        
                         const areaNameListItem = document.createElement('li');
                         areaNameList.className = 'area-name';
                         areaNameListItem.textContent = area;
-
+        
                         areaNameList.appendChild(areaNameListItem);
                         areaNameElement.appendChild(areaNameList);
                         areaElement.appendChild(areaNameElement);
-
-                        for (const subcategory in areaDetails) {
+        
+                        if (isAllSameValue) {
                             const subcategoryElement = document.createElement('div');
-                            subcategoryElement.className = 'col-md-6 col-lg-1 area-subcategory';
-
-                            const subcategoryBox = document.createElement('div');
-
-                            const status = areaDetails[subcategory];
+                            subcategoryElement.className = 'col-lg-8 area-subcategory';
+                            const status = subcategoryValues[0];
                             const statusClass = status.replace(/\s/g, ''); // Remove spaces from status for class name
-
-                            // Set class based on status, use "NoData" for [No Data]
-                            subcategoryBox.className = `area-box ${status === 'No Data' ? 'NoData' : statusClass}`;
-                            subcategoryBox.textContent = subcategory; // Set the description as the text content
-
-                            subcategoryElement.appendChild(subcategoryBox);
-
+                            subcategoryElement.className = `col-lg-8 area-box ${status === 'No Data' ? 'NoData' : statusClass}`;
+                            subcategoryElement.textContent = `All ${status}`;
                             areaElement.appendChild(subcategoryElement);
+                        } else {
+                            for (const subcategory in areaDetails) {
+                                const subcategoryElement = document.createElement('div');
+                                subcategoryElement.className = 'col-md-6 col-lg-1 area-subcategory';
+
+                                const subcategoryBox = document.createElement('div');
+
+                                const status = areaDetails[subcategory];
+                                const statusClass = status.replace(/\s/g, ''); // Remove spaces from status for class name
+
+                                // Set class based on status, use "NoData" for [No Data]
+                                subcategoryBox.className = `area-box ${status === 'No Data' ? 'NoData' : statusClass}`;
+                                subcategoryBox.textContent = subcategory; // Set the description as the text content
+
+                                subcategoryElement.appendChild(subcategoryBox);
+
+                                areaElement.appendChild(subcategoryElement);
+                            }
                         }
 
                         shipElement.appendChild(areaElement);
@@ -150,5 +161,6 @@ fetch('../data/scan_database.json')
                 }
             }
         }
+
     })
     .catch(error => console.error('Error fetching JSON:', error));
