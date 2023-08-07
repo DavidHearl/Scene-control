@@ -21,9 +21,14 @@ ul {
     list-style: none;
 }
 
+hr {
+    margin: 12px 0;
+}
+
 .title-underline {
     margin-top: 0;
 }
+
 
 .filters {
     text-align: center;
@@ -149,4 +154,30 @@ ul {
             rgba(0, 128, 0, 0.65) 10px,
             rgba(0, 128, 0, 0.65) 20px);
     color: #ffffff;
+}
+
+@media only screen and (max-width: 600px) {
+    .key-boxes {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+    .key-boxes > .area-box {
+        margin-bottom: 4px;
+    }
+
+    .key-description {
+        margin: 0 4px 8px;
+        font-size: 11px;
+        text-align: center;
+    }
+
+    .filter-boxes {
+        padding: 0;
+    }
+
+    .filter-label {
+        margin-top: 4px;
+        margin-bottom: 4px;
+    }
 }

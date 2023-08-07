@@ -11,29 +11,29 @@
     <div class="container">
         <h1 class="text-center">Scanning Progress</h1>
         <div class="row key">
-            <div class="col-4">
+            <div class="col-4 key-boxes">
                 <div class="area-box Legacy">Legacy</div>
                 <p class="key-description">Scans were completed prior to proceedure, are now considered legacy content.</p>
             </div>
-            <div class="col-4">
+            <div class="col-4 key-boxes">
                 <div class="area-box Failed">Failed</div>
                 <p class="key-description">Scan operation has failed. This will require manual intervention.</p>
             </div>
-            <div class="col-4">
+            <div class="col-4 key-boxes">
                 <div class="area-box NoData">NoData</div>
                 <p class="key-description">No data has been found for this area.</p>
             </div>
         </div> 
         <div class="row key">
-            <div class="col-4">
+            <div class="col-4 key-boxes">
                 <div class="area-box Queued">Queued</div>
                 <p class="key-description">This conent is in the queue to be processed</p>
             </div>
-            <div class="col-4">
+            <div class="col-4 key-boxes">
                 <div class="area-box WIP">WIP</div>
                 <p class="key-description">This content is currently being processed</p>
             </div>
-            <div class="col-4">
+            <div class="col-4 key-boxes">
                 <div class="area-box Completed">Completed</div>
                 <p class="key-description">This process has finished.</p>
             </div>
@@ -41,20 +41,20 @@
         <hr>
 
         <div class="row filters">
-            <div class="col-md-4">
-                <label for="ship-filter">Filter by Ship Name:</label>
+            <div class="col-md-4 filter-boxes">
+                <label for="ship-filter" class="filter-label">Filter by Ship Name:</label>
                 <select id="ship-filter" class="form-control">
                     <option value="">All Ships</option>
                 </select>
             </div>
-            <div class="col-md-4">
-                <label for="company-filter">Filter by Company:</label>
+            <div class="col-md-4 filter-boxes">
+                <label for="company-filter" class="filter-label">Filter by Company:</label>
                 <select id="company-filter" class="form-control">
                     <option value="">All Companies</option>
                 </select>
             </div>
-            <div class="col-md-4">
-                <label for="number-search">Search by Number:</label>
+            <div class="col-md-4 filter-boxes">
+                <label for="number-search" class="filter-label">Search by Number:</label>
                 <input type="text" id="number-search" class="form-control" placeholder="Type number here">
             </div>
         </div>
