@@ -11,16 +11,18 @@ h1 {
 }
 
 h3 {
-    font-size: 1.4rem;
+    font-size: 1.25rem;
     text-align: center;
+    margin-top: 8px;
 }
 
 ul {
     margin: 0;
+    list-style: none;
 }
 
-.col-lg-4 {
-    height: 24px;
+.title-underline {
+    margin-top: 0;
 }
 
 .filters {
@@ -37,10 +39,6 @@ ul {
     padding: 4px;
 }
 
-.ship-title {
-    margin: 10px 0 16px 14px;
-}
-
 .key {
     display: flex;
     flex-direction: row;
@@ -54,53 +52,70 @@ ul {
 
 .ship-section {
     background-color: #f8f9fa;
-    border-radius: 8px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-    padding: 10px;
+    border: 1px solid;
+    border-radius: 16px;
+    margin-bottom: 32px;
+    padding: 4px 15px;
 }
 
 #ship-dropdown {
     margin-left: 10px;
 }
 
-.area {
-    margin-bottom: 0.5rem;
+.row {
+    margin: 0;
 }
 
 .area-name {
-    font-size: 1.1rem;
-    margin-bottom: 8px;
+    margin-bottom: 12px;
 }
 
-.area-subcategory {
-    padding: 0 8px;
+.area-title {
+    padding: 0 4px;
+    margin: 0;
 }
 
 .area-box {
-    display: inline-block;
+    display: flex;
     width: 100%;
     border: 1px solid #ccc;
     border-radius: 8px;
-    text-align: center;
-    font-size: 11px;
+    justify-content: center;
+    font-size: 10px;
     padding: 4px;
+    margin-bottom: 11px;
 }
 
-.area-box.Legacy {
+.area-box-large {
+    display: flex;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    justify-content: center;
+    font-size: 10px;
+    padding: 4px;
+    height: 26px;
+}
+
+.progress-box {
+    padding: 0;
+}
+
+.Legacy {
     background-color: #ffffff;
     color: #000000;
 }
 
-.area-box.Queued {
+.Queued {
     background: repeating-linear-gradient(45deg,
-            rgba(255, 0, 0, 1),
-            rgba(255, 0, 0, 1) 10px,
-            rgba(255, 0, 0, 0.8) 10px,
-            rgba(255, 0, 0, 0.8) 20px);
+            rgba(255, 0, 0, 0.7),
+            rgba(255, 0, 0, 0.7) 10px,
+            rgba(255, 0, 0, 0.6) 10px,
+            rgba(255, 0, 0, 0.6) 20px);
     color: #ffffff;
 }
 
-.area-box.Failed {
+.Failed {
     background: repeating-linear-gradient(45deg,
             rgba(80, 80, 80, 1),
             rgba(80, 80, 80, 1) 10px,
@@ -109,7 +124,7 @@ ul {
     color: #ffffff;
 }
 
-.area-box.WIP {
+.WIP {
     background: repeating-linear-gradient(45deg,
             rgba(255, 165, 0, 1),
             rgba(255, 165, 0, 1) 10px,
@@ -118,7 +133,7 @@ ul {
     color: #000000;
 }
 
-.area-box.NoData {
+.NoData {
     background: repeating-linear-gradient(45deg,
             rgba(128, 128, 128, 1),
             rgba(128, 128, 128, 1) 10px,
@@ -127,24 +142,11 @@ ul {
     color: #ffffff;
 }
 
-.area-box.Completed {
+.Completed {
     background: repeating-linear-gradient(45deg,
-            rgba(0, 128, 0, 0.8),
-            rgba(0, 128, 0, 0.8) 10px,
+            rgba(0, 128, 0, 0.7),
             rgba(0, 128, 0, 0.7) 10px,
-            rgba(0, 128, 0, 0.7) 20px);
+            rgba(0, 128, 0, 0.65) 10px,
+            rgba(0, 128, 0, 0.65) 20px);
     color: #ffffff;
-}
-
-@media (max-width: 992px) {
-    .area-box {
-        width: 95%;
-        margin: 2.5%;
-        margin-bottom: 0px;
-    }
-
-    .area-name {
-        list-style: none;
-        margin-left: -32px;
-    }
 }

@@ -10,7 +10,7 @@
                     "Registered": "Queued",
                     "Alignment": "Failed",
                     "Clean Up": "WIP",
-                    "Point Cloud": "No Data",
+                    "Point Cloud": "NoData",
                     "Exported": "Completed",
                     "Uploaded": "Completed"
                 }
@@ -26,7 +26,7 @@
                     "Registered": "Queued",
                     "Alignment": "Failed",
                     "Clean Up": "WIP",
-                    "Point Cloud": "No Data",
+                    "Point Cloud": "NoData",
                     "Exported": "Completed",
                     "Uploaded": "Completed"
                 }
@@ -1656,14 +1656,14 @@
             ],      
             "areas": {
                 "AFT Restaurant": {
-                    "Imported": "No Data",
-                    "Processed": "No Data",
-                    "Registered": "No Data",
-                    "Alignment": "No Data",
-                    "Clean Up": "No Data",
-                    "Point Cloud": "No Data",
-                    "Exported": "No Data",
-                    "Uploaded": "No Data"
+                    "Imported": "NoData",
+                    "Processed": "NoData",
+                    "Registered": "NoData",
+                    "Alignment": "NoData",
+                    "Clean Up": "NoData",
+                    "Point Cloud": "NoData",
+                    "Exported": "NoData",
+                    "Uploaded": "NoData"
                 },
                 "Conference Room": {
                     "Imported": "Completed",
@@ -1676,14 +1676,14 @@
                     "Uploaded": "Completed"
                 },
                 "Chef's Table": {
-                    "Imported": "No Data",
-                    "Processed": "No Data",
-                    "Registered": "No Data",
-                    "Alignment": "No Data",
-                    "Clean Up": "No Data",
-                    "Point Cloud": "No Data",
-                    "Exported": "No Data",
-                    "Uploaded": "No Data"
+                    "Imported": "NoData",
+                    "Processed": "NoData",
+                    "Registered": "NoData",
+                    "Alignment": "NoData",
+                    "Clean Up": "NoData",
+                    "Point Cloud": "NoData",
+                    "Exported": "NoData",
+                    "Uploaded": "NoData"
                 },
                 "FWD Restaurant": {
                     "Imported": "Completed",
