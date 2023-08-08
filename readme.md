@@ -1,19 +1,21 @@
-Installations required to run the program.
+# Live Site 
+### https://davidhearl.github.io/scene-control/webpage/index.html
 
-- pip install pyautogui
-- pip install math
-- pip install time
-- pip install tkinter
-- pip install tqdm
-- pip install pytesseract
-- pip install pillow
+## Running
 
 To run in CMD for testing purposes:
 
-Command to navigate to location in cmd
+```cd ../../local storage/github/scene-control```
 
-cd ../../local storage/github/scene-control
+To Run the code:
 
-py run.py
+```py run.py```
 
-https://davidhearl.github.io/scene-control/webpage/index.html
+```py ../data/data_logging.py```
+
+Terminal command to host the developer environment.
+
+```py -m http.server```
+
+## Known Issues
+1. Mobile view will only update when the page is reloaded.

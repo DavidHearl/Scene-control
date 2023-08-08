@@ -119,47 +119,57 @@ fetch('../data/scan_database.json')
                         const areaDetails = areas[area];
                         const subcategoryValues = Object.values(areaDetails);
                         const isAllSameValue = subcategoryValues.every(value => value === subcategoryValues[0]);
-
+                    
                         const areaElement = document.createElement('div');
                         areaElement.className = 'row area';
-
+                    
                         const areaNameElement = document.createElement('div');
-                        areaNameElement.className = 'col-4 area-title';
-
+                        const subcategoryElement = document.createElement('div'); // New element for subcategory
                         const areaNameParagraph = document.createElement('p');
+                    
                         areaNameParagraph.className = 'area-name';
                         areaNameParagraph.textContent = area;
-                        
+                    
+                        if (isAllSameValue) {
+                            subcategoryElement.className = `col-8 area-box-large ${subcategoryValues[0]}`;
+                            subcategoryElement.textContent = `All ${subcategoryValues[0]}`;
+                            areaNameElement.className = 'col-4 area-title';
+                        } else {
+                            subcategoryElement.className = 'col-12'; // Set class for subcategory element
+                            
+                            // Check screen width and set class for areaNameElement
+                            if (window.innerWidth < 800) {
+                                areaNameElement.className = 'col-12 area-title';
+                            } else {
+                                areaNameElement.className = 'col-4 area-title';
+                            }
+                        }
+                    
                         areaNameElement.appendChild(areaNameParagraph);
                         areaElement.appendChild(areaNameElement);
-
+                    
                         if (isAllSameValue) {
-                            const subcategoryElement = document.createElement('div');
-                            subcategoryElement.className = 'col-8';
-                            const status = subcategoryValues[0];
-                            subcategoryElement.className = `col-8 area-box-large ${status === 'NoData' ? 'NoData' : status}`;
-                            subcategoryElement.textContent = `All ${status}`;
                             areaElement.appendChild(subcategoryElement);
                         } else {
                             for (const subcategory in areaDetails) {
                                 const subcategoryElement = document.createElement('div');
-                                subcategoryElement.className = 'col-md-6 col-lg-1 progress-box';
-                        
+                                subcategoryElement.className = 'col-3 col-md-6 col-lg-1 progress-box';
+                    
                                 const subcategoryBox = document.createElement('div');
-                        
+                    
                                 const status = areaDetails[subcategory];
-                        
-                                // Set class based on status, use "NoData" for [No Data]
-                                subcategoryBox.className = `area-box ${status === 'NoData' ? 'NoData' : status}`;
-                                subcategoryBox.textContent = subcategory; // Set the description as the text content
-                        
+                    
+                                // Set the description as the class name & text content
+                                subcategoryBox.className = `area-box ${status}`;
+                                subcategoryBox.textContent = subcategory;
+                    
                                 subcategoryElement.appendChild(subcategoryBox);
-                        
+                    
                                 areaElement.appendChild(subcategoryElement);
                             }
-                        }                        
+                        }
                         shipElement.appendChild(areaElement);
-                    }
+                    }                    
                     shipDetailsDiv.appendChild(shipElement);
                 }
             }
