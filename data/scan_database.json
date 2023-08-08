@@ -7,12 +7,12 @@
                 "Porch": {
                     "Imported": "Legacy",
                     "Processed": "Legacy",
-                    "Registered": "Queued",
-                    "Alignment": "Failed",
-                    "Clean Up": "WIP",
-                    "Point Cloud": "NoData",
-                    "Exported": "Completed",
-                    "Uploaded": "Completed"
+                    "Registered": "Legacy",
+                    "Alignment": "Legacy",
+                    "Clean Up": "Legacy",
+                    "Point Cloud": "Legacy",
+                    "Exported": "Legacy",
+                    "Uploaded": "Legacy"
                 }
             }
         },
@@ -23,20 +23,342 @@
                 "Playmakers": {
                     "Imported": "Legacy",
                     "Processed": "Legacy",
-                    "Registered": "Queued",
-                    "Alignment": "Failed",
-                    "Clean Up": "WIP",
-                    "Point Cloud": "NoData",
-                    "Exported": "Completed",
-                    "Uploaded": "Completed"
+                    "Registered": "Legacy",
+                    "Alignment": "Legacy",
+                    "Clean Up": "Legacy",
+                    "Point Cloud": "Legacy",
+                    "Exported": "Legacy",
+                    "Uploaded": "Legacy"
+                }
+            }
+        },        
+        "Silver Origin": {
+            "number": "936",
+            "company": "Silversea",
+            "areas": {
+                "Owner Suite": {
+                    "Imported": "Legacy",
+                    "Processed": "Legacy",
+                    "Registered": "Legacy",
+                    "Alignment": "Legacy",
+                    "Clean Up": "Legacy",
+                    "Point Cloud": "Legacy",
+                    "Exported": "Legacy",
+                    "Uploaded": "Legacy"
+                },
+                "Medallion Suite": {
+                    "Imported": "Legacy",
+                    "Processed": "Legacy",
+                    "Registered": "Legacy",
+                    "Alignment": "Legacy",
+                    "Clean Up": "Legacy",
+                    "Point Cloud": "Legacy",
+                    "Exported": "Legacy",
+                    "Uploaded": "Legacy"
+                },
+                "Stairs & Lobbies": {
+                    "Imported": "Legacy",
+                    "Processed": "Legacy",
+                    "Registered": "Legacy",
+                    "Alignment": "Legacy",
+                    "Clean Up": "Legacy",
+                    "Point Cloud": "Legacy",
+                    "Exported": "Legacy",
+                    "Uploaded": "Legacy"
+                },
+                "Stairs & Lobbies 2": {
+                    "Imported": "Legacy",
+                    "Processed": "Legacy",
+                    "Registered": "Legacy",
+                    "Alignment": "Legacy",
+                    "Clean Up": "Legacy",
+                    "Point Cloud": "Legacy",
+                    "Exported": "Legacy",
+                    "Uploaded": "Legacy"
+                },
+                "Stairs & Lobbies 3": {
+                    "Imported": "Legacy",
+                    "Processed": "Legacy",
+                    "Registered": "Legacy",
+                    "Alignment": "Legacy",
+                    "Clean Up": "Legacy",
+                    "Point Cloud": "Legacy",
+                    "Exported": "Legacy",
+                    "Uploaded": "Legacy"
+                },
+                "Stairs & Lobbies 4": {
+                    "Imported": "Legacy",
+                    "Processed": "Legacy",
+                    "Registered": "Legacy",
+                    "Alignment": "Legacy",
+                    "Clean Up": "Legacy",
+                    "Point Cloud": "Legacy",
+                    "Exported": "Legacy",
+                    "Uploaded": "Legacy"
+                },
+                "Owner Suite 2": {
+                    "Imported": "Legacy",
+                    "Processed": "Legacy",
+                    "Registered": "Legacy",
+                    "Alignment": "Legacy",
+                    "Clean Up": "Legacy",
+                    "Point Cloud": "Legacy",
+                    "Exported": "Legacy",
+                    "Uploaded": "Legacy"
+                },
+                "Royal/Grand Suite": {
+                    "Imported": "Legacy",
+                    "Processed": "Legacy",
+                    "Registered": "Legacy",
+                    "Alignment": "Legacy",
+                    "Clean Up": "Legacy",
+                    "Point Cloud": "Legacy",
+                    "Exported": "Legacy",
+                    "Uploaded": "Legacy"
+                },
+                "Observation Lounge": {
+                    "Imported": "Legacy",
+                    "Processed": "Legacy",
+                    "Registered": "Legacy",
+                    "Alignment": "Legacy",
+                    "Clean Up": "Legacy",
+                    "Point Cloud": "Legacy",
+                    "Exported": "Legacy",
+                    "Uploaded": "Legacy"
                 }
             }
         },
+        "Celebrity Constellation": {
+            "number": "945",
+            "company": "Celebrity",
+            "areas": {
+                "Sunset Bar": {
+                    "Imported": "Legacy",
+                    "Processed": "Legacy",
+                    "Registered": "Legacy",
+                    "Alignment": "Legacy",
+                    "Clean Up": "Legacy",
+                    "Point Cloud": "Legacy",
+                    "Exported": "Legacy",
+                    "Uploaded": "Legacy"
+                },
+                "Sunset Bar 2": {
+                    "Imported": "Legacy",
+                    "Processed": "Legacy",
+                    "Registered": "Legacy",
+                    "Alignment": "Legacy",
+                    "Clean Up": "Legacy",
+                    "Point Cloud": "Legacy",
+                    "Exported": "Legacy",
+                    "Uploaded": "Legacy"
+                },
+                "Rendezvous 1": {
+                    "Imported": "Legacy",
+                    "Processed": "Legacy",
+                    "Registered": "Legacy",
+                    "Alignment": "Legacy",
+                    "Clean Up": "Legacy",
+                    "Point Cloud": "Legacy",
+                    "Exported": "Legacy",
+                    "Uploaded": "Legacy"
+                },
+                "Rendezvous 2": {
+                    "Imported": "Legacy",
+                    "Processed": "Legacy",
+                    "Registered": "Legacy",
+                    "Alignment": "Legacy",
+                    "Clean Up": "Legacy",
+                    "Point Cloud": "Legacy",
+                    "Exported": "Legacy",
+                    "Uploaded": "Legacy"
+                },
+                "Suite Sun Deck": {
+                    "Imported": "Legacy",
+                    "Processed": "Legacy",
+                    "Registered": "Legacy",
+                    "Alignment": "Legacy",
+                    "Clean Up": "Legacy",
+                    "Point Cloud": "Legacy",
+                    "Exported": "Legacy",
+                    "Uploaded": "Legacy"
+                },
+                "Spa": {
+                    "Imported": "Legacy",
+                    "Processed": "Legacy",
+                    "Registered": "Legacy",
+                    "Alignment": "Legacy",
+                    "Clean Up": "Legacy",
+                    "Point Cloud": "Legacy",
+                    "Exported": "Legacy",
+                    "Uploaded": "Legacy"
+                },
+                "OVC": {
+                    "Imported": "Legacy",
+                    "Processed": "Legacy",
+                    "Registered": "Legacy",
+                    "Alignment": "Legacy",
+                    "Clean Up": "Legacy",
+                    "Point Cloud": "Legacy",
+                    "Exported": "Legacy",
+                    "Uploaded": "Legacy"
+                }
+            }
+        },    
         "Ruby Princess": {
             "number": "XXX",
             "company": "Princess",
             "areas": {
-                "Playmakers": {
+                "Adagio": {
+                    "Imported": "Completed",
+                    "Processed": "Completed",
+                    "Registered": "Completed",
+                    "Alignment": "Completed",
+                    "Clean Up": "Completed",
+                    "Point Cloud": "Completed",
+                    "Exported": "Completed",
+                    "Uploaded": "Completed"
+                },
+                "Calypso Bar": {
+                    "Imported": "Completed",
+                    "Processed": "Completed",
+                    "Registered": "Completed",
+                    "Alignment": "Completed",
+                    "Clean Up": "Completed",
+                    "Point Cloud": "Completed",
+                    "Exported": "Completed",
+                    "Uploaded": "Completed"
+                },
+                "Club Fusion": {
+                    "Imported": "Completed",
+                    "Processed": "Completed",
+                    "Registered": "Completed",
+                    "Alignment": "Completed",
+                    "Clean Up": "Completed",
+                    "Point Cloud": "Completed",
+                    "Exported": "Completed",
+                    "Uploaded": "Completed"
+                },
+                "Coffee & Cones, Slices": {
+                    "Imported": "Completed",
+                    "Processed": "Completed",
+                    "Registered": "Completed",
+                    "Alignment": "Completed",
+                    "Clean Up": "Completed",
+                    "Point Cloud": "Completed",
+                    "Exported": "Completed",
+                    "Uploaded": "Completed"
+                },
+                "Crooners": {
+                    "Imported": "Completed",
+                    "Processed": "Completed",
+                    "Registered": "Completed",
+                    "Alignment": "Completed",
+                    "Clean Up": "Completed",
+                    "Point Cloud": "Completed",
+                    "Exported": "Completed",
+                    "Uploaded": "Completed"
+                },
+                "Drop Box": {
+                    "Imported": "Completed",
+                    "Processed": "Completed",
+                    "Registered": "Completed",
+                    "Alignment": "Completed",
+                    "Clean Up": "Completed",
+                    "Point Cloud": "Completed",
+                    "Exported": "Completed",
+                    "Uploaded": "Completed"
+                },
+                "Explorers Lounge": {
+                    "Imported": "Completed",
+                    "Processed": "Completed",
+                    "Registered": "Completed",
+                    "Alignment": "Completed",
+                    "Clean Up": "Completed",
+                    "Point Cloud": "Completed",
+                    "Exported": "Completed",
+                    "Uploaded": "Completed"
+                },
+                "International Café & Goods Spirits": {
+                    "Imported": "Completed",
+                    "Processed": "Completed",
+                    "Registered": "Completed",
+                    "Alignment": "Completed",
+                    "Clean Up": "Completed",
+                    "Point Cloud": "Completed",
+                    "Exported": "Completed",
+                    "Uploaded": "Completed"
+                },
+                "Outriggers": {
+                    "Imported": "Completed",
+                    "Processed": "Completed",
+                    "Registered": "Completed",
+                    "Alignment": "Completed",
+                    "Clean Up": "Completed",
+                    "Point Cloud": "Completed",
+                    "Exported": "Completed",
+                    "Uploaded": "Completed"
+                },
+                "Photo Studio": {
+                    "Imported": "Completed",
+                    "Processed": "Completed",
+                    "Registered": "Completed",
+                    "Alignment": "Completed",
+                    "Clean Up": "Completed",
+                    "Point Cloud": "Completed",
+                    "Exported": "Completed",
+                    "Uploaded": "Completed"
+                },
+                "Skywalkers": {
+                    "Imported": "Completed",
+                    "Processed": "Completed",
+                    "Registered": "Completed",
+                    "Alignment": "Completed",
+                    "Clean Up": "Completed",
+                    "Point Cloud": "Completed",
+                    "Exported": "Completed",
+                    "Uploaded": "Completed"
+                },
+                "The Mix": {
+                    "Imported": "Completed",
+                    "Processed": "Completed",
+                    "Registered": "Completed",
+                    "Alignment": "Completed",
+                    "Clean Up": "Completed",
+                    "Point Cloud": "Completed",
+                    "Exported": "Completed",
+                    "Uploaded": "Completed"
+                },
+                "Salty Dog": {
+                    "Imported": "Completed",
+                    "Processed": "Completed",
+                    "Registered": "Completed",
+                    "Alignment": "Completed",
+                    "Clean Up": "Completed",
+                    "Point Cloud": "Completed",
+                    "Exported": "Completed",
+                    "Uploaded": "Completed"
+                },
+                "Trade Winds": {
+                    "Imported": "Completed",
+                    "Processed": "Completed",
+                    "Registered": "Completed",
+                    "Alignment": "Completed",
+                    "Clean Up": "Completed",
+                    "Point Cloud": "Completed",
+                    "Exported": "Completed",
+                    "Uploaded": "Completed"
+                },
+                "Vines": {
+                    "Imported": "Completed",
+                    "Processed": "Completed",
+                    "Registered": "Completed",
+                    "Alignment": "Completed",
+                    "Clean Up": "Completed",
+                    "Point Cloud": "Completed",
+                    "Exported": "Completed",
+                    "Uploaded": "Completed"
+                },
+                "Wheelhouse": {
                     "Imported": "Completed",
                     "Processed": "Completed",
                     "Registered": "Completed",
@@ -565,6 +887,396 @@
                     "Point Cloud": "Completed",
                     "Exported": "Completed",
                     "Uploaded": "Queued"
+                },
+                "Cabin 8000": {
+                    "Imported": "Completed",
+                    "Processed": "Completed",
+                    "Registered": "Completed",
+                    "Alignment": "Completed",
+                    "Clean Up": "Completed",
+                    "Point Cloud": "Completed",
+                    "Exported": "Completed",
+                    "Uploaded": "Completed"
+                },
+                "Cabin 8012": {
+                    "Imported": "Completed",
+                    "Processed": "Completed",
+                    "Registered": "Completed",
+                    "Alignment": "Completed",
+                    "Clean Up": "Completed",
+                    "Point Cloud": "Completed",
+                    "Exported": "Completed",
+                    "Uploaded": "Completed"
+                },
+                "Cabin 8018": {
+                    "Imported": "Completed",
+                    "Processed": "Completed",
+                    "Registered": "Failed",
+                    "Alignment": "Queued",
+                    "Clean Up": "Queued",
+                    "Point Cloud": "Queued",
+                    "Exported": "Queued",
+                    "Uploaded": "Queued"
+                },
+                "Cabin 8056": {
+                    "Imported": "Completed",
+                    "Processed": "Completed",
+                    "Registered": "Failed",
+                    "Alignment": "Queued",
+                    "Clean Up": "Queued",
+                    "Point Cloud": "Queued",
+                    "Exported": "Queued",
+                    "Uploaded": "Queued"
+                },
+                "Cabin 8062": {
+                    "Imported": "Completed",
+                    "Processed": "Completed",
+                    "Registered": "Completed",
+                    "Alignment": "Completed",
+                    "Clean Up": "Completed",
+                    "Point Cloud": "Completed",
+                    "Exported": "Completed",
+                    "Uploaded": "Completed"
+                },
+                "Cabin 8512": {
+                    "Imported": "Completed",
+                    "Processed": "Completed",
+                    "Registered": "Failed",
+                    "Alignment": "Queued",
+                    "Clean Up": "Queued",
+                    "Point Cloud": "Queued",
+                    "Exported": "Queued",
+                    "Uploaded": "Queued"
+                },
+                "Cabin 9002": {
+                    "Imported": "Completed",
+                    "Processed": "Completed",
+                    "Registered": "Failed",
+                    "Alignment": "Queued",
+                    "Clean Up": "Queued",
+                    "Point Cloud": "Queued",
+                    "Exported": "Queued",
+                    "Uploaded": "Queued"
+                },
+                "Cabin 9120": {
+                    "Imported": "Completed",
+                    "Processed": "Completed",
+                    "Registered": "Failed",
+                    "Alignment": "Queued",
+                    "Clean Up": "Queued",
+                    "Point Cloud": "Queued",
+                    "Exported": "Queued",
+                    "Uploaded": "Queued"
+                },
+                "Cabin 9126": {
+                    "Imported": "Completed",
+                    "Processed": "Completed",
+                    "Registered": "Failed",
+                    "Alignment": "Queued",
+                    "Clean Up": "Queued",
+                    "Point Cloud": "Queued",
+                    "Exported": "Queued",
+                    "Uploaded": "Queued"
+                },
+                "Cabin 9300": {
+                    "Imported": "Completed",
+                    "Processed": "Completed",
+                    "Registered": "Completed",
+                    "Alignment": "Completed",
+                    "Clean Up": "Completed",
+                    "Point Cloud": "Completed",
+                    "Exported": "Completed",
+                    "Uploaded": "Completed"
+                },
+                "Cabin 9308": {
+                    "Imported": "Completed",
+                    "Processed": "Completed",
+                    "Registered": "Completed",
+                    "Alignment": "Completed",
+                    "Clean Up": "Completed",
+                    "Point Cloud": "Completed",
+                    "Exported": "Completed",
+                    "Uploaded": "Completed"
+                },
+                "Cabin 9500": {
+                    "Imported": "Completed",
+                    "Processed": "Completed",
+                    "Registered": "Failed",
+                    "Alignment": "Queued",
+                    "Clean Up": "Queued",
+                    "Point Cloud": "Queued",
+                    "Exported": "Queued",
+                    "Uploaded": "Queued"
+                },
+                "Cabin 9508": {
+                    "Imported": "Completed",
+                    "Processed": "Completed",
+                    "Registered": "Failed",
+                    "Alignment": "Queued",
+                    "Clean Up": "Queued",
+                    "Point Cloud": "Queued",
+                    "Exported": "Queued",
+                    "Uploaded": "Queued"
+                },
+                "Cabin 9510": {
+                    "Imported": "Completed",
+                    "Processed": "Completed",
+                    "Registered": "Failed",
+                    "Alignment": "Queued",
+                    "Clean Up": "Queued",
+                    "Point Cloud": "Queued",
+                    "Exported": "Queued",
+                    "Uploaded": "Queued"
+                },
+                "Cabin 10000": {
+                    "Imported": "Completed",
+                    "Processed": "Completed",
+                    "Registered": "Failed",
+                    "Alignment": "Queued",
+                    "Clean Up": "Queued",
+                    "Point Cloud": "Queued",
+                    "Exported": "Queued",
+                    "Uploaded": "Queued"
+                },
+                "Cabin 10168": {
+                    "Imported": "Completed",
+                    "Processed": "Completed",
+                    "Registered": "Completed",
+                    "Alignment": "Completed",
+                    "Clean Up": "Completed",
+                    "Point Cloud": "Completed",
+                    "Exported": "Completed",
+                    "Uploaded": "Completed"
+                },
+                "Cabin 12000": {
+                    "Imported": "Completed",
+                    "Processed": "Completed",
+                    "Registered": "Completed",
+                    "Alignment": "Completed",
+                    "Clean Up": "Completed",
+                    "Point Cloud": "Completed",
+                    "Exported": "Completed",
+                    "Uploaded": "Completed"
+                },
+                "Cabin 12006": {
+                    "Imported": "Completed",
+                    "Processed": "Completed",
+                    "Registered": "Completed",
+                    "Alignment": "Completed",
+                    "Clean Up": "Completed",
+                    "Point Cloud": "Completed",
+                    "Exported": "Completed",
+                    "Uploaded": "Completed"
+                },
+                "Cabin 12508": {
+                    "Imported": "Completed",
+                    "Processed": "Completed",
+                    "Registered": "Completed",
+                    "Alignment": "Completed",
+                    "Clean Up": "Completed",
+                    "Point Cloud": "Completed",
+                    "Exported": "Completed",
+                    "Uploaded": "Queued"
+                },
+                "Cabin 13000": {
+                    "Imported": "Completed",
+                    "Processed": "Completed",
+                    "Registered": "Completed",
+                    "Alignment": "Completed",
+                    "Clean Up": "Completed",
+                    "Point Cloud": "Queued",
+                    "Exported": "Queued",
+                    "Uploaded": "Queued"
+                },
+                "Cabin 13001": {
+                    "Imported": "Completed",
+                    "Processed": "Completed",
+                    "Registered": "Completed",
+                    "Alignment": "Completed",
+                    "Clean Up": "Completed",
+                    "Point Cloud": "Queued",
+                    "Exported": "Queued",
+                    "Uploaded": "Queued"
+                },
+                "Cabin 13002": {
+                    "Imported": "Completed",
+                    "Processed": "Completed",
+                    "Registered": "Failed",
+                    "Alignment": "Queued",
+                    "Clean Up": "Queued",
+                    "Point Cloud": "Queued",
+                    "Exported": "Queued",
+                    "Uploaded": "Queued"
+                },
+                "Cabin 13006": {
+                    "Imported": "Completed",
+                    "Processed": "Completed",
+                    "Registered": "Completed",
+                    "Alignment": "Completed",
+                    "Clean Up": "Completed",
+                    "Point Cloud": "Queued",
+                    "Exported": "Queued",
+                    "Uploaded": "Queued"
+                },
+                "Cabin 13052": {
+                    "Imported": "Completed",
+                    "Processed": "Completed",
+                    "Registered": "Failed",
+                    "Alignment": "Queued",
+                    "Clean Up": "Queued",
+                    "Point Cloud": "Queued",
+                    "Exported": "Queued",
+                    "Uploaded": "Queued"
+                },
+                "Cabin 13117": {
+                    "Imported": "Completed",
+                    "Processed": "Completed",
+                    "Registered": "Completed",
+                    "Alignment": "Completed",
+                    "Clean Up": "Completed",
+                    "Point Cloud": "Queued",
+                    "Exported": "Queued",
+                    "Uploaded": "Queued"
+                },
+                "Cabin 13506": {
+                    "Imported": "Completed",
+                    "Processed": "Completed",
+                    "Registered": "Failed",
+                    "Alignment": "Queued",
+                    "Clean Up": "Queued",
+                    "Point Cloud": "Queued",
+                    "Exported": "Queued",
+                    "Uploaded": "Queued"
+                },
+                "Cabin 13518": {
+                    "Imported": "Completed",
+                    "Processed": "Completed",
+                    "Registered": "Completed",
+                    "Alignment": "Completed",
+                    "Clean Up": "Completed",
+                    "Point Cloud": "Queued",
+                    "Exported": "Queued",
+                    "Uploaded": "Queued"
+                },
+                "Cabin 15088": {
+                    "Imported": "Completed",
+                    "Processed": "Completed",
+                    "Registered": "Failed",
+                    "Alignment": "Queued",
+                    "Clean Up": "Queued",
+                    "Point Cloud": "Queued",
+                    "Exported": "Queued",
+                    "Uploaded": "Queued"
+                },
+                "Cabin 15090": {
+                    "Imported": "Completed",
+                    "Processed": "Completed",
+                    "Registered": "Failed",
+                    "Alignment": "Queued",
+                    "Clean Up": "Queued",
+                    "Point Cloud": "Queued",
+                    "Exported": "Queued",
+                    "Uploaded": "Queued"
+                },
+                "Cabin 15092": {
+                    "Imported": "Completed",
+                    "Processed": "Completed",
+                    "Registered": "Failed",
+                    "Alignment": "Queued",
+                    "Clean Up": "Queued",
+                    "Point Cloud": "Queued",
+                    "Exported": "Queued",
+                    "Uploaded": "Queued"
+                },
+                "Cabin 15572": {
+                    "Imported": "Completed",
+                    "Processed": "Completed",
+                    "Registered": "Completed",
+                    "Alignment": "Completed",
+                    "Clean Up": "Completed",
+                    "Point Cloud": "Queued",
+                    "Exported": "Queued",
+                    "Uploaded": "Queued"
+                },
+                "Cabin 15576": {
+                    "Imported": "Completed",
+                    "Processed": "Completed",
+                    "Registered": "Completed",
+                    "Alignment": "Completed",
+                    "Clean Up": "Completed",
+                    "Point Cloud": "Queued",
+                    "Exported": "Queued",
+                    "Uploaded": "Queued"
+                },
+                "Cabin 15592": {
+                    "Imported": "Completed",
+                    "Processed": "Completed",
+                    "Registered": "Completed",
+                    "Alignment": "Completed",
+                    "Clean Up": "Completed",
+                    "Point Cloud": "Queued",
+                    "Exported": "Queued",
+                    "Uploaded": "Queued"
+                },
+                "Cabin 13062": {
+                    "Imported": "NoData",
+                    "Processed": "NoData",
+                    "Registered": "NoData",
+                    "Alignment": "NoData",
+                    "Clean Up": "NoData",
+                    "Point Cloud": "NoData",
+                    "Exported": "NoData",
+                    "Uploaded": "NoData"
+                },
+                "Cabin 15000": {
+                    "Imported": "NoData",
+                    "Processed": "NoData",
+                    "Registered": "NoData",
+                    "Alignment": "NoData",
+                    "Clean Up": "NoData",
+                    "Point Cloud": "NoData",
+                    "Exported": "NoData",
+                    "Uploaded": "NoData"
+                },
+                "Cabin 15072": {
+                    "Imported": "NoData",
+                    "Processed": "NoData",
+                    "Registered": "NoData",
+                    "Alignment": "NoData",
+                    "Clean Up": "NoData",
+                    "Point Cloud": "NoData",
+                    "Exported": "NoData",
+                    "Uploaded": "NoData"
+                },
+                "Cabin 15082": {
+                    "Imported": "NoData",
+                    "Processed": "NoData",
+                    "Registered": "NoData",
+                    "Alignment": "NoData",
+                    "Clean Up": "NoData",
+                    "Point Cloud": "NoData",
+                    "Exported": "NoData",
+                    "Uploaded": "NoData"
+                },
+                "Cabin 15570": {
+                    "Imported": "NoData",
+                    "Processed": "NoData",
+                    "Registered": "NoData",
+                    "Alignment": "NoData",
+                    "Clean Up": "NoData",
+                    "Point Cloud": "NoData",
+                    "Exported": "NoData",
+                    "Uploaded": "NoData"
+                },
+                "Cabin 15590": {
+                    "Imported": "NoData",
+                    "Processed": "NoData",
+                    "Registered": "NoData",
+                    "Alignment": "NoData",
+                    "Clean Up": "NoData",
+                    "Point Cloud": "NoData",
+                    "Exported": "NoData",
+                    "Uploaded": "NoData"
                 }
             }
         },
@@ -1284,7 +1996,7 @@
                     "Exported": "Queued",
                     "Uploaded": "Queued"
                 },
-                "Wheelhouse Bar": {
+                "Wheelhouse": {
                     "Imported": "Completed",
                     "Processed": "Queued",
                     "Registered": "Queued",
@@ -1316,9 +2028,9 @@
                 }
             }
         },
-        "Carnival Frienze": {
+        "Costa Frienze": {
             "number": "1127",
-            "company": "Carnival",
+            "company": "Costa",
             "areas": {
                 "Arcade": {
                     "Imported": "Completed",
@@ -1334,9 +2046,9 @@
                     "Imported": "Completed",
                     "Processed": "Completed",
                     "Registered": "Completed",
-                    "Alignment": "Queued",
-                    "Clean Up": "Queued",
-                    "Point Cloud": "Queued",
+                    "Alignment": "Completed",
+                    "Clean Up": "Completed",
+                    "Point Cloud": "WIP",
                     "Exported": "Queued",
                     "Uploaded": "Queued"
                 },
@@ -1376,9 +2088,9 @@
                     "Registered": "Completed",
                     "Alignment": "Completed",
                     "Clean Up": "Completed",
-                    "Point Cloud": "WIP",
-                    "Exported": "Queued",
-                    "Uploaded": "Queued"
+                    "Point Cloud": "Completed",
+                    "Exported": "Completed",
+                    "Uploaded": "Completed"
                 },
                 "Photo Shades": {
                     "Imported": "Completed",
