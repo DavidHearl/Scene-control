@@ -13,12 +13,12 @@ class InitialProcedures:
     def __init__(self):
         # Processing options to choose from
         self.operations = [
-            "1: Processing & Registration",
-            "2: Overview Map, Point Cloud Creation & Project Export",
-            "3: Processing",
-            "4: Registration",
-            "5: Overview Map & Point Cloud Creation",
-            "6: Recap Project Export"
+            "Processing & Registration",
+            "Overview Map, Point Cloud Creation & Project Export",
+            "Processing",
+            "Registration",
+            "Overview Map & Point Cloud Creation",
+            "Recap Project Export"
         ]
 
         self.sorted_nested_dict = None
@@ -27,6 +27,7 @@ class InitialProcedures:
         # Set Tesseract path
         pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
 
+    # Give the user choices to choose from
     def startup(self):
         # Introduction
         print("")
@@ -35,33 +36,43 @@ class InitialProcedures:
         print("----------------------------------------------------------", end='\n\n')
         print("Select which operation you would like to run ?", end='\n\n')
 
-        # Prints list of operations with a small delay
-        for i in range(6):
-            time.sleep(0.15)
-            print(self.operations[i])
-
-        # Adds a space to the terminal
-        print()
-
-        # Takes input from user, doesn't allow wrong input
         while True:
-            print("Please enter the operation number you wish to run:", end=" ")
+            # Prints list of operations with a small delay
+            for i in range(6):
+                time.sleep(0.15)
+                print(f"{i + 1}: {self.operations[i]}")
+
+            # Adds a space to the terminal
+            print()
+
+            # Asks for input
+            print("Please enter the operation number you wish to run:", end=' ')
             operation_result = input()
             print()
+
             if operation_result.isdigit():
                 operation_number = int(operation_result)
                 if 1 <= operation_number <= 6:
-                    break
+                    print(f"You have selected operation {operation_number}: {self.operations[operation_number - 1]}", end='\n\n')
+                    
+                    while True:
+                        confirmation = input("Is this the correct selection? (yes/no): ")
+                        print()
+                        if confirmation.lower() == "yes":
+                            return operation_number
+                        elif confirmation.lower() == "no":
+                            break
+                        else:
+                            print("Invalid input. Please enter 'yes' or 'no'.")
                 else:
-                    print("Invalid input. Please enter a number between 1 and 6.", end='\n\n')
+                    print("Invalid input. Please enter a number between 1 and 6.")
             else:
-                print("Invalid input. Please enter a number between 1 and 6.", end='\n\n')
+                print("Invalid input. Please enter a number between 1 and 6.")
 
-        return operation_number
-
-        # Prints confirmation of selected choice
-        print("You have selected operation", self.operations[operation_number - 1], end='\n\n')
-        print("If this is not correct, press CTRL + C and restart the program", end='\n\n')
+        # Create an instance of your class and call the startup method
+        instance = YourClass()
+        selected_operation = instance.startup()
+        print(f"Proceeding with operation {selected_operation}")
 
     def open_scene(self):
         # Prints statement with small delay

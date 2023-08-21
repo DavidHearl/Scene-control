@@ -11,10 +11,15 @@ operations_instance = InitialProcedures()
 
 # Call the instances
 operations_instance.startup()
-operations_instance.open_scene()
-operations_instance.close_updates_and_news()
-operations_instance.set_database()
-operations_instance.validate_database()
+
+
+
+
+
+# operations_instance.open_scene()
+# operations_instance.close_updates_and_news()
+# operations_instance.set_database()
+# operations_instance.validate_database()
 
 
 
