@@ -2511,7 +2511,7 @@
             "company": "Princess",
             "areas": {
                 "Good Spirits": {
-                    "Imported": "WIP",
+                    "Imported": "Completed",
                     "Processed": "Queued",
                     "Registered": "Queued",
                     "Alignment": "Queued",
@@ -2522,22 +2522,12 @@
                 },
                 "Lotus Bar": {
                     "Imported": "Completed",
-                    "Processed": "Queued",
-                    "Registered": "Queued",
-                    "Alignment": "Queued",
-                    "Clean Up": "Queued",
-                    "Point Cloud": "Queued",
-                    "Exported": "Queued",
-                    "Uploaded": "Queued"
-                },
-                "Princess Pizza": {
-                    "Imported": "Completed",
-                    "Processed": "Queued",
-                    "Registered": "Queued",
-                    "Alignment": "Queued",
-                    "Clean Up": "Queued",
-                    "Point Cloud": "Queued",
-                    "Exported": "Queued",
+                    "Processed": "Completed",
+                    "Registered": "Completed",
+                    "Alignment": "Completed",
+                    "Clean Up": "Completed",
+                    "Point Cloud": "Completed",
+                    "Exported": "Completed",
                     "Uploaded": "Queued"
                 },
                 "Swirls": {
@@ -2550,22 +2540,22 @@
                     "Exported": "Completed",
                     "Uploaded": "Queued"
                 },
-                "Lido Bar": {
-                    "Imported": "Completed",
-                    "Processed": "Queued",
-                    "Registered": "Queued",
-                    "Alignment": "Queued",
-                    "Clean Up": "Queued",
-                    "Point Cloud": "Queued",
-                    "Exported": "Queued",
-                    "Uploaded": "Queued"
-                },
-                "The Grill Bar": {
+                "Pizza & Lido Bar": {
                     "Imported": "Completed",
                     "Processed": "Completed",
                     "Registered": "Completed",
                     "Alignment": "Completed",
                     "Clean Up": "Completed",
+                    "Point Cloud": "Completed",
+                    "Exported": "Completed",
+                    "Uploaded": "Queued"
+                },
+                "Bar & Grill": {
+                    "Imported": "Completed",
+                    "Processed": "Queued",
+                    "Registered": "Queued",
+                    "Alignment": "Queued",
+                    "Clean Up": "Queued",
                     "Point Cloud": "Queued",
                     "Exported": "Queued",
                     "Uploaded": "Queued"

@@ -30,7 +30,7 @@ class InitialProcedures:
     # Give the user choices to choose from
     def startup(self):
         # Introduction
-        print("")
+        print()
         print("----------------------------------------------------------")
         print("---------- Welcome to Automatic Scan Processing ----------")
         print("----------------------------------------------------------", end='\n\n')
@@ -63,21 +63,15 @@ class InitialProcedures:
                         elif confirmation.lower() == "no":
                             break
                         else:
-                            print("Invalid input. Please enter 'yes' or 'no'.")
+                            print("Invalid input. Please enter 'yes' or 'no'.", end='\n\n')
                 else:
-                    print("Invalid input. Please enter a number between 1 and 6.")
+                    print("Invalid input. Please enter a number between 1 and 6.", end='\n\n')
             else:
-                print("Invalid input. Please enter a number between 1 and 6.")
+                print("Invalid input. Please enter a number between 1 and 6.", end='\n\n')
 
-        # Create an instance of your class and call the startup method
-        instance = YourClass()
-        selected_operation = instance.startup()
-        print(f"Proceeding with operation {selected_operation}")
 
-    def open_scene(self):
-        # Prints statement with small delay
+    def open_scene(self):    
         print("Checking if SCENE is open...", end='\n\n')
-        time.sleep(0.5)
 
         # Program name variable
         program_name = 'SCENE.exe'
@@ -85,14 +79,14 @@ class InitialProcedures:
         # Checks to see if the program is open
         for proc in psutil.process_iter(['name']):
             if proc.info['name'] == program_name:
-                print("The program is open.", end='\n\n')
+                print(f"{program_name} is already open.", end='\n\n')
                 return
-        print("The program is not open. Opening SCENE...", end='\n\n')
+        print(f"{program_name} is not open. Opening {program_name}...", end='\n\n')
         # If the program is not open then open it.
         try:
             subprocess.Popen('C:\Program Files\FARO\SCENE\SCENE.exe')
         except Exception as e:
-            print("Failed to open SCENE:", str(e), end='\n\n')
+            print(f"Failed to open {program_name}", str(e), end='\n\n')
             return
 
         # Keep checking if the program is open
@@ -122,13 +116,13 @@ class InitialProcedures:
                         print(loading_message, end='\r')
                         time.sleep(0.05)
 
-                    print("SCENE has been opened successfully.", end='\n\n')
+                    print(f"{program_name} has been opened successfully.", end='\n\n')
                     return
 
         # Print error message
-        print("Failed to open SCENE. Please check the installation.", end='\n\n')
+        print(f"Failed to open {program_name}. Please check the installation.", end='\n\n')
 
-    def close_updates_and_news(self):
+    def clear_popup_menus(self):
         # Capture screenshot
         screenshot = pyautogui.screenshot()
         # Perform OCR on the screenshot
