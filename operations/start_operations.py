@@ -1,13 +1,14 @@
+""" Docstring Placeholder """
 import time
 import tkinter
 import os
-import json
-import psutil
 import subprocess
-import pytesseract
-import pyautogui
 import itertools
 import shutil
+import psutil
+import pytesseract
+import pyautogui
+# import json
 from tqdm import tqdm
 
 
@@ -56,7 +57,7 @@ class InitialProcedures:
                 operation_number = int(operation_result)
                 if 1 <= operation_number <= 6:
                     print(f"You have selected operation {operation_number}: {self.operations[operation_number - 1]}", end='\n\n')
-                    
+
                     while True:
                         confirmation = input("Is this the correct selection? (yes/no): ")
                         print()
@@ -70,7 +71,6 @@ class InitialProcedures:
                     print("Invalid input. Please enter a number between 1 and 6.", end='\n\n')
             else:
                 print("Invalid input. Please enter a number between 1 and 6.", end='\n\n')
-
 
     def open_scene(self):
         print("----------------------------------------------------------")
@@ -230,7 +230,7 @@ class InitialProcedures:
                     else:
                         shutil.copy2(source_item, destination_item)
                     pbar.update(1)  # Update the progress bar
-                    
+
             print()
             print(f"Contents copied to: {raw_folder_path}", end="\n\n")
 
