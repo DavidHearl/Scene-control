@@ -128,29 +128,31 @@ class InitialProcedures:
         # Perform OCR on the screenshot
         text = pytesseract.image_to_string(screenshot)
 
-        target_text = "Updates and News"
+        target_texts = ["Updates and News", "Project Transfer"]
 
-        if target_text in text:
-            print(f"Found '{target_text}' on the screen", end='\n\n')
+        for target_text in target_texts:
+            if target_text in text:
+                print(f"Found '{target_text}' on the screen", end='\n\n')
 
-            # Find the position of the text "Close" using OCR
-            try:
-                text_location = pyautogui.locateOnScreen('./items/close.png')
-                if text_location is not None:
-                    # Get the center coordinates of the text "Close"
-                    text_position = pyautogui.center(text_location)
-                    # Move the mouse to the position of the text "Close"
-                    pyautogui.moveTo(text_position, duration=0.5)
-                    # Perform a click action
-                    pyautogui.click()
-                    print("Clicked on 'Close'", end='\n\n')
-                else:
-                    print("'Close' button not found", end='\n\n')
-            except Exception as e:
-                print("Error occurred while locating 'Close' button:", str(e), end='\n\n')
+                # Find the position of the text "Close" or "No" using OCR
+                button_text = "Close" if target_text == "Updates and News" else "No"
+                try:
+                    text_location = pyautogui.locateOnScreen(f'./items/{button_text.lower()}.png')
+                    if text_location is not None:
+                        # Get the center coordinates of the text "Close" or "No"
+                        text_position = pyautogui.center(text_location)
+                        # Move the mouse to the position of the text "Close" or "No"
+                        pyautogui.moveTo(text_position, duration=0.5)
+                        # Perform a click action
+                        pyautogui.click()
+                        print(f"Clicked on '{button_text}'", end='\n\n')
+                    else:
+                        print(f"'{button_text}' button not found", end='\n\n')
+                except Exception as e:
+                    print(f"Error occurred while locating '{button_text}' button:", str(e), end='\n\n')
 
-        else:
-            print(f"'{target_text}' was not found on the screen", end='\n\n')
+            else:
+                print(f"'{target_text}' was not found on the screen", end='\n\n')
 
     def set_database(self):
         while True:
