@@ -7,6 +7,8 @@ import subprocess
 import pytesseract
 import pyautogui
 import itertools
+import shutil
+from tqdm import tqdm
 
 
 class InitialProcedures:
@@ -70,7 +72,10 @@ class InitialProcedures:
                 print("Invalid input. Please enter a number between 1 and 6.", end='\n\n')
 
 
-    def open_scene(self):    
+    def open_scene(self):
+        print("----------------------------------------------------------")
+        print("----------------------- Open Scene -----------------------")
+        print("----------------------------------------------------------", end='\n\n')
         print("Checking if SCENE is open...", end='\n\n')
 
         # Program name variable
@@ -154,100 +159,147 @@ class InitialProcedures:
             else:
                 print(f"'{target_text}' was not found on the screen", end='\n\n')
 
-    def set_database(self):
-        while True:
-            user_input = input("Is the current file path correct? (y/n): ")
+    def import_project(self):
+        print("----------------------------------------------------------")
+        print("------------------- Project Management -------------------")
+        print("----------------------------------------------------------", end='\n\n')
+        # Ask the user if they would like to add a project
+        response = input("Would you like to import a project? (yes/no): ").lower()
+        print()
+        if response == "yes":
+            # Ask the user to select the SD card.
+            print("Please select the SD card containing the Raw scan data", end='\n\n')
+            sd_card = tkinter.filedialog.askdirectory()
+            print("Selected Directory:", sd_card, end='\n\n')
+
+            # Ask the user where they would like the data to be stored.
+            print("Please select the directory you would like to store the data in", end='\n\n')
+            directory = tkinter.filedialog.askdirectory()
+            print("Selected Directory:", directory, end='\n\n')
+
+            # Ask the user the name of the ship
+            while True:
+                ship_name = input("What is the name of the ship?: ")
+                print()
+                if any(c.isdigit() for c in ship_name):
+                    print("Please enter only the ship name without numbers.", end="\n\n")
+                else:
+                    # Ask for confirmation
+                    confirmation = input(f"The ship is called '{ship_name}'. Is this correct? (yes/no): ")
+                    print()
+                    if confirmation.lower() == "yes":
+                        break  # Exit the loop if the ship name is confirmed
+                    elif confirmation.lower() == "no":
+                        continue
+                    else:
+                        print("Invalid input. Please enter 'yes' or 'no'.", end="\n\n")
+
+            # Ask if the user knows the contract number
+            while True:
+                knows_contract = input("Do you know the contract number? (yes/no): ")
+                print()
+                if knows_contract.lower() == "yes":
+                    contract_number = input("Please enter the contract number: ")
+                    print()
+                    if contract_number.isdigit():
+                        break  # Exit the loop if the contract number is entered
+                    else:
+                        print("Invalid input. Contract number should consist of numbers only.", end="\n\n")
+                elif knows_contract.lower() == "no":
+                    contract_number = "XXX"
+                    break  # Exit the loop if the contract number is set to 'XXX'
+                else:
+                    print("Invalid input. Please enter 'yes' or 'no'.", end="\n\n")
+
+            # Create raw folder and copy data
+            raw_folder_name = f"{contract_number} - {ship_name} - Raw"
+            raw_folder_path = os.path.join(directory, raw_folder_name)
+            os.makedirs(raw_folder_path, exist_ok=True)
+
+            # Get the total number of items to copy
+            total_items = len(os.listdir(sd_card))
+
+            # Initialize tqdm with the total number of items
+            with tqdm(total=total_items, unit='item(s)', desc='Copying') as pbar:
+                # Copy contents from source_directory to the newly created folder
+                for item in os.listdir(sd_card):
+                    source_item = os.path.join(sd_card, item)
+                    destination_item = os.path.join(raw_folder_path, item)
+                    if os.path.isdir(source_item):
+                        shutil.copytree(source_item, destination_item)
+                    else:
+                        shutil.copy2(source_item, destination_item)
+                    pbar.update(1)  # Update the progress bar
+                    
             print()
-            if user_input.lower() == 'y':
-                # print("Obtaining current file path, please wait...", end='\n\n')
-                directory = "E:/Caribbean Princess - Processed/"
-                print("Selected Directory:", directory, end='\n\n')
-                time.sleep(1)
-                break
-            else:
-                print("Using the dialog box, please select the folder containing the scans", end='\n\n')
-                directory = tkinter.filedialog.askdirectory()
-                print("Selected Directory:", directory, end='\n\n')
-                time.sleep(1.5)
+            print(f"Contents copied to: {raw_folder_path}", end="\n\n")
 
-        # Create an array
-        inner_keys = ['processed', 'registered', 'aligned', 'clean_up',
-                    'point_cloud', 'point_cloud_export', 'recap_export', 'uploaded']
-        inner_value = False
+            # Create folders and copy data
+            processed_folder_name = f"{contract_number} - {ship_name} - Processed"
+            processed_folder_path = os.path.join(directory, processed_folder_name)
+            os.makedirs(processed_folder_path, exist_ok=True)
 
-        # List all files in the directory
-        directory_content = os.listdir(directory)
-        print("Number of items: ", len(directory_content), end='\n\n')
+            print(f"Processing folder Created: {processed_folder_path}", end="\n\n")
 
-        # Create a nested dictionary
-        nested_dict = {
-            project: {inner_key: inner_value for inner_key in inner_keys}
-            for project in directory_content
-        }
+    # def validate_database(self):
+    #     # Define location of colored band
+    #     location_x = [380, 620, 850]
+    #     location_y = 560
 
-        # Sort the outer keys alphabetically
-        sorted_projects = sorted(nested_dict.keys())
+    #     # Define Colors to search for: Green, Orange, Red, Gray
+    #     colors = [
+    #       (0, 153, 105), (225, 160, 0),
+    #       (220, 17, 28), (240, 240, 240)
+    #     ]
 
-        # Create a new dictionary with sorted outer keys
-        self.sorted_nested_dict = {project: nested_dict[project] for project in sorted_projects}
+    #     for project_number in range(12):
+    #         y_coords = 400 + (project_number * 55)
+    #         pyautogui.moveTo(400, y_coords, duration=1)
+    #         pyautogui.click()
 
+    #         # Wait while project opens
+    #         print('Waiting for project to open...', end='\n\n')
+    #         while pyautogui.locateOnScreen('./items/close-project.png') is None:
+    #             time.sleep(1)
+    #         print("Close Project Open", end='\n\n')
 
-    def validate_database(self):
-        # Define location of colored band
-        location_x = [380, 620, 850]
-        location_y = 560
+    #         # Search locations
+    #         processed_color = pyautogui.pixel(location_x[0], location_y)
+    #         registration_color = pyautogui.pixel(location_x[1], location_y)
+    #         point_cloud_color = pyautogui.pixel(location_x[2], location_y)
 
-        # Define Colors to search for: Green, Orange, Red, Gray
-        colors = [(0, 153, 105), (225, 160, 0), (220, 17, 28), (240, 240, 240)]
+    #         # Check processed status
+    #         current_project = next(iter(self.sorted_nested_dict))
+    #         if processed_color == colors[0]:
+    #             self.sorted_nested_dict[current_project]["processed"] = True
 
-        for project_number in range(12):
-            y_coords = 400 + (project_number * 55)
-            pyautogui.moveTo(400, y_coords, duration=1)
-            pyautogui.click()
+    #         # Check registration status
+    #         if registration_color == colors[0]:
+    #             self.sorted_nested_dict[current_project]["registered"] = True
 
-            # Wait while project opens
-            print('Waiting for project to open...', end='\n\n')
-            while pyautogui.locateOnScreen('./items/close-project.png') is None:
-                time.sleep(1)
-            print("Close Project Open", end='\n\n')
+    #         # Check point cloud status
+    #         if point_cloud_color == colors[0]:
+    #             self.sorted_nested_dict[current_project]["point_cloud"] = True
 
-            # Search locations
-            processed_color = pyautogui.pixel(location_x[0], location_y)
-            registration_color = pyautogui.pixel(location_x[1], location_y)
-            point_cloud_color = pyautogui.pixel(location_x[2], location_y)
+    #         # Find and click close project button
+    #         image_location = pyautogui.locateOnScreen('./items/close-project.png')
+    #         if image_location is not None:
+    #             image_center = pyautogui.center(image_location)
+    #             time.sleep(0.5)
+    #             pyautogui.click(image_center)
+    #             print("Image clicked!", end='\n\n')
+    #         else:
+    #             print("Image not found!", end='\n\n')
 
-            # Check processed status
-            current_project = next(iter(self.sorted_nested_dict))
-            if processed_color == colors[0]:
-                self.sorted_nested_dict[current_project]["processed"] = True
+    #         # Wait while project closes
+    #         while "Projects Overview" not in pytesseract.image_to_string(pyautogui.screenshot()):
+    #             time.sleep(1)
+    #         print("Text found: Projects Overview")
+    #         time.sleep(0.2)
 
-            # Check registration status
-            if registration_color == colors[0]:
-                self.sorted_nested_dict[current_project]["registered"] = True
-
-            # Check point cloud status
-            if point_cloud_color == colors[0]:
-                self.sorted_nested_dict[current_project]["point_cloud"] = True
-
-            # Find and click close project button
-            image_location = pyautogui.locateOnScreen('./items/close-project.png')
-            if image_location is not None:
-                image_center = pyautogui.center(image_location)
-                time.sleep(0.5)
-                pyautogui.click(image_center)
-                print("Image clicked!", end='\n\n')
-            else:
-                print("Image not found!", end='\n\n')
-
-            # Wait while project closes
-            while "Projects Overview" not in pytesseract.image_to_string(pyautogui.screenshot()):
-                time.sleep(1)
-            print("Text found: Projects Overview")
-            time.sleep(0.2)
-
-        # Print list with updated values
-        sorted_values = list(self.sorted_nested_dict.values())
-        for project, values in zip(self.sorted_nested_dict.keys(), sorted_values):
-            print("Project:", project, end=" ")
-            print(json.dumps(values, indent=4), end='\n\n')
-            time.sleep(0.2)
+    #     # Print list with updated values
+    #     sorted_values = list(self.sorted_nested_dict.values())
+    #     for project, values in zip(self.sorted_nested_dict.keys(), sorted_values):
+    #         print("Project:", project, end=" ")
+    #         print(json.dumps(values, indent=4), end='\n\n')
+    #         time.sleep(0.2)
