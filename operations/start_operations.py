@@ -13,7 +13,9 @@ from tqdm import tqdm
 
 
 class InitialProcedures:
+    """ Docstring Placeholder """
     def __init__(self):
+        """ Docstring Placeholder """
         # Processing options to choose from
         self.operations = [
             "Processing & Registration",
@@ -32,6 +34,7 @@ class InitialProcedures:
 
     # Give the user choices to choose from
     def startup(self):
+        """ Docstring Placeholder """
         # Introduction
         print()
         print("----------------------------------------------------------")
@@ -56,8 +59,7 @@ class InitialProcedures:
             if operation_result.isdigit():
                 operation_number = int(operation_result)
                 if 1 <= operation_number <= 6:
-                    print(f"You have selected operation {operation_number}: {self.operations[operation_number - 1]}", end='\n\n')
-
+                    print(f"Operation {operation_number}: {self.operations[operation_number - 1]}\n")
                     while True:
                         confirmation = input("Is this the correct selection? (yes/no): ")
                         print()
@@ -73,6 +75,7 @@ class InitialProcedures:
                 print("Invalid input. Please enter a number between 1 and 6.", end='\n\n')
 
     def open_scene(self):
+        """ Docstring Placeholder """
         print("----------------------------------------------------------")
         print("----------------------- Open Scene -----------------------")
         print("----------------------------------------------------------", end='\n\n')
@@ -89,9 +92,9 @@ class InitialProcedures:
         print(f"{program_name} is not open. Opening {program_name}...", end='\n\n')
         # If the program is not open then open it.
         try:
-            subprocess.Popen('C:\Program Files\FARO\SCENE\SCENE.exe')
-        except Exception as e:
-            print(f"Failed to open {program_name}", str(e), end='\n\n')
+            subprocess.Popen(r'C:\Program Files\FARO\SCENE\SCENE.exe')
+        except Exception as exception:
+            print(f"Failed to open {program_name}: {exception}\n")
             return
 
         # Keep checking if the program is open
@@ -128,6 +131,7 @@ class InitialProcedures:
         print(f"Failed to open {program_name}. Please check the installation.", end='\n\n')
 
     def clear_popup_menus(self):
+        """ Docstring Placeholder """
         # Capture screenshot
         screenshot = pyautogui.screenshot()
         # Perform OCR on the screenshot
@@ -153,13 +157,14 @@ class InitialProcedures:
                         print(f"Clicked on '{button_text}'", end='\n\n')
                     else:
                         print(f"'{button_text}' button not found", end='\n\n')
-                except Exception as e:
-                    print(f"Error occurred while locating '{button_text}' button:", str(e), end='\n\n')
+                except Exception as exception:
+                    print(f"Error occurred while locating '{button_text}' button: {exception}\n")
 
             else:
                 print(f"'{target_text}' was not found on the screen", end='\n\n')
 
     def import_project(self):
+        """ Docstring Placeholder """
         print("----------------------------------------------------------")
         print("------------------- Project Management -------------------")
         print("----------------------------------------------------------", end='\n\n')
@@ -185,7 +190,7 @@ class InitialProcedures:
                     print("Please enter only the ship name without numbers.", end="\n\n")
                 else:
                     # Ask for confirmation
-                    confirmation = input(f"The ship is called '{ship_name}'. Is this correct? (yes/no): ")
+                    confirmation = input(f"Is the ship called '{ship_name}'? (yes/no): ")
                     print()
                     if confirmation.lower() == "yes":
                         break  # Exit the loop if the ship name is confirmed
@@ -204,7 +209,7 @@ class InitialProcedures:
                     if contract_number.isdigit():
                         break  # Exit the loop if the contract number is entered
                     else:
-                        print("Invalid input. Contract number should consist of numbers only.", end="\n\n")
+                        print("Invalid contract number format. Please use numbers only.\n")
                 elif knows_contract.lower() == "no":
                     contract_number = "XXX"
                     break  # Exit the loop if the contract number is set to 'XXX'
