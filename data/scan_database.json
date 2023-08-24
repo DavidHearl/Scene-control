@@ -2190,18 +2190,18 @@
             "areas": {
                 "RR Shelves": {
                     "Imported": "Completed",
-                    "Processed": "Queued",
-                    "Registered": "Queued",
-                    "Alignment": "Queued",
-                    "Clean Up": "Queued",
-                    "Point Cloud": "Queued",
+                    "Processed": "Completed",
+                    "Registered": "Completed",
+                    "Alignment": "Completed",
+                    "Clean Up": "Completed",
+                    "Point Cloud": "",
                     "Exported": "Queued",
                     "Uploaded": "Queued"
                 },
                 "International Cafe": {
                     "Imported": "Completed",
-                    "Processed": "Queued",
-                    "Registered": "Queued",
+                    "Processed": "Completed",
+                    "Registered": "Completed",
                     "Alignment": "Queued",
                     "Clean Up": "Queued",
                     "Point Cloud": "Queued",
@@ -2210,8 +2210,8 @@
                 },
                 "Shore Excursions": {
                     "Imported": "Completed",
-                    "Processed": "Queued",
-                    "Registered": "Queued",
+                    "Processed": "Completed",
+                    "Registered": "Completed",
                     "Alignment": "Queued",
                     "Clean Up": "Queued",
                     "Point Cloud": "Queued",
@@ -2512,9 +2512,9 @@
             "areas": {
                 "Good Spirits": {
                     "Imported": "Completed",
-                    "Processed": "Queued",
-                    "Registered": "Queued",
-                    "Alignment": "Queued",
+                    "Processed": "Completed",
+                    "Registered": "Completed",
+                    "Alignment": "Completed",
                     "Clean Up": "Queued",
                     "Point Cloud": "Queued",
                     "Exported": "Queued",

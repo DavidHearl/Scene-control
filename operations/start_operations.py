@@ -246,6 +246,43 @@ class InitialProcedures:
 
             print(f"Processing folder Created: {processed_folder_path}", end="\n\n")
 
+            # Select the settings icon
+            settings_btn = pyautogui.locateOnScreen('items/settings-wheel.png')
+            print("Settings Icon found", end="\n\n")
+            settings_btn_ctr = pyautogui.center(settings_btn)
+
+            pyautogui.moveTo(settings_btn_ctr, duration=0.5)
+            pyautogui.click()
+
+            # Click on more actions icon
+            pyautogui.moveTo(540, 650, duration=0.5)
+            pyautogui.click()
+            time.sleep(5)
+
+            # Click to the left of the drop down arrow
+            drop_down_btn = pyautogui.locateOnScreen('items/previous-location.png')
+            drop_down_btn_pos = pyautogui.center(drop_down_btn)
+            drop_down_btn_pos = (drop_down_btn.left - 20, drop_down_btn_pos[1])
+
+            pyautogui.moveTo(drop_down_btn_pos)
+            pyautogui.click()
+
+            # Paste the link
+            pyautogui.typewrite(processed_folder_path)
+
+            # Click select folder
+            select_folder_btn = pyautogui.locateOnScreen('items/select-folder.png')
+            select_folder_btn_ctr = pyautogui.center(select_folder_btn)
+
+            pyautogui.moveTo(select_folder_btn_ctr)
+            pyautogui.click()
+
+            project_transfer_btn = pyautogui.locateOnScreen('items/project-transfer.PNG')
+            project_transfer_btn_ctr = pyautogui.center(project_transfer_btn)
+
+            pyautogui.moveTo(project_transfer_btn_ctr, duration=0.5)
+            pyautogui.click()
+
     # def validate_database(self):
     #     # Define location of colored band
     #     location_x = [380, 620, 850]
