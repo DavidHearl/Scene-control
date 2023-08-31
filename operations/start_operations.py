@@ -1,6 +1,6 @@
 """ Docstring Placeholder """
 import time
-import tkinter
+from tkinter.filedialog import askdirectory
 import os
 import subprocess
 import itertools
@@ -59,7 +59,8 @@ class InitialProcedures:
             if operation_result.isdigit():
                 operation_number = int(operation_result)
                 if 1 <= operation_number <= 6:
-                    print(f"Operation {operation_number}: {self.operations[operation_number - 1]}\n")
+                    print(f"Operation {operation_number}: "
+                          f"{self.operations[operation_number - 1]}\n")
                     while True:
                         confirmation = input("Is this the correct selection? (yes/no): ")
                         print()
@@ -163,23 +164,24 @@ class InitialProcedures:
             else:
                 print(f"'{target_text}' was not found on the screen", end='\n\n')
 
-    def import_project(self):
+    def set_folders(self):
         """ Docstring Placeholder """
         print("----------------------------------------------------------")
         print("------------------- Project Management -------------------")
         print("----------------------------------------------------------", end='\n\n')
+
         # Ask the user if they would like to add a project
         response = input("Would you like to import a project? (yes/no): ").lower()
         print()
         if response == "yes":
             # Ask the user to select the SD card.
             print("Please select the SD card containing the Raw scan data", end='\n\n')
-            sd_card = tkinter.filedialog.askdirectory()
+            sd_card = askdirectory()
             print("Selected Directory:", sd_card, end='\n\n')
 
             # Ask the user where they would like the data to be stored.
             print("Please select the directory you would like to store the data in", end='\n\n')
-            directory = tkinter.filedialog.askdirectory()
+            directory = askdirectory()
             print("Selected Directory:", directory, end='\n\n')
 
             # Ask the user the name of the ship
@@ -246,51 +248,65 @@ class InitialProcedures:
 
             print(f"Processing folder Created: {processed_folder_path}", end="\n\n")
 
-            # Select the settings icon
-            settings_btn = pyautogui.locateOnScreen('items/settings-wheel.png')
-            print("Settings Icon found", end="\n\n")
-            settings_btn_ctr = pyautogui.center(settings_btn)
+        else:
+            # Ask the user where they would like the data to be stored.
+            print("Please select the directory you would like to store the data in", end='\n\n')
+            processed_folder_path = askdirectory()
+            print("Selected Directory:", processed_folder_path, end='\n\n')
 
-            pyautogui.moveTo(settings_btn_ctr, duration=0.5)
-            pyautogui.click()
+        return processed_folder_path
 
-            # Click on more actions icon
-            pyautogui.moveTo(540, 650, duration=0.5)
-            pyautogui.click()
-            time.sleep(5)
+    def set_project_folder(self, processed_folder_path):
+        """ Docstring Placehodler """
 
-            # Click to the left of the drop down arrow
-            drop_down_btn = pyautogui.locateOnScreen('items/previous-location.png')
-            drop_down_btn_pos = pyautogui.center(drop_down_btn)
-            drop_down_btn_pos = (drop_down_btn.left - 20, drop_down_btn_pos[1])
+        # Select the settings icon
+        settings_btn = pyautogui.locateOnScreen('items/settings-wheel.png')
+        print("Settings Icon found", end="\n\n")
+        settings_btn_ctr = pyautogui.center(settings_btn)
 
-            pyautogui.moveTo(drop_down_btn_pos, duration=0.5)
-            pyautogui.click()
-            time.sleep(0.5)
+        pyautogui.moveTo(settings_btn_ctr, duration=0.5)
+        pyautogui.click()
 
-            # Paste the link
-            pyautogui.typewrite(processed_folder_path)
-            time.sleep(0.5)
-            pyautogui.press('enter')
-            time.sleep(0.5)
+        # Click on more actions icon
+        pyautogui.moveTo(540, 650, duration=0.5)
+        pyautogui.click()
+        print("Waiting for Dialog to open", end='\n\n')
+        time.sleep(4)
 
-            # Click select folder
-            select_folder_btn = pyautogui.locateOnScreen('items/select-folder.png')
-            select_folder_btn_ctr = pyautogui.center(select_folder_btn)
-            pyautogui.moveTo(select_folder_btn_ctr, duration=0.5)
-            pyautogui.click()
+        # Click to the left of the drop down arrow
+        drop_down_btn = pyautogui.locateOnScreen('items/previous-location.png')
+        drop_down_btn_pos = pyautogui.center(drop_down_btn)
+        drop_down_btn_pos = (drop_down_btn.left - 20, drop_down_btn_pos[1])
 
-            # Return to main page
-            back_btn = pyautogui.locateOnScreen('items/back.PNG')
-            back_btn_ctr = pyautogui.center(back_btn)
-            pyautogui.moveTo(back_btn_ctr, duration=0.5)
-            pyautogui.click()
+        pyautogui.moveTo(drop_down_btn_pos, duration=0.5)
+        pyautogui.click()
+        time.sleep(0.5)
 
-            # Click project transfer button
-            project_transfer_btn = pyautogui.locateOnScreen('items/project-transfer.PNG')
-            project_transfer_btn_ctr = pyautogui.center(project_transfer_btn)
-            pyautogui.moveTo(project_transfer_btn_ctr, duration=0.5)
-            pyautogui.click()
+        # Paste the link
+        pyautogui.typewrite(processed_folder_path)
+        time.sleep(0.5)
+        pyautogui.press('enter')
+        time.sleep(0.5)
+
+        # Click select folder
+        select_folder_btn = pyautogui.locateOnScreen('items/select-folder.png')
+        select_folder_btn_ctr = pyautogui.center(select_folder_btn)
+        pyautogui.moveTo(select_folder_btn_ctr, duration=0.5)
+        pyautogui.click()
+
+        # Return to main page
+        back_btn = pyautogui.locateOnScreen('items/back.PNG')
+        back_btn_ctr = pyautogui.center(back_btn)
+        pyautogui.moveTo(back_btn_ctr, duration=0.5)
+        pyautogui.click()
+
+    def project_transfer(self):
+        """ Docstring Placeholder """
+        # Click project transfer button
+        project_transfer_btn = pyautogui.locateOnScreen('items/project-transfer.PNG')
+        project_transfer_btn_ctr = pyautogui.center(project_transfer_btn)
+        pyautogui.moveTo(project_transfer_btn_ctr, duration=0.5)
+        pyautogui.click()
 
     # def validate_database(self):
     #     # Define location of colored band
