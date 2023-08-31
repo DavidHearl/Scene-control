@@ -270,8 +270,8 @@ class InitialProcedures:
         # Click on more actions icon
         pyautogui.moveTo(540, 650, duration=0.5)
         pyautogui.click()
-        print("Waiting for Dialog to open", end='\n\n')
-        time.sleep(4)
+        print("Wait for Dialog to open...", end='\n\n')
+        time.sleep(3)
 
         # Click to the left of the drop down arrow
         drop_down_btn = pyautogui.locateOnScreen('items/previous-location.png')
@@ -282,20 +282,22 @@ class InitialProcedures:
         pyautogui.click()
         time.sleep(0.5)
 
-        # Paste the link
+        # Paste the link and close dialog box
         pyautogui.typewrite(processed_folder_path)
         time.sleep(0.5)
         pyautogui.press('enter')
-        time.sleep(0.5)
+        time.sleep(1)
 
         # Click select folder
-        select_folder_btn = pyautogui.locateOnScreen('items/select-folder.png')
+        print("Waiting for GUI to update...")
+        time.sleep(3)
+        select_folder_btn = pyautogui.locateOnScreen('items/select-folder.png', confidence=0.8)
         select_folder_btn_ctr = pyautogui.center(select_folder_btn)
         pyautogui.moveTo(select_folder_btn_ctr, duration=0.5)
         pyautogui.click()
-
+        
         # Return to main page
-        back_btn = pyautogui.locateOnScreen('items/back.PNG')
+        back_btn = pyautogui.locateOnScreen('items/back.png')
         back_btn_ctr = pyautogui.center(back_btn)
         pyautogui.moveTo(back_btn_ctr, duration=0.5)
         pyautogui.click()
@@ -303,7 +305,7 @@ class InitialProcedures:
     def project_transfer(self):
         """ Docstring Placeholder """
         # Click project transfer button
-        project_transfer_btn = pyautogui.locateOnScreen('items/project-transfer.PNG')
+        project_transfer_btn = pyautogui.locateOnScreen('items/project-transfer.png')
         project_transfer_btn_ctr = pyautogui.center(project_transfer_btn)
         pyautogui.moveTo(project_transfer_btn_ctr, duration=0.5)
         pyautogui.click()

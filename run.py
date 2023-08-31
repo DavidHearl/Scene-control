@@ -29,7 +29,7 @@ class MainApp:
         operations_instance.set_project_folder(processed_folder_path)
 
         # Import a project using the project transfer wizard
-        operations_instance.project_transfer()
+        # operations_instance.project_transfer()
 
 
 # Create an instance of MainApp

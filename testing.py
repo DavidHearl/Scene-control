@@ -9,11 +9,18 @@ def get_mouse_position():
 
 
 def test_code():
-    # Return to main page
-    back_btn = pyautogui.locateOnScreen('items/back.PNG')
-    back_btn_ctr = pyautogui.center(back_btn)
-    pyautogui.moveTo(back_btn_ctr, duration=0.5)
-    pyautogui.click()
+    # Click select folder
+    try:
+        select_folder_btn = pyautogui.locateOnScreen('items/select-folder.png')
+        if select_folder_btn:
+            select_folder_btn_ctr = pyautogui.center(select_folder_btn)
+            pyautogui.moveTo(select_folder_btn_ctr, duration=0.5)
+            # pyautogui.click()
+        else:
+            print("Select folder button not found.")
+    except pyautogui.ImageNotFoundException:
+        print("Image 'select-folder.png' not found on the screen.")
 
 
-test_code()
+# test_code()
+get_mouse_position()
