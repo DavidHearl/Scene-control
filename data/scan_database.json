@@ -2536,17 +2536,17 @@
                     "Registered": "Completed",
                     "Alignment": "Completed",
                     "Clean Up": "Completed",
-                    "Point Cloud": "Queued",
+                    "Point Cloud": "Completed",
                     "Exported": "Queued",
                     "Uploaded": "Queued"
                 },
                 "Lotus Bar": {
                     "Imported": "Completed",
-                    "Processed": "Queued",
-                    "Registered": "Queued",
-                    "Alignment": "Queued",
-                    "Clean Up": "Queued",
-                    "Point Cloud": "Queued",
+                    "Processed": "Completed",
+                    "Registered": "Completed",
+                    "Alignment": "Completed",
+                    "Clean Up": "Completed",
+                    "Point Cloud": "Completed",
                     "Exported": "Queued",
                     "Uploaded": "Queued"
                 },
@@ -2650,7 +2650,7 @@
                     "Exported": "Queued",
                     "Uploaded": "Queued"
                 },
-                "Business Center": {
+                "Internet Cafe": {
                     "Imported": "Completed",
                     "Processed": "Queued",
                     "Registered": "Queued",
