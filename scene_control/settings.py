@@ -27,7 +27,11 @@ SECRET_KEY = os.environ.get('SECRET_KEY', '')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['https://scene-control-4f12eed04548.herokuapp.com/', 'localhost']
+ALLOWED_HOSTS = [
+    'https://scene-control-4f12eed04548.herokuapp.com/',
+    'localhost',
+    '127.0.0.1'    
+]
 
 # Application definition
 
