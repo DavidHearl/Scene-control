@@ -2412,7 +2412,7 @@
                     "Clean Up": "Completed",
                     "Point Cloud": "Completed",
                     "Exported": "Completed",
-                    "Uploaded": "Queued"
+                    "Uploaded": "Completed"
                 },
                 "Crew Area": {
                     "Imported": "Completed",
@@ -2422,7 +2422,7 @@
                     "Clean Up": "Completed",
                     "Point Cloud": "Completed",
                     "Exported": "Completed",
-                    "Uploaded": "Queued"
+                    "Uploaded": "Completed"
                 },
                 "Deck 4 Shop": {
                     "Imported": "Completed",
@@ -2432,7 +2432,7 @@
                     "Clean Up": "Completed",
                     "Point Cloud": "Completed",
                     "Exported": "Completed",
-                    "Uploaded": "Queued"
+                    "Uploaded": "Completed"
                 },
                 "Deck 4 Shop #2": {
                     "Imported": "Completed",
@@ -2442,7 +2442,7 @@
                     "Clean Up": "Completed",
                     "Point Cloud": "Completed",
                     "Exported": "Completed",
-                    "Uploaded": "Queued"
+                    "Uploaded": "Completed"
                 },
                 "Palazzo Vecchio": {
                     "Imported": "Completed",
@@ -2452,7 +2452,7 @@
                     "Clean Up": "Completed",
                     "Point Cloud": "Completed",
                     "Exported": "Completed",
-                    "Uploaded": "Queued"
+                    "Uploaded": "Completed"
                 },
                 "Photo Gallery": {
                     "Imported": "Completed",
@@ -2462,7 +2462,7 @@
                     "Clean Up": "Completed",
                     "Point Cloud": "Completed",
                     "Exported": "Completed",
-                    "Uploaded": "Queued"
+                    "Uploaded": "Completed"
                 },
                 "Photo Shades": {
                     "Imported": "Completed",
@@ -2472,7 +2472,7 @@
                     "Clean Up": "Completed",
                     "Point Cloud": "Completed",
                     "Exported": "Completed",
-                    "Uploaded": "Queued"
+                    "Uploaded": "Completed"
                 },
                 "Spa": {
                     "Imported": "Completed",
@@ -2492,7 +2492,7 @@
                     "Clean Up": "Completed",
                     "Point Cloud": "Completed",
                     "Exported": "Completed",
-                    "Uploaded": "Queued"
+                    "Uploaded": "Completed"
                 },
                 "Tuscany Lounge": {
                     "Imported": "Completed",
@@ -2502,27 +2502,27 @@
                     "Clean Up": "Completed",
                     "Point Cloud": "Completed",
                     "Exported": "Completed",
-                    "Uploaded": "Queued"
+                    "Uploaded": "Completed"
                 },
                 "Football Pitch": {
                     "Imported": "Completed",
-                    "Processed": "Queued",
-                    "Registered": "Queued",
-                    "Alignment": "Queued",
-                    "Clean Up": "Queued",
-                    "Point Cloud": "Queued",
-                    "Exported": "Queued",
-                    "Uploaded": "Queued"
+                    "Processed": "Completed",
+                    "Registered": "Completed",
+                    "Alignment": "Completed",
+                    "Clean Up": "Completed",
+                    "Point Cloud": "Completed",
+                    "Exported": "Completed",
+                    "Uploaded": "Completed"
                 },
                 "Lanai": {
                     "Imported": "Completed",
-                    "Processed": "Queued",
-                    "Registered": "Queued",
-                    "Alignment": "Queued",
-                    "Clean Up": "Queued",
-                    "Point Cloud": "Queued",
-                    "Exported": "Queued",
-                    "Uploaded": "Queued"
+                    "Processed": "Completed",
+                    "Registered": "Completed",
+                    "Alignment": "Completed",
+                    "Clean Up": "Completed",
+                    "Point Cloud": "Completed",
+                    "Exported": "Completed",
+                    "Uploaded": "Completed"
                 }
             }
         },
@@ -2890,23 +2890,23 @@
             "areas": {
                 "Atmosphere": {
                     "Imported": "Completed",
-                    "Processed": "Queued",
-                    "Registered": "Queued",
-                    "Alignment": "Queued",
-                    "Clean Up": "Queued",
-                    "Point Cloud": "Queued",
-                    "Exported": "Queued",
-                    "Uploaded": "Queued"
+                    "Processed": "Completed",
+                    "Registered": "Completed",
+                    "Alignment": "Completed",
+                    "Clean Up": "Completed",
+                    "Point Cloud": "Completed",
+                    "Exported": "Completed",
+                    "Uploaded": "Completed"
                 },
                 "Tiki Bar": {
                     "Imported": "Completed",
-                    "Processed": "Queued",
-                    "Registered": "Queued",
-                    "Alignment": "Queued",
-                    "Clean Up": "Queued",
-                    "Point Cloud": "Queued",
-                    "Exported": "Queued",
-                    "Uploaded": "Queued"
+                    "Processed": "Completed",
+                    "Registered": "Completed",
+                    "Alignment": "Completed",
+                    "Clean Up": "Completed",
+                    "Point Cloud": "Completed",
+                    "Exported": "Completed",
+                    "Uploaded": "Completed"
                 }
             }
         },
@@ -2919,123 +2919,123 @@
             "areas": {
                 "Shisha Lounge Sports Bar": {
                     "Imported": "Completed",
-                    "Processed": "Queued",
-                    "Registered": "Queued",
-                    "Alignment": "Queued",
-                    "Clean Up": "Queued",
-                    "Point Cloud": "Queued",
-                    "Exported": "Queued",
-                    "Uploaded": "Queued"
+                    "Processed": "Completed",
+                    "Registered": "Completed",
+                    "Alignment": "Completed",
+                    "Clean Up": "Completed",
+                    "Point Cloud": "Completed",
+                    "Exported": "Completed",
+                    "Uploaded": "Completed"
                 },
                 "Italian Restaurant": {
                     "Imported": "Completed",
-                    "Processed": "Queued",
-                    "Registered": "Queued",
-                    "Alignment": "Queued",
-                    "Clean Up": "Queued",
-                    "Point Cloud": "Queued",
-                    "Exported": "Queued",
-                    "Uploaded": "Queued"
+                    "Processed": "Completed",
+                    "Registered": "Completed",
+                    "Alignment": "Completed",
+                    "Clean Up": "Completed",
+                    "Point Cloud": "Completed",
+                    "Exported": "Completed",
+                    "Uploaded": "Completed"
                 },
                 "Art Gallery": {
                     "Imported": "Completed",
-                    "Processed": "Queued",
-                    "Registered": "Queued",
-                    "Alignment": "Queued",
-                    "Clean Up": "Queued",
-                    "Point Cloud": "Queued",
-                    "Exported": "Queued",
-                    "Uploaded": "Queued"
+                    "Processed": "Completed",
+                    "Registered": "Completed",
+                    "Alignment": "Completed",
+                    "Clean Up": "Completed",
+                    "Point Cloud": "Completed",
+                    "Exported": "Completed",
+                    "Uploaded": "Completed"
                 },
                 "Chocolate Coffee Bar": {
                     "Imported": "Completed",
-                    "Processed": "Queued",
-                    "Registered": "Queued",
-                    "Alignment": "Queued",
-                    "Clean Up": "Queued",
-                    "Point Cloud": "Queued",
-                    "Exported": "Queued",
-                    "Uploaded": "Queued"
+                    "Processed": "Completed",
+                    "Registered": "Completed",
+                    "Alignment": "Completed",
+                    "Clean Up": "Completed",
+                    "Point Cloud": "Completed",
+                    "Exported": "Completed",
+                    "Uploaded": "Completed"
                },
                 "Khaliji": {
                     "Imported": "Completed",
-                    "Processed": "Queued",
-                    "Registered": "Queued",
-                    "Alignment": "Queued",
-                    "Clean Up": "Queued",
-                    "Point Cloud": "Queued",
-                    "Exported": "Queued",
-                    "Uploaded": "Queued"
+                    "Processed": "Completed",
+                    "Registered": "Completed",
+                    "Alignment": "Completed",
+                    "Clean Up": "Completed",
+                    "Point Cloud": "Completed",
+                    "Exported": "Completed",
+                    "Uploaded": "Completed"
                 },
                 "Photo Gallery": {
                     "Imported": "Completed",
-                    "Processed": "Queued",
-                    "Registered": "Queued",
-                    "Alignment": "Queued",
-                    "Clean Up": "Queued",
-                    "Point Cloud": "Queued",
-                    "Exported": "Queued",
-                    "Uploaded": "Queued"
+                    "Processed": "Completed",
+                    "Registered": "Completed",
+                    "Alignment": "Completed",
+                    "Clean Up": "Completed",
+                    "Point Cloud": "Completed",
+                    "Exported": "Completed",
+                    "Uploaded": "Completed"
                 },
                 "Premium Turkish Restaurant": {
                     "Imported": "Completed",
-                    "Processed": "Queued",
-                    "Registered": "Queued",
-                    "Alignment": "Queued",
-                    "Clean Up": "Queued",
-                    "Point Cloud": "Queued",
-                    "Exported": "Queued",
-                    "Uploaded": "Queued"
+                    "Processed": "Completed",
+                    "Registered": "Completed",
+                    "Alignment": "Completed",
+                    "Clean Up": "Completed",
+                    "Point Cloud": "Completed",
+                    "Exported": "Completed",
+                    "Uploaded": "Completed"
                 },
                 "Japanese Peruvian Restaurant Sushi Bar": {
                     "Imported": "Completed",
-                    "Processed": "Queued",
-                    "Registered": "Queued",
-                    "Alignment": "Queued",
-                    "Clean Up": "Queued",
-                    "Point Cloud": "Queued",
-                    "Exported": "Queued",
-                    "Uploaded": "Queued"
+                    "Processed": "Completed",
+                    "Registered": "Completed",
+                    "Alignment": "Completed",
+                    "Clean Up": "Completed",
+                    "Point Cloud": "Completed",
+                    "Exported": "Completed",
+                    "Uploaded": "Completed"
                 },
                 "Teppanyki Restaurant": {
                     "Imported": "Completed",
-                    "Processed": "Queued",
-                    "Registered": "Queued",
-                    "Alignment": "Queued",
-                    "Clean Up": "Queued",
-                    "Point Cloud": "Queued",
-                    "Exported": "Queued",
-                    "Uploaded": "Queued"
+                    "Processed": "Completed",
+                    "Registered": "Completed",
+                    "Alignment": "Completed",
+                    "Clean Up": "Completed",
+                    "Point Cloud": "Completed",
+                    "Exported": "Completed",
+                    "Uploaded": "Completed"
                 },
                  "Meeting Rooms": {
                     "Imported": "Completed",
-                    "Processed": "Queued",
-                    "Registered": "Queued",
-                    "Alignment": "Queued",
-                    "Clean Up": "Queued",
-                    "Point Cloud": "Queued",
-                    "Exported": "Queued",
-                    "Uploaded": "Queued"
+                    "Processed": "Completed",
+                    "Registered": "Completed",
+                    "Alignment": "Completed",
+                    "Clean Up": "Completed",
+                    "Point Cloud": "Completed",
+                    "Exported": "Completed",
+                    "Uploaded": "Completed"
                 },
                 "Kids Area": {
                     "Imported": "Completed",
-                    "Processed": "Queued",
-                    "Registered": "Queued",
-                    "Alignment": "Queued",
-                    "Clean Up": "Queued",
-                    "Point Cloud": "Queued",
-                    "Exported": "Queued",
-                    "Uploaded": "Queued"
+                    "Processed": "Completed",
+                    "Registered": "Completed",
+                    "Alignment": "Completed",
+                    "Clean Up": "Completed",
+                    "Point Cloud": "Completed",
+                    "Exported": "Completed",
+                    "Uploaded": "Completed"
                 },
                 "Dk-08 Lift Lobby Fwd": {
                     "Imported": "Completed",
-                    "Processed": "Queued",
-                    "Registered": "Queued",
-                    "Alignment": "Queued",
-                    "Clean Up": "Queued",
-                    "Point Cloud": "Queued",
-                    "Exported": "Queued",
-                    "Uploaded": "Queued"
+                    "Processed": "Completed",
+                    "Registered": "Completed",
+                    "Alignment": "Completed",
+                    "Clean Up": "Completed",
+                    "Point Cloud": "Completed",
+                    "Exported": "Completed",
+                    "Uploaded": "Completed"
                 }
             }
         }
