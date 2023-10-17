@@ -22,7 +22,11 @@ ul {
 }
 
 hr {
-    margin: 12px 0;
+    margin: 8px 0;
+}
+
+.title {
+    margin-bottom: 0;
 }
 
 .title-underline {
