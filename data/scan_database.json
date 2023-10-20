@@ -2195,7 +2195,7 @@
                     "Alignment": "Completed",
                     "Clean Up": "Completed",
                     "Point Cloud": "Completed",
-                    "Exported": "Queued",
+                    "Exported": "Completed",
                     "Uploaded": "Queued"
                 },
                 "Captains Circle": {
@@ -2205,7 +2205,7 @@
                     "Alignment": "Completed",
                     "Clean Up": "Completed",
                     "Point Cloud": "Completed",
-                    "Exported": "Queued",
+                    "Exported": "Completed",
                     "Uploaded": "Queued"
                 },
                 "Chirchills Lounge": {
@@ -2215,7 +2215,7 @@
                     "Alignment": "Completed",
                     "Clean Up": "Completed",
                     "Point Cloud": "Completed",
-                    "Exported": "Queued",
+                    "Exported": "Completed",
                     "Uploaded": "Queued"
                 },
                 "Club Fusion": {
@@ -3056,8 +3056,58 @@
                 "david.hearl@mjmmarine.com"
             ],
             "areas": {
-                "": {
-                    "Imported": "Queued",
+                "Captains Club": {
+                    "Imported": "Completed",
+                    "Processed": "Queued",
+                    "Registered": "Queued",
+                    "Alignment": "Queued",
+                    "Clean Up": "Queued",
+                    "Point Cloud": "Queued",
+                    "Exported": "Queued",
+                    "Uploaded": "Queued"
+                },
+                "Nightclub": {
+                    "Imported": "Completed",
+                    "Processed": "Queued",
+                    "Registered": "Queued",
+                    "Alignment": "Queued",
+                    "Clean Up": "Queued",
+                    "Point Cloud": "Queued",
+                    "Exported": "Queued",
+                    "Uploaded": "Queued"
+                },
+                "Nightclub 2": {
+                    "Imported": "Completed",
+                    "Processed": "Queued",
+                    "Registered": "Queued",
+                    "Alignment": "Queued",
+                    "Clean Up": "Queued",
+                    "Point Cloud": "Queued",
+                    "Exported": "Queued",
+                    "Uploaded": "Queued"
+                },
+                "Pixels Deck 1": {
+                    "Imported": "Completed",
+                    "Processed": "Queued",
+                    "Registered": "Queued",
+                    "Alignment": "Queued",
+                    "Clean Up": "Queued",
+                    "Point Cloud": "Queued",
+                    "Exported": "Queued",
+                    "Uploaded": "Queued"
+                },
+                "Pixels Deck 2": {
+                    "Imported": "Completed",
+                    "Processed": "Queued",
+                    "Registered": "Queued",
+                    "Alignment": "Queued",
+                    "Clean Up": "Queued",
+                    "Point Cloud": "Queued",
+                    "Exported": "Queued",
+                    "Uploaded": "Queued"
+                },
+                "Spa": {
+                    "Imported": "Completed",
                     "Processed": "Queued",
                     "Registered": "Queued",
                     "Alignment": "Queued",
@@ -3075,8 +3125,238 @@
                 "david.hearl@mjmmarine.com"
             ],
             "areas": {
-                "": {
-                    "Imported": "Queued",
+                "Billboards": {
+                    "Imported": "Completed",
+                    "Processed": "Queued",
+                    "Registered": "Queued",
+                    "Alignment": "Queued",
+                    "Clean Up": "Queued",
+                    "Point Cloud": "Queued",
+                    "Exported": "Queued",
+                    "Uploaded": "Queued"
+                },
+                "Billboards Piano": {
+                    "Imported": "Completed",
+                    "Processed": "Queued",
+                    "Registered": "Queued",
+                    "Alignment": "Queued",
+                    "Clean Up": "Queued",
+                    "Point Cloud": "Queued",
+                    "Exported": "Queued",
+                    "Uploaded": "Queued"
+                },
+                "Crows Nest": {
+                    "Imported": "Completed",
+                    "Processed": "Queued",
+                    "Registered": "Queued",
+                    "Alignment": "Queued",
+                    "Clean Up": "Queued",
+                    "Point Cloud": "Queued",
+                    "Exported": "Queued",
+                    "Uploaded": "Queued"
+                },
+                "Dive In": {
+                    "Imported": "Completed",
+                    "Processed": "Queued",
+                    "Registered": "Queued",
+                    "Alignment": "Queued",
+                    "Clean Up": "Queued",
+                    "Point Cloud": "Queued",
+                    "Exported": "Queued",
+                    "Uploaded": "Queued"
+                },
+                "Exploration Cafe & Future Cruises": {
+                    "Imported": "Completed",
+                    "Processed": "Queued",
+                    "Registered": "Queued",
+                    "Alignment": "Queued",
+                    "Clean Up": "Queued",
+                    "Point Cloud": "Queued",
+                    "Exported": "Queued",
+                    "Uploaded": "Queued"
+                },
+                "Explorers Lounge": {
+                    "Imported": "Completed",
+                    "Processed": "Queued",
+                    "Registered": "Queued",
+                    "Alignment": "Queued",
+                    "Clean Up": "Queued",
+                    "Point Cloud": "Queued",
+                    "Exported": "Queued",
+                    "Uploaded": "Queued"
+                },
+                "Guest Services": {
+                    "Imported": "Completed",
+                    "Processed": "Queued",
+                    "Registered": "Queued",
+                    "Alignment": "Queued",
+                    "Clean Up": "Queued",
+                    "Point Cloud": "Queued",
+                    "Exported": "Queued",
+                    "Uploaded": "Queued"
+                },
+                "Hudson Room": {
+                    "Imported": "Completed",
+                    "Processed": "Queued",
+                    "Registered": "Queued",
+                    "Alignment": "Queued",
+                    "Clean Up": "Queued",
+                    "Point Cloud": "Queued",
+                    "Exported": "Queued",
+                    "Uploaded": "Queued"
+                },
+                "Lido Bar": {
+                    "Imported": "Completed",
+                    "Processed": "Queued",
+                    "Registered": "Queued",
+                    "Alignment": "Queued",
+                    "Clean Up": "Queued",
+                    "Point Cloud": "Queued",
+                    "Exported": "Queued",
+                    "Uploaded": "Queued"
+                },
+                "Lido": {
+                    "Imported": "Completed",
+                    "Processed": "Queued",
+                    "Registered": "Queued",
+                    "Alignment": "Queued",
+                    "Clean Up": "Queued",
+                    "Point Cloud": "Queued",
+                    "Exported": "Queued",
+                    "Uploaded": "Queued"
+                },
+                "Medical Center": {
+                    "Imported": "Completed",
+                    "Processed": "Queued",
+                    "Registered": "Queued",
+                    "Alignment": "Queued",
+                    "Clean Up": "Queued",
+                    "Point Cloud": "Queued",
+                    "Exported": "Queued",
+                    "Uploaded": "Queued"
+                },
+                "Microsoft Room": {
+                    "Imported": "Completed",
+                    "Processed": "Queued",
+                    "Registered": "Queued",
+                    "Alignment": "Queued",
+                    "Clean Up": "Queued",
+                    "Point Cloud": "Queued",
+                    "Exported": "Queued",
+                    "Uploaded": "Queued"
+                },
+                "Neptune Lounge": {
+                    "Imported": "Completed",
+                    "Processed": "Queued",
+                    "Registered": "Queued",
+                    "Alignment": "Queued",
+                    "Clean Up": "Queued",
+                    "Point Cloud": "Queued",
+                    "Exported": "Queued",
+                    "Uploaded": "Queued"
+                },
+                "Ocean Bar": {
+                    "Imported": "Completed",
+                    "Processed": "Queued",
+                    "Registered": "Queued",
+                    "Alignment": "Queued",
+                    "Clean Up": "Queued",
+                    "Point Cloud": "Queued",
+                    "Exported": "Queued",
+                    "Uploaded": "Queued"
+                },
+                "Outside Hudson Room": {
+                    "Imported": "Completed",
+                    "Processed": "Queued",
+                    "Registered": "Queued",
+                    "Alignment": "Queued",
+                    "Clean Up": "Queued",
+                    "Point Cloud": "Queued",
+                    "Exported": "Queued",
+                    "Uploaded": "Queued"
+                },
+                "Photo Gallery": {
+                    "Imported": "Completed",
+                    "Processed": "Queued",
+                    "Registered": "Queued",
+                    "Alignment": "Queued",
+                    "Clean Up": "Queued",
+                    "Point Cloud": "Queued",
+                    "Exported": "Queued",
+                    "Uploaded": "Queued"
+                },
+                "Sea View Bar": {
+                    "Imported": "Completed",
+                    "Processed": "Queued",
+                    "Registered": "Queued",
+                    "Alignment": "Queued",
+                    "Clean Up": "Queued",
+                    "Point Cloud": "Queued",
+                    "Exported": "Queued",
+                    "Uploaded": "Queued"
+                },
+                "Teams Mess": {
+                    "Imported": "Completed",
+                    "Processed": "Queued",
+                    "Registered": "Queued",
+                    "Alignment": "Queued",
+                    "Clean Up": "Queued",
+                    "Point Cloud": "Queued",
+                    "Exported": "Queued",
+                    "Uploaded": "Queued"
+                },
+                "Theatre Portside Stairs": {
+                    "Imported": "Completed",
+                    "Processed": "Queued",
+                    "Registered": "Queued",
+                    "Alignment": "Queued",
+                    "Clean Up": "Queued",
+                    "Point Cloud": "Queued",
+                    "Exported": "Queued",
+                    "Uploaded": "Queued"
+                },
+                "Theatre Portside": {
+                    "Imported": "Completed",
+                    "Processed": "Queued",
+                    "Registered": "Queued",
+                    "Alignment": "Queued",
+                    "Clean Up": "Queued",
+                    "Point Cloud": "Queued",
+                    "Exported": "Queued",
+                    "Uploaded": "Queued"
+                },
+                "Theatre Ramp Starboard": {
+                    "Imported": "Completed",
+                    "Processed": "Queued",
+                    "Registered": "Queued",
+                    "Alignment": "Queued",
+                    "Clean Up": "Queued",
+                    "Point Cloud": "Queued",
+                    "Exported": "Queued",
+                    "Uploaded": "Queued"
+                },
+                "Theatre Starboard": {
+                    "Imported": "Completed",
+                    "Processed": "Queued",
+                    "Registered": "Queued",
+                    "Alignment": "Queued",
+                    "Clean Up": "Queued",
+                    "Point Cloud": "Queued",
+                    "Exported": "Queued",
+                    "Uploaded": "Queued"
+                },
+                "The Mix Casino": {
+                    "Imported": "Completed",
+                    "Processed": "Queued",
+                    "Registered": "Queued",
+                    "Alignment": "Queued",
+                    "Clean Up": "Queued",
+                    "Point Cloud": "Queued",
+                    "Exported": "Queued",
+                    "Uploaded": "Queued"
+                },
+                "Wine Shop": {
+                    "Imported": "Completed",
                     "Processed": "Queued",
                     "Registered": "Queued",
                     "Alignment": "Queued",
